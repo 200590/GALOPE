@@ -21,7 +21,6 @@ class Button {
     StrokeColor=color(0);
   }
 
-  //setters
   void display() {
     pushStyle();
     if (mouseOverButton()) {

@@ -1,4 +1,8 @@
 boolean logged=false;
+//Enumerat pantalles
+enum PANTALLA {ENTRADA,IS, EMPEZAR, ELECCION};
+//PANTALLA ACTUAL
+PANTALLA pantalla=PANTALLA.ENTRADA;
 
 //Pantalla entrada
 Button b1, b2;
@@ -14,6 +18,7 @@ void setup(){
 fullScreen();
 textAlign (CENTER);
 setGUI();
+loadMedia();
 
 //creación botones
 b1= new Button("ENTRADA", Xbutton, Ybutton, Wbutton, Hbutton);
@@ -29,9 +34,19 @@ Textocontraseña= new TextField ((int)Xbutton, (int)Ybutton+150,(int) Wbutton,(i
 Textocorreo=new TextField ((int)Xcorreo,(int) Ycorreo, (int)Wbutton, (int) Hbutton);
 TextocontraseñaE= new TextField ((int)Xcorreo, (int)Ycorreo+(int)Hbutton+25, (int)Wbutton, (int)Hbutton);
 TextOcupacion=new TextField (Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton);
+
+//DIBUIXA PANTALLA CORRESPONENT
+switch (pantalla){
+  case ENTRADA: dibujaPantallaENTRADA(); break;
+  case IS: dibujaPantallaIS(); break;
+  case EMPEZAR: dibujaPantallaEMP(); break;
+  case ELECCION: dibujaPantallaEleccion(); break;
+}
 }
 
 void draw (){
+image(Logo, margeX, margeX+107, llarglogo, amplogo);
+  
 background(255);
 //menu
 dibujaZonaMenu();
@@ -44,45 +59,18 @@ dibujaZonaLogo();
 
 //PANTALLA 1
 /*dibujaPantallaENTRADA();
-b1.display();
-b2.display();*/
-
 
 //PANTALLA 2
-/*dibujaPantallaIS();
-Textousuario.display();
-Textocontraseña.display();
-
-//etiquetas texto
-fill(0); textSize(30); textAlign (CENTER); 
-text ("INICIAR SESIÓN", 1035, 470);
-ellipse (1145, 463, 50, 50);
-text ("CONTRASEÑA", 1035, 500);
-ellipse (1145, 610, 50, 50);
-*/
+dibujaPantallaIS();
 
 //PANTALLA 3
-/*dibujaZonaEMP();
-Textocorreo.display();
-TextocontraseñaE.display();
-TextOcupacion.display();
-
-//etiquetas texto
-fill(0); textSize(30); textAlign (CENTER);
-text ("CORREO ELECTRONICO", 1033, 405);
-text ("CONTRASEÑA", 975, 520);
-text ("OCUPACIÓN", 960, 635);*/
+dibujaPantallaEMP();
 
 //PANTALLA 4
-/*dibujaPantallaEleccion();
-b3.display();
-b4.display();
-b5.display();
-b6.display();*/
+dibujaPantallaEleccion();*/
+
 
 //PANTALLA 5
-//dibujaZonaFAQs();
-
 for(int i=0; i<faqs.length; i++){
 faqs[i].display();
 }
@@ -94,4 +82,5 @@ println("X: "+mouseX+", Y:"+mouseY);
 void mousePressed(){
   Textousuario.isPressed();
   Textocontraseña.isPressed();
+
 }
