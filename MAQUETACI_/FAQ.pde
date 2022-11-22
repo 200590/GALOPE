@@ -15,6 +15,7 @@ class FAQ {
   void display(){
     pushStyle();
     rectMode(CORNER);
+    fill(this.c);
     rect(this.x, this.y, this.w, this.h);
     fill(0);
     textAlign(LEFT);text(this.pregunta, this.x+5, this.y+this.h/2);
