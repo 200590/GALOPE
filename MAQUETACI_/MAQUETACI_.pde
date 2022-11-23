@@ -71,9 +71,7 @@ dibujaPantallaEleccion();*/
 
 
 //PANTALLA 5
-for(int i=0; i<faqs.length; i++){
-faqs[i].display();
-}
+dibujaPantallaFAQs();
 
 println("X: "+mouseX+", Y:"+mouseY);
 }

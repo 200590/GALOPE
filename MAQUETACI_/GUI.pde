@@ -1,4 +1,3 @@
-FAQ faq1, faq2;
 FAQ[] faqs;
 
 void setFAQs(){
