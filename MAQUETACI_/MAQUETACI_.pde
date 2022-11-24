@@ -1,4 +1,7 @@
 boolean logged=false;
+CheckBoxList cb1;
+//textos opciones checkboxlist
+String[] info={"EXEMPLE 1", "EXEMPLE 2", "EXEMPLE 3", "EXEMPLE 4"};
 //Enumerat pantalles
 enum PANTALLA {ENTRADA,IS, EMPEZAR, ELECCION};
 //PANTALLA ACTUAL
@@ -34,6 +37,8 @@ Textocontraseña= new TextField ((int)Xbutton, (int)Ybutton+150,(int) Wbutton,(i
 Textocorreo=new TextField ((int)Xcorreo,(int) Ycorreo, (int)Wbutton, (int) Hbutton);
 TextocontraseñaE= new TextField ((int)Xcorreo, (int)Ycorreo+(int)Hbutton+25, (int)Wbutton, (int)Hbutton);
 TextOcupacion=new TextField (Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton);
+//consturcción checkbox List
+cb1=new CheckBoxList (info, width/3, height/4, 100, 100);
 
 //DIBUIXA PANTALLA CORRESPONENT
 switch (pantalla){
@@ -67,18 +72,22 @@ dibujaPantallaIS();
 dibujaPantallaEMP();
 
 //PANTALLA 4
-dibujaPantallaEleccion();*/
+dibujaPantallaEleccion();
 
 
 //PANTALLA 5
 dibujaPantallaFAQs();
 
-println("X: "+mouseX+", Y:"+mouseY);
+println("X: "+mouseX+", Y:"+mouseY);*/
+
+//PANTALLA 6
+dibujaPantallaEsenciales();
 }
 
 //pressed on campo texto
 void mousePressed(){
   Textousuario.isPressed();
   Textocontraseña.isPressed();
+  cb1.checkMouse();
 
 }

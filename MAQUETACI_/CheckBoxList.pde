@@ -61,10 +61,11 @@ class CheckBoxList{
   
   //true si mouse sobre algun checkbox
   boolean checkCursor(){
-    for (CheckBoxText cb : cbs){
+    for (CheckboxText cb : cbs){
       if(cb.onMouseOver()){
         return true;
       }
   }
   return false;
+  }
 }
