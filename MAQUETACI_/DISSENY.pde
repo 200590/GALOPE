@@ -43,3 +43,7 @@ float Xbutton=881;
 float Ybutton=416;
 float Wbutton=300;
 float Hbutton=90;
+
+//checkbox list
+//distanca entre logo y checkboxlist
+float entreLogoyCheckbox=10;

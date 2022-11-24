@@ -42,9 +42,10 @@ void dibujaPantallaEleccion(){
 void dibujaPantallaFAQs(){
 for(int i=0; i<faqs.length; i++){
 faqs[i].display();
-}
+  }
 }
 
 void dibujaPantallaEsenciales(){
   cb1.display();
+  cb2.display();
 }
