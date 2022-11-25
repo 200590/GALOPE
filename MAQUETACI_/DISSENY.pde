@@ -38,11 +38,15 @@ float Xtexts=185;
 float Ytexts=196;
 float Wcapsa=1920-margeX*2;
 
-//dimensiones boton
+//dimensiones boton rect
 float Xbutton=881;
 float Ybutton=416;
 float Wbutton=300;
 float Hbutton=90;
+//dimensions boton round
+float Xroundbutton=1820; 
+float Yroundbutton=935; 
+float Rroundbutton=100;
 
 //checkbox list
 //distanca entre logo y checkboxlist

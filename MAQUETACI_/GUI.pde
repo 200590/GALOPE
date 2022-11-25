@@ -1,4 +1,8 @@
 FAQ[] faqs;
+
+//general
+Button b0;
+RoundButton start;
 //Pantalla entrada
 Button b1, b2;
 //Pantalla Iniciar sesion
@@ -31,8 +35,11 @@ void setGUI() {
   setFAQs();
 
   //creación botones
+  b0= new Button ("LOGO",margeX,margeX+107, llarglogo, amplogo);
   b1= new Button("ENTRADA", Xbutton, Ybutton, Wbutton, Hbutton);
   b2= new Button ("INICIAR SESION", Xbutton, Ybutton+150, Wbutton, Hbutton);
+  start= new RoundButton("NEXT", Xroundbutton, Yroundbutton, Rroundbutton);
+  
   b3= new Button ("INFORMACIÓN GALOPES (FAQs)", Xrecuadros, Yrecuadros, Wrecuadros, Hrecuadros);
   b4= new Button ("ESENCIALES", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros);
   b5= new Button ("PRÁCTICA", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros);

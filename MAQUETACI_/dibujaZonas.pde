@@ -14,9 +14,10 @@ popStyle();
 void dibujaZonaLogo(){
  pushStyle();
   fill (129, 170, 255);
-  rect (margeX,margeX+107, llarglogo, amplogo);
-  fill (0);textSize (20);
-  text ("LOGO", 75, 185);
+  b0.displayButton();
+  //rect (margeX,margeX+107, llarglogo, amplogo);
+  //fill (0);textSize (20);
+ //text ("LOGO", 75, 185);
  popStyle();
 }
 

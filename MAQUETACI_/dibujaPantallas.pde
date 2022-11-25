@@ -1,13 +1,14 @@
 void dibujaPantallaENTRADA(){
   dibujaZonaEntr();
-  b1.display();
-  b2.display();
+  b1.displayButton();
+  b2.displayButton();
 }
 
 void dibujaPantallaIS(){
   dibujaZonaIS();
   Textousuario.display();
   Textocontraseña.display();
+  start.displayRoundButton();
 
   //etiquetas texto
   fill(0); textSize(30); textAlign (CENTER); 
@@ -23,6 +24,7 @@ void dibujaPantallaEMP(){
   Textocorreo.display();
   TextocontraseñaE.display();
   TextOcupacion.display();
+  start.displayRoundButton();
 
   //etiquetas texto
   fill(0); textSize(30); textAlign (CENTER);
@@ -33,10 +35,10 @@ void dibujaPantallaEMP(){
 
 void dibujaPantallaEleccion(){
   dibujaZonaEleccion();
-  b3.display();
-  b4.display();
-  b5.display();
-  b6.display();
+  b3.displayButton();
+  b4.displayButton();
+  b5.displayButton();
+  b6.displayButton();
 }
 
 void dibujaPantallaFAQs(){

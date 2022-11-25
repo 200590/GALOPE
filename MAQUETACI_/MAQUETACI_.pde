@@ -1,10 +1,10 @@
 boolean logged=false;
 
 //Enumerat pantalles
-enum PANTALLA {ENTRADA, IS, EMPEZAR, ELECCION, ESENCIALES};
+enum PANTALLA {ENTRADA, IS, EMP, ELECCION, ESENCIALES};
 
 //PANTALLA ACTUAL
-PANTALLA pantalla=PANTALLA.ESENCIALES;
+PANTALLA pantalla=PANTALLA.ENTRADA;
 
 
 
@@ -28,20 +28,15 @@ void draw () {
   //DIBUIXA PANTALLA CORRESPONENT
   switch (pantalla) {
   case ENTRADA:
-    dibujaPantallaENTRADA();
-    break;
+    dibujaPantallaENTRADA(); break;
   case IS:
-    dibujaPantallaIS();
-    break;
-  case EMPEZAR:
-    dibujaPantallaEMP();
-    break;
+    dibujaPantallaIS(); break;
+  case EMP:
+    dibujaPantallaEMP(); break;
   case ELECCION:
-    dibujaPantallaEleccion();
-    break;
+    dibujaPantallaEleccion(); break;
   case ESENCIALES:
-    dibujaPantallaEsenciales();
-    break;
+    dibujaPantallaEsenciales();break;
   }
 
 

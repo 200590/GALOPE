@@ -1,13 +1,21 @@
 class Button {
 
-  //características boton
+  //características boton rect. 
   float x, y, w, h;
+  
+  //características boton circulo
+  float a, b, r; //a-->equivalente a x   b-->equivalente a y    r-->equivalente a radio
+  PImage LOGO;
 
-  //propiedades contorno, relleno
+  //propiedades contorno, relleno boton rect. 
   color ColorFill; 
   color fillColorOver;
   color StrokeColor;
   String textButton;
+  
+  //propiedades contorno, relleno boton circular
+  color FillColor;
+  color ColorFillOver;
 
   //constructor
   Button (String texto, float x, float y, float w, float h) {
@@ -20,8 +28,10 @@ class Button {
     fillColorOver=color(235, 188, 220);
     StrokeColor=color(0);
   }
+  
+  
 
-  void display() {
+ void displayButton() {
     pushStyle();
     if (mouseOverButton()) {
       fill(fillColorOver);
