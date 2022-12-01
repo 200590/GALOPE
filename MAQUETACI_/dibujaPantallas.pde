@@ -12,9 +12,9 @@ void dibujaPantallaIS(){
 
   //etiquetas texto
   fill(0); textSize(30); textAlign (CENTER); 
-  text ("INICIAR SESIÓN", 1035, 470);
+  text ("USUARIO", 1015, 470);
   ellipse (1145, 463, 50, 50);
-  text ("CONTRASEÑA", 1035, 500);
+  text ("CONTRASEÑA", 1015, 620);
   ellipse (1145, 610, 50, 50);
 
 }
@@ -49,5 +49,5 @@ faqs[i].display();
 
 void dibujaPantallaEsenciales(){
   cb1.display();
-  cb2.display();
+ // cb2.display();
 }

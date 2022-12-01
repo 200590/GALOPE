@@ -4,7 +4,7 @@ boolean logged=false;
 enum PANTALLA {ENTRADA, IS, EMP, ELECCION, ESENCIALES};
 
 //PANTALLA ACTUAL
-PANTALLA pantalla=PANTALLA.ENTRADA;
+PANTALLA pantalla=PANTALLA.ELECCION;
 
 
 
@@ -44,10 +44,3 @@ void draw () {
 
   println("X: "+mouseX+", Y:"+mouseY);
 }
-
-//pressed on campo texto
-/*void mousePressed(){
- Textousuario.isPressed();
- Textocontraseña.isPressed();
- cb1.checkMouse();
- }*/

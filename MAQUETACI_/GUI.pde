@@ -36,8 +36,8 @@ void setGUI() {
 
   //creación botones
   b0= new Button ("LOGO",margeX,margeX+107, llarglogo, amplogo);
-  b1= new Button("ENTRADA", Xbutton, Ybutton, Wbutton, Hbutton);
-  b2= new Button ("INICIAR SESION", Xbutton, Ybutton+150, Wbutton, Hbutton);
+  b1= new Button("EMPEZAR", Xbutton, Ybutton, Wbutton, Hbutton);
+  b2= new Button ("INICIAR SESION", Xbutton, Ybutton+200, Wbutton, Hbutton);
   start= new RoundButton("NEXT", Xroundbutton, Yroundbutton, Rroundbutton);
   
   b3= new Button ("INFORMACIÓN GALOPES (FAQs)", Xrecuadros, Yrecuadros, Wrecuadros, Hrecuadros);
