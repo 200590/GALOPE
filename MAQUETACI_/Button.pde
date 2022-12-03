@@ -13,9 +13,6 @@ class Button {
   color StrokeColor;
   String textButton;
   
-  //propiedades contorno, relleno boton circular
-  color FillColor;
-  color ColorFillOver;
 
   //constructor
   Button (String texto, float x, float y, float w, float h) {

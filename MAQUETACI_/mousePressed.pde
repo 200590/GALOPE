@@ -1,12 +1,11 @@
 //pressed on campo texto
-//enum PANTALLA {ENTRADA, IS, EMP, ELECCION, ESENCIALES};
+//enum PANTALLA {ENTRADA, IS, EMP, FAQs, ELECCION, ESENCIALES};
 void mousePressed() {
 
   // Escoltar tots els elements comunS A TOTES LES PANTALLES
-  if (b0.mouseOverButton()) {
+  if (b0.mouseOverRoundButton()) {
     pantalla=PANTALLA.ENTRADA;
   }
-
 
 
   if (pantalla==PANTALLA.ENTRADA) {
@@ -25,6 +24,12 @@ void mousePressed() {
   if (pantalla==PANTALLA.EMP) {
     Textocorreo.isPressed();
     TextocontraseñaE.isPressed();
+      if (s1.mouseOverSelect()){
+        if (!s1.wraped){
+          s1.update();
+        }
+        s1.toggle();
+      }
 
     /* Textousuario.isPressed();
      Textocontraseña.isPressed();
@@ -32,10 +37,20 @@ void mousePressed() {
   }
 
   if (pantalla==PANTALLA.ELECCION) {
-    b3.mouseOverButton();
-    b4.mouseOverButton();
-    b5.mouseOverButton();
-    b6.mouseOverButton();
+    if (b3.mouseOverButton()){
+     //pantalla=PANTALLA.FAQs;
+    }else if (b4.mouseOverButton()){
+      pantalla=PANTALLA.ESENCIALES;
+    }else if (b5.mouseOverButton()){
+      //pantalla=PANTALLA.PRACTICA;
+    }else if (b6.mouseOverButton()){
+      //pantalla=PANTALLA.CALENDARIO
+    }
+    
+    //b3.mouseOverButton();
+    //b4.mouseOverButton();
+    //b5.mouseOverButton();
+   // b6.mouseOverButton();
   }
 
   if (pantalla==PANTALLA.ESENCIALES) {

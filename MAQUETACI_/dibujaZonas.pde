@@ -14,7 +14,7 @@ popStyle();
 void dibujaZonaLogo(){
  pushStyle();
   fill (129, 170, 255);
-  b0.displayButton();
+  b0.displayRoundButton();
   //rect (margeX,margeX+107, llarglogo, amplogo);
   //fill (0);textSize (20);
  //text ("LOGO", 75, 185);
@@ -25,7 +25,7 @@ void dibujaZonaLogo(){
 void dibujaZonaGeneral(){
 pushStyle();
   fill (255, 108, 255);
-  rect (135+margeX, margeX+107, margeX+llargeneral, height-ampgeneral);
+  rect (margeX, margeX+107, margeX+llargeneral, ampmenu);
   fill (255); textSize (30);
   text("GENERAL", 995, 570);
 popStyle();
@@ -38,7 +38,8 @@ pushStyle();
   fill(244, 255, 253);
   //sección rosa 
   fill (227, 188, 208);
-  rect (135+margeX, margeX+107, margeX+llargeneral, height-ampgeneral);
+  rect (margeX, margeX+107, width-margeX*2, height-ampmenu);
+  b0.displayRoundButton();
   popStyle();
 }
 

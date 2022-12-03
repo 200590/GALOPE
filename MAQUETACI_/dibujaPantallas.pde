@@ -1,3 +1,4 @@
+
 void dibujaPantallaENTRADA(){
   dibujaZonaEntr();
   b1.displayButton();
@@ -23,7 +24,8 @@ void dibujaPantallaEMP(){
   dibujaZonaEMP();
   Textocorreo.display();
   TextocontraseñaE.display();
-  TextOcupacion.display();
+ // TextOcupacion.display();
+  s1.display();
   start.displayRoundButton();
 
   //etiquetas texto

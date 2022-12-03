@@ -1,17 +1,37 @@
  class RoundButton{
   float a, b, r; //a-->equivalente a x   b-->equivalente a y    r-->equivalente a radio
   String text;
+      //propiedades contorno, relleno boton circular
+  color FillColor;
+  color ColorFillOver;
  
  RoundButton (String text, float a, float b, float r){
     this.text=text;
     this.a=a; 
     this.b=b; 
     this.r=r;
-    //FillColor=color(129, 170, 255);
+    FillColor=color(227, 188, 208);
+    ColorFillOver=color(235, 188, 220);
   }
+  
  
  void displayRoundButton(){
-   ellipse (this.a, this.b, this.r, this.r);
+    pushStyle();
+    if (mouseOverRoundButton()) {
+      fill(ColorFillOver);
+    }else {
+      fill (FillColor);
+    }
+   // stroke(StrokeColor);
+    strokeWeight(2);
+  ellipse (this.a, this.b, this.r, this.r);
+
+    //propiedades texto
+    fill(0);
+    textAlign (CENTER);
+    textSize(30);
+    text (text, 1035, 470);
+    popStyle();
  }
  
  boolean  mouseOverRoundButton(){

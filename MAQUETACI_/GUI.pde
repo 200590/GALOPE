@@ -1,8 +1,8 @@
 FAQ[] faqs;
 
 //general
-Button b0;
-RoundButton start;
+//Button b0;
+RoundButton start, b0;
 //Pantalla entrada
 Button b1, b2;
 //Pantalla Iniciar sesion
@@ -35,14 +35,16 @@ void setGUI() {
   setFAQs();
 
   //creación botones
-  b0= new Button ("LOGO",margeX,margeX+107, llarglogo, amplogo);
+ // b0= new Button ("LOGO",margeX,margeX+107, llarglogo, amplogo);
   b1= new Button("EMPEZAR", Xbutton, Ybutton, Wbutton, Hbutton);
   b2= new Button ("INICIAR SESION", Xbutton, Ybutton+200, Wbutton, Hbutton);
+  b0= new RoundButton ("GALOPE", llarglogo/2+16, amplogo/2+ampmenu+15, Rroundbutton+20);
   start= new RoundButton("NEXT", Xroundbutton, Yroundbutton, Rroundbutton);
   
+  
   b3= new Button ("INFORMACIÓN GALOPES (FAQs)", Xrecuadros, Yrecuadros, Wrecuadros, Hrecuadros);
-  b4= new Button ("ESENCIALES", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros);
-  b5= new Button ("PRÁCTICA", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros);
+  b4= new Button ("PRÁCTICA", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros);
+  b5= new Button ("ESENCIALES", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros);
   b6= new Button ("CALENDARIO", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros);
 
   //creacion campo texto
@@ -50,9 +52,12 @@ void setGUI() {
   Textocontraseña= new TextField ((int)Xbutton, (int)Ybutton+150, (int) Wbutton, (int)Hbutton);
   Textocorreo=new TextField ((int)Xcorreo, (int) Ycorreo, (int)Wbutton, (int) Hbutton);
   TextocontraseñaE= new TextField ((int)Xcorreo, (int)Ycorreo+(int)Hbutton+25, (int)Wbutton, (int)Hbutton);
-  TextOcupacion=new TextField (Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton);
+ // TextOcupacion=new TextField (Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton);
 
   //consturcción checkbox List
   cb1=new CheckBoxList (info1, margeX+amplogo+entreLogoyCheckbox, margeY+llarglogo+ampmenu+5, 100, 100);
   cb2=new CheckBoxList (info2, 300, 599, 100, 100);
+  
+  //selected
+  s1=new Select (selectedValue, Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton);
 }

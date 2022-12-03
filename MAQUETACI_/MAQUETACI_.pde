@@ -1,10 +1,14 @@
 boolean logged=false;
+//selects
+Select s1;
+//opcions select
+String[] selectedValue={"JINETE/AMAZONA", "ENTRENADOR/A", "AMBOS", "OTROS"};
 
 //Enumerat pantalles
-enum PANTALLA {ENTRADA, IS, EMP, ELECCION, ESENCIALES};
+enum PANTALLA {ENTRADA, IS, EMP, ELECCION,FAQs,  ESENCIALES};
 
 //PANTALLA ACTUAL
-PANTALLA pantalla=PANTALLA.ELECCION;
+PANTALLA pantalla=PANTALLA.ENTRADA;
 
 
 
@@ -35,6 +39,8 @@ void draw () {
     dibujaPantallaEMP(); break;
   case ELECCION:
     dibujaPantallaEleccion(); break;
+  case FAQs:
+    dibujaPantallaFAQs(); break;
   case ESENCIALES:
     dibujaPantallaEsenciales();break;
   }
