@@ -8,7 +8,7 @@ String[] selectedValue={"JINETE/AMAZONA", "ENTRENADOR/A", "AMBOS", "OTROS"};
 enum PANTALLA {ENTRADA, IS, EMP, ELECCION,FAQs,  ESENCIALES};
 
 //PANTALLA ACTUAL
-PANTALLA pantalla=PANTALLA.ENTRADA;
+PANTALLA pantalla=PANTALLA.ELECCION;
 
 
 
@@ -24,7 +24,7 @@ void draw () {
 
   background(255);
   //menu
-  dibujaZonaMenu();
+  //dibujaZonaMenu();
 
   //logo
   dibujaZonaLogo();

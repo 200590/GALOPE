@@ -38,11 +38,11 @@ void mousePressed() {
 
   if (pantalla==PANTALLA.ELECCION) {
     if (b3.mouseOverButton()){
-     //pantalla=PANTALLA.FAQs;
+     pantalla=PANTALLA.FAQs;
     }else if (b4.mouseOverButton()){
-      pantalla=PANTALLA.ESENCIALES;
+     // pantalla=PANTALLA.PRACTICA;
     }else if (b5.mouseOverButton()){
-      //pantalla=PANTALLA.PRACTICA;
+      pantalla=PANTALLA.ESENCIALES;
     }else if (b6.mouseOverButton()){
       //pantalla=PANTALLA.CALENDARIO
     }

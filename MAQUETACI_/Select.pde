@@ -19,7 +19,7 @@ class Select{
   
   void display(){
     pushStyle();
-    stroke (0); strokeWeight(1); fill (255);
+    stroke (0); strokeWeight(2); fill (227, 188, 208);
     rect (x, y, w, h);
     
     //sección triangulo

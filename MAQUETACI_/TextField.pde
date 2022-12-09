@@ -8,7 +8,7 @@ float x, y, h, w;
 color FieldNoSelectedColor=color(227, 188, 208);
 color FieldSelectedColor=color(235, 188, 220);
 color bordercolor=color(0);
-int borderWeight=1;
+int borderWeight=2;
 
 //texto campo
 String text="";

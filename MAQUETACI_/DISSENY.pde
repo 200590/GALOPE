@@ -39,10 +39,13 @@ float Ytexts=196;
 float Wcapsa=1920-margeX*2;
 
 //dimensiones boton rect
-float Xbutton=881;
-float Ybutton=416;
+float Xbutton=815;
+float Ybutton=396;
 float Wbutton=300;
 float Hbutton=90;
+//posicions text b1, b2
+float textX=965; 
+float textY=453;
 //dimensions boton round
 float Xroundbutton=1820; 
 float Yroundbutton=935; 

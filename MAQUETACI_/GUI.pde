@@ -36,9 +36,9 @@ void setGUI() {
 
   //creación botones
  // b0= new Button ("LOGO",margeX,margeX+107, llarglogo, amplogo);
-  b1= new Button("EMPEZAR", Xbutton, Ybutton, Wbutton, Hbutton);
-  b2= new Button ("INICIAR SESION", Xbutton, Ybutton+200, Wbutton, Hbutton);
-  b0= new RoundButton ("GALOPE", llarglogo/2+16, amplogo/2+ampmenu+15, Rroundbutton+20);
+  b1= new Button("INICIAR SESIÓN", Xbutton, Ybutton, Wbutton, Hbutton);
+  b2= new Button ("EMPEZAR", Xbutton, Ybutton+200, Wbutton, Hbutton);
+  b0= new RoundButton ("GALOPE", llarglogo/2+16, amplogo/2+ampmenu+30, Rroundbutton+20);
   start= new RoundButton("NEXT", Xroundbutton, Yroundbutton, Rroundbutton);
   
   
