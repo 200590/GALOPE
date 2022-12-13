@@ -30,7 +30,7 @@
     fill(0);
     textAlign (CENTER);
     textSize(30);
-    text (text, this.a+this.r/2-58, this.b+this.r/2-49);
+    text (text, this.a, this.b+10);
     popStyle();
  }
  

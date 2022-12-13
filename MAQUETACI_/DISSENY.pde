@@ -33,7 +33,7 @@ float Ytext=Yrecuadros-20;
 
 
 //FAQs
-float Ycapsa=margeX+107+amplogo;
+float Ycapsa=margeX+125+amplogo;
 float Xtexts=185; 
 float Ytexts=196;
 float Wcapsa=1920-margeX*2;

@@ -13,16 +13,17 @@ PANTALLA pantalla=PANTALLA.ELECCION;
 
 
 void setup() {
-  fullScreen();
+  fullScreen(P2D);
   textAlign (CENTER);
   setGUI();
   loadMedia();
 }
 
 void draw () {
-  image(Logo, margeX, margeX+107, llarglogo, amplogo);
-
   background(255);
+  //image(Logo, margeX, margeX+107, llarglogo, amplogo);
+
+ 
   //menu
   //dibujaZonaMenu();
 

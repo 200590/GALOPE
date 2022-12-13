@@ -1,41 +1,49 @@
 
-void dibujaPantallaENTRADA(){
+void dibujaPantallaENTRADA() {
   dibujaZonaEntr();
   b1.displayButton();
   b2.displayButton();
 }
 
-void dibujaPantallaIS(){
+void dibujaPantallaIS() {
   dibujaZonaIS();
   Textousuario.display();
   Textocontraseña.display();
-  start.displayRoundButton();
+  next.displayRoundButton();
+  back.displayRoundButton();
 
   //etiquetas texto
-  fill(0); textSize(30); textAlign (CENTER); 
-  text ("USUARIO", 1015, 470);
-  ellipse (1145, 463, 50, 50);
-  text ("CONTRASEÑA", 1015, 620);
-  ellipse (1145, 610, 50, 50);
-
+  fill(0);
+  textSize(30);
+  textAlign (CENTER);
+  text ("USUARIO", 968, 452);
+  noFill();
+  ellipse (1150, 445, 50, 50);
+  fill(0);
+  text ("CONTRASEÑA", 968, 600);
+  noFill();
+  ellipse (1153, 590, 50, 50);
 }
 
-void dibujaPantallaEMP(){
+void dibujaPantallaEMP() {
   dibujaZonaEMP();
   Textocorreo.display();
   TextocontraseñaE.display();
- // TextOcupacion.display();
+  // TextOcupacion.display();
   s1.display();
-  start.displayRoundButton();
+  next.displayRoundButton();
+  back.displayRoundButton();
 
   //etiquetas texto
-  fill(0); textSize(30); textAlign (CENTER);
+  fill(0);
+  textSize(30);
+  textAlign (CENTER);
   text ("CORREO ELECTRONICO", 1033, 405);
   text ("CONTRASEÑA", 975, 520);
   text ("OCUPACIÓN", 960, 635);
 }
 
-void dibujaPantallaEleccion(){
+void dibujaPantallaEleccion() {
   dibujaZonaEleccion();
   b3.displayButton();
   b4.displayButton();
@@ -43,13 +51,20 @@ void dibujaPantallaEleccion(){
   b6.displayButton();
 }
 
-void dibujaPantallaFAQs(){
-for(int i=0; i<faqs.length; i++){
-faqs[i].display();
+void dibujaPantallaFAQs() {
+  fill (164, 107, 136);
+  strokeWeight(2);
+  rect (margeX,margeY, width-margeX*2, ampmenu);
+  fill (0); textAlign (CENTER); textSize(40);
+  text ("INFORMACIÓN GALOPES (FAQs)", 960, 77);
+  for (int i=0; i<faqs.length; i++) {
+    if (faqs[i]!=null) {
+      faqs[i].display();
+    }
   }
 }
 
-void dibujaPantallaEsenciales(){
+void dibujaPantallaEsenciales() {
   cb1.display();
- // cb2.display();
+  // cb2.display();
 }
