@@ -7,10 +7,17 @@ void mousePressed() {
     pantalla=PANTALLA.ENTRADA;
   }
   
-  if (next.mouseOverRoundButton()){
-    
+  if (next.mouseOverRoundButton()){        
+    if (pantalla==PANTALLA.IS||pantalla==PANTALLA.EMP){
+      pantalla=PANTALLA.ELECCION;
+    }
   }
 
+    if (back.mouseOverRoundButton()){
+      if (pantalla==PANTALLA.FAQs||pantalla==PANTALLA.ESENCIALES||pantalla==PANTALLA.PRACTICA){
+        pantalla=PANTALLA.ELECCION;
+    }
+    }
 
   if (pantalla==PANTALLA.ENTRADA) {
     if (b1.mouseOverButton()) {
@@ -58,7 +65,7 @@ void mousePressed() {
   }
 
   if (pantalla==PANTALLA.ESENCIALES) {
-    cb1.display();
+    cb1.checkMouse();
     //cb2.display();
   }
 }
