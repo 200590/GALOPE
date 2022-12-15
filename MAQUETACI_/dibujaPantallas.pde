@@ -65,6 +65,11 @@ void dibujaPantallaFAQs() {
 }
 
 void dibujaPantallaEsenciales() {
+  fill (164, 107, 136);
+  strokeWeight(2);
+  rect (margeX,margeY, width-margeX*2, ampmenu);
+  fill (0); textAlign (CENTER); textSize(40);
+  text ("ESENCIALES", 960, 77);
   cb1.display();
   // cb2.display();
 }

@@ -22,6 +22,8 @@ void setFAQs() {
   faqs = new FAQ[8];
 
   faqs[0] = new FAQ ("pregunta1", "resposta1", margeX, Ycapsa, Wcapsa, 120, 250, color(227, 188, 208), color (255, 222, 226));
+ //faqs[1]=new FAQ("pregunta 2", "resposta 2", margeX, Ycapsa*2, Wcapsa, 120, 250, color (227, 188, 208), color (255, 222, 226));
+  //faqs[2]= new FAQ ("pregunta 3", "resposta 3", margeX, Ycapsa*3, Wcapsa, 120, 250, color (277, 188, 208), color (255, 222, 226));
 }
 
 void setGUI() {
@@ -50,8 +52,8 @@ void setGUI() {
   // TextOcupacion=new TextField (Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton);
 
   //consturcción checkbox List
-  cb1=new CheckBoxList (info1, margeX+amplogo+entreLogoyCheckbox, margeY+llarglogo+ampmenu+5, 100, 100);
-  cb2=new CheckBoxList (info2, 300, 599, 100, 100);
+  cb1=new CheckBoxList (info1, Xcheckbox,  margeY+llarglogo+ampmenu+5, 100, 100);
+//  cb2=new CheckBoxList (info2, 300, 599, 100, 100);
 
   //selected
   s1=new Select (selectedValue, Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton);
