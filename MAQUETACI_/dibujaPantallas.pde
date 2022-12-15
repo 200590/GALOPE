@@ -52,6 +52,7 @@ void dibujaPantallaEleccion() {
 }
 
 void dibujaPantallaFAQs() {
+  back.displayRoundButton();
   fill (164, 107, 136);
   strokeWeight(2);
   rect (margeX,margeY, width-margeX*2, ampmenu);
@@ -70,6 +71,17 @@ void dibujaPantallaEsenciales() {
   rect (margeX,margeY, width-margeX*2, ampmenu);
   fill (0); textAlign (CENTER); textSize(40);
   text ("ESENCIALES", 960, 77);
+  back.displayRoundButton();
   cb1.display();
   // cb2.display();
+}
+
+void dibujaPantallaPractica(){
+  dibujaZonaPractica();
+  b7.displayButton();
+  b8.displayButton(); 
+  b9.displayButton();
+  b10.displayButton();
+  next.displayRoundButton();
+  back.displayRoundButton();
 }

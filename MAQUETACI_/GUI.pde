@@ -13,6 +13,8 @@ TextField Textocorreo, TextocontraseñaE, TextOcupacion;
 Button b3, b4, b5, b6;
 CheckBoxList cb1;
 CheckBoxList cb2;
+//pantalla practica
+Button b7, b8, b9, b10;
 
 //textos opciones checkboxlist
 String[] info1={"EXEMPLE 1", "EXEMPLE 2", "EXEMPLE 3", "EXEMPLE 4", "EXEMPLE 5", "EXEMPLE 6"};
@@ -21,8 +23,8 @@ String[] info2={"EXEMPLE A", "EXEMPLE B", "EXEMPLE C", "EXEMPLE D", "EMEPLE E"};
 void setFAQs() {
   faqs = new FAQ[8];
 
-  faqs[0] = new FAQ ("pregunta1", "resposta1", margeX, Ycapsa, Wcapsa, 120, 250, color(227, 188, 208), color (255, 222, 226));
- //faqs[1]=new FAQ("pregunta 2", "resposta 2", margeX, Ycapsa*2, Wcapsa, 120, 250, color (227, 188, 208), color (255, 222, 226));
+  faqs[0] = new FAQ ("pregunta1", "resposta1", margeX, Ycapsa, Wcapsa, 100, 170, color(227, 188, 208), color (255, 222, 226));
+  faqs[1]=new FAQ("pregunta 2", "resposta 2", margeX, Ycapsa+100+170, Wcapsa, 100, 170, color (227, 188, 208), color (255, 222, 226));
   //faqs[2]= new FAQ ("pregunta 3", "resposta 3", margeX, Ycapsa*3, Wcapsa, 120, 250, color (277, 188, 208), color (255, 222, 226));
 }
 
@@ -43,6 +45,11 @@ void setGUI() {
   b4= new Button ("PRÁCTICA", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros);
   b5= new Button ("ESENCIALES", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros);
   b6= new Button ("CALENDARIO", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros);
+  
+  b7=new Button ("GALOPE 1", Xrecuadros, Yrecuadros, Wrecuadros, Hrecuadros);
+  b8= new Button ("GALOPE 2", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros);
+  b9= new Button ("GALOPE 3", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros);
+  b10= new Button ("GALOPE 4", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros);
 
   //creacion campo texto
   Textousuario= new TextField((int)Xbutton, (int)Ybutton, (int)Wbutton, (int)Hbutton);
@@ -52,7 +59,7 @@ void setGUI() {
   // TextOcupacion=new TextField (Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton);
 
   //consturcción checkbox List
-  cb1=new CheckBoxList (info1, Xcheckbox,  margeY+llarglogo+ampmenu+5, 100, 100);
+  cb1=new CheckBoxList (info1, Xcheckbox,  Ycheckbox, 100, 100);
 //  cb2=new CheckBoxList (info2, 300, 599, 100, 100);
 
   //selected

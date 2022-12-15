@@ -95,12 +95,21 @@ void dibujaZonaEleccion(){
   fill (227, 188, 208);
  rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
   b0.displayRoundButton();
+  next.displayRoundButton();
   popStyle();
 }
 
-//ESENCIALES 
-void dibujaZonaEsenciales(){
-pushStyle();
-
-popStyle();
+void dibujaZonaPractica (){
+  pushStyle();
+   fill (164, 107, 136);
+  strokeWeight(2);
+  rect (margeX,margeY, width-margeX*2, ampmenu);
+  fill (0); textAlign (CENTER); textSize(40);
+  text ("PRÁCTICA", 960, 77);
+  //sección rosa 
+  fill (227, 188, 208);
+  rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
+  b0.displayRoundButton();
+  back.displayRoundButton();
+  popStyle();
 }

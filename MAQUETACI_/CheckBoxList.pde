@@ -22,7 +22,7 @@ class CheckBoxList{
     this.info=info; 
     this.cbs= new CheckboxText[info.length ];
     for (int i=0; i<info.length; i++){
-      cbs[i]= new CheckboxText (info[i], x, y+h*i, w, h);
+      cbs[i]= new CheckboxText (info[i], x, y, w, h);
      //cbs[i].setImage (info[i].toLowerCase()+".png");
     }
   }

@@ -6,6 +6,10 @@ void mousePressed() {
   if (b0.mouseOverRoundButton()) {
     pantalla=PANTALLA.ENTRADA;
   }
+  
+  if (next.mouseOverRoundButton()){
+    
+  }
 
 
   if (pantalla==PANTALLA.ENTRADA) {
@@ -40,7 +44,7 @@ void mousePressed() {
     if (b3.mouseOverButton()){
      pantalla=PANTALLA.FAQs;
     }else if (b4.mouseOverButton()){
-     // pantalla=PANTALLA.PRACTICA;
+     pantalla=PANTALLA.PRACTICA;
     }else if (b5.mouseOverButton()){
       pantalla=PANTALLA.ESENCIALES;
     }else if (b6.mouseOverButton()){
