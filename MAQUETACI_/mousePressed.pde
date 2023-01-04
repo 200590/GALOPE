@@ -41,10 +41,6 @@ void mousePressed() {
         }
         s1.toggle();
       }
-
-    /* Textousuario.isPressed();
-     Textocontraseña.isPressed();
-     cb1.checkMouse();*/
   }
 
   if (pantalla==PANTALLA.ELECCION) {
@@ -53,19 +49,26 @@ void mousePressed() {
     }else if (b4.mouseOverButton()){
      pantalla=PANTALLA.PRACTICA;
     }else if (b5.mouseOverButton()){
+       P1.reset();
+       P2.reset();
+       P3.reset();
       pantalla=PANTALLA.ESENCIALES;
     }else if (b6.mouseOverButton()){
       //pantalla=PANTALLA.CALENDARIO
     }
-    
-    //b3.mouseOverButton();
-    //b4.mouseOverButton();
-    //b5.mouseOverButton();
-   // b6.mouseOverButton();
+   
   }
 
   if (pantalla==PANTALLA.ESENCIALES) {
     cb1.checkMouse();
     //cb2.display();
+  }
+  
+  if (pantalla==PANTALLA.FAQs){
+   if (b11.mouseOverButton()){
+     PT.nextPage();
+   }else if(b12.mouseOverButton()){
+     PT.prevPage();
+   }
   }
 }

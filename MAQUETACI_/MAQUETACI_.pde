@@ -8,7 +8,7 @@ String[] selectedValue={"JINETE/AMAZONA", "ENTRENADOR/A", "AMBOS", "OTROS"};
 enum PANTALLA {ENTRADA, IS, EMP, ELECCION,FAQs,  ESENCIALES, PRACTICA};
 
 //PANTALLA ACTUAL
-PANTALLA pantalla=PANTALLA.IS;
+PANTALLA pantalla=PANTALLA.ENTRADA;
 
 
 
@@ -41,7 +41,7 @@ void draw () {
   case ELECCION:
     dibujaPantallaEleccion(); break;
   case FAQs:
-    dibujaPantallaFAQs(); break;
+   dibujaPantallaFAQs(); break;
   case ESENCIALES:
     dibujaPantallaEsenciales();break;
   case PRACTICA:

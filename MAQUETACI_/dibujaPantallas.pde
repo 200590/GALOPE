@@ -58,22 +58,22 @@ void dibujaPantallaFAQs() {
   rect (margeX,margeY, width-margeX*2, ampmenu);
   fill (0); textAlign (CENTER); textSize(40);
   text ("INFORMACIÓN GALOPES (FAQs)", 960, 77);
-  for (int i=0; i<faqs.length; i++) {
+ 
+  /*for (int i=0; i<faqs.length; i++) {
     if (faqs[i]!=null) {
       faqs[i].display();
     }
-  }
+  }*/
+  
+  PT.display (50, 50, tableW,tableH);
+  b11.displayButton();
+  b12.displayButton();
 }
 
+
+
 void dibujaPantallaEsenciales() {
-  fill (164, 107, 136);
-  strokeWeight(2);
-  rect (margeX,margeY, width-margeX*2, ampmenu);
-  fill (0); textAlign (CENTER); textSize(40);
-  text ("ESENCIALES", 960, 77);
-  back.displayRoundButton();
-  cb1.display();
-  // cb2.display();
+  dibujaZonaEsenciales();
 }
 
 void dibujaPantallaPractica(){
@@ -82,6 +82,6 @@ void dibujaPantallaPractica(){
   b8.displayButton(); 
   b9.displayButton();
   b10.displayButton();
-  next.displayRoundButton();
+  //next.displayRoundButton();
   back.displayRoundButton();
 }

@@ -113,3 +113,18 @@ void dibujaZonaPractica (){
   back.displayRoundButton();
   popStyle();
 }
+
+void dibujaZonaEsenciales(){
+  pushStyle();
+  fill (164, 107, 136);
+  strokeWeight(2);
+  rect (margeX,margeY, width-margeX*2, ampmenu);
+  fill (0); textAlign (CENTER); textSize(40);
+  text ("ESENCIALES", 960, 77);
+  back.displayRoundButton();
+  cb1.display();
+  P1.display();
+  P2.display();
+  P3.display();
+  popStyle();
+}

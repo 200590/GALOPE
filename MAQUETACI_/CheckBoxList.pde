@@ -2,7 +2,7 @@ class CheckBoxList{
 
   //caracteristicas(dimensiones, posiciones)
   float x, y, w, h;
-  float margeV=50;
+  float margeV=55;
   
   //características (informacion, checkboxes)
   String []info;
