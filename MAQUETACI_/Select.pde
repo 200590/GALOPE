@@ -4,8 +4,8 @@ class Select{
   String[] opciones; //diferentes opciones del desplegable
   String selectedValue; //valor seleccionado
   
-  boolean wraped=true;   //plegat/desplegat
-  float lineSpace=15;    //espacio entre lineas
+  boolean wraped=false;   //plegat/desplegat
+  float lineSpace=10;    //espacio entre lineas
   
   Select (String[] opciones, float x, float y, float w, float h){
     this.opciones=opciones; 
@@ -31,7 +31,7 @@ class Select{
     triangle (x + w - 25, y+5, x + w - 15, y + 25, x + w - 5 , y+5);
     //caracteristicas opciones
     fill (0); textSize (14);
-     text(selectedValue, x + 10, y + 20);
+     text(selectedValue, x , y + 20);
      
      if (!this.wraped){
        fill(255); stroke(0);

@@ -71,4 +71,14 @@ void mousePressed() {
      PT.prevPage();
    }
   }
+  
+  if (pantalla==PANTALLA.PRACTICA){
+    if (b7.mouseOverButton()){
+      pantalla=PANTALLA.PRACTICATEST1;
+    }
+  }
+    /*else if (b8.mouseOverButton()){
+    }else if (b9.mouseOverButton()){
+   }else if (b10.mouseOverButton()){
+  }*/
 }

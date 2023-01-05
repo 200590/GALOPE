@@ -15,9 +15,6 @@ void dibujaZonaLogo(){
  pushStyle();
   fill (129, 170, 255);
   b0.displayRoundButton();
-  //rect (margeX,margeX+107, llarglogo, amplogo);
-  //fill (0);textSize (20);
- //text ("LOGO", 75, 185);
  popStyle();
 }
 
@@ -127,4 +124,35 @@ void dibujaZonaEsenciales(){
   P2.display();
   P3.display();
   popStyle();
+}
+
+void dibujaZonaPracticaTEST(){
+  //menu y logo
+  pushStyle();
+  fill (164, 107, 136);
+  strokeWeight(2);
+  rect (margeX,margeY, width-margeX*2, ampmenu);
+  fill (0); textAlign (CENTER); textSize(40);
+  text ("TEST", 960, 77);
+  back.displayRoundButton();
+
+  
+  //recuadro informativo
+  fill(255);
+  rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20);
+  textAlign(LEFT);fill(0);
+  text("TEST GALOPE 1", 242, 210);
+  popStyle();
+  
+  //esferas indicadoras de preguntas
+  //fill (255); stroke (2);
+  for (float i=llarglogo/2+180; i<llargeneral-amplogo; i+=70){
+    fill(255); stroke (5);
+    ellipse (i, amplogo/2+ampmenu-22+Rroundbutton+50, 35, 35);
+  }
+  //recuadro pregunta
+rect (margeX, margeY+321, width-margeX*2, ampmenu);
+textAlign (CENTER); fill (0);
+text("PREGUNTA:", 100, 395);
+ //ellipse (llarglogo/2+180, amplogo/2+ampmenu-22+Rroundbutton+50, 35,35);
 }

@@ -39,7 +39,6 @@ void setGUI() {
   setFAQs();
 
   //creación botones
-  // b0= new Button ("LOGO",margeX,margeX+107, llarglogo, amplogo);
   b1= new Button("INICIAR SESIÓN", Xbutton, Ybutton, Wbutton, Hbutton);
   b2= new Button ("EMPEZAR", Xbutton, Ybutton+200, Wbutton, Hbutton);
   b0= new RoundButton ("GALOPE", llarglogo/2+16, amplogo/2+ampmenu+30, Rroundbutton+20);
@@ -73,9 +72,9 @@ void setGUI() {
   s1=new Select (selectedValue, Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton);
   
   //PopUps
-  P1= new PopUp (1431, Ycheckbox, 300, 200, 20, "ASUNTO", "MENSAJE", color (245, 123, 90));
-  P2= new PopUp (1431, Ycheckbox+270, 300, 200, 20, "ASUNTO", "MENSAJE", color (245, 123, 90));
-  P3= new PopUp (1431, Ycheckbox+270*2, 300, 200, 20, "ASUNTO", "MENSAJE", color (245, 123, 90));
+  P1= new PopUp (1431, Ycheckbox, 300, 200, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
+  P2= new PopUp (1431, Ycheckbox+270, 300, 200, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
+  P3= new PopUp (1431, Ycheckbox+270*2, 300, 200, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
   //PagedTable
   b11= new Button ("NEXT", buttonPTX, buttonPTY, buttonPTW, buttonPTH);
   b12=new Button ("PREV", buttonPTX-30, buttonPTY-30, buttonPTW, buttonPTH);

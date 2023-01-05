@@ -85,3 +85,7 @@ void dibujaPantallaPractica(){
   //next.displayRoundButton();
   back.displayRoundButton();
 }
+
+void dibujaPantallaPracTEST1(){
+  dibujaZonaPracticaTEST();
+}
