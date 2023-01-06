@@ -89,3 +89,7 @@ void dibujaPantallaPractica(){
 void dibujaPantallaPracTEST1(){
   dibujaZonaPracticaTEST();
 }
+
+void dibujaPantallaPracTEST2(){
+  dibujaZonaPracticaTEST2();
+}

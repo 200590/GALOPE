@@ -20,6 +20,12 @@ PopUp P1, P2, P3;
 //Pantalla FAQs
 Button b11, b12;
 PagedTable PT;
+//pantalla practica test 1
+RadioButton rb1, rb2, rb3, rb4;
+RadioButtonGroup rbg;
+//pantalla practica test 2
+RadioButton rb5, rb6, rb7;
+RadioButtonGroup rbg2;
 
 //textos opciones checkboxlist
 String[] info1={"EXEMPLE 1", "EXEMPLE 2", "EXEMPLE 3", "EXEMPLE 4", "EXEMPLE 5", "EXEMPLE 6"};
@@ -79,4 +85,21 @@ void setGUI() {
   b11= new Button ("NEXT", buttonPTX, buttonPTY, buttonPTW, buttonPTH);
   b12=new Button ("PREV", buttonPTX-30, buttonPTY-30, buttonPTW, buttonPTH);
   PT= new PagedTable (5, 1);
+  
+  //radio buttons practica test 1
+  rb1= new RadioButton (664, 495, 30);
+  rb2= new RadioButton (664, 550, 30); 
+  rb3= new RadioButton (730, 495, 30);
+  rb4= new RadioButton (730, 550, 30);
+  //group radio button
+  rbg= new RadioButtonGroup(4);
+  rbg.setRadioButtons(rb1, rb2, rb3, rb4); 
+  
+  //radio button practica test 2
+   rb5= new RadioButton (664, 495, 30);
+  rb6= new RadioButton (664, 550, 30); 
+  rb7= new RadioButton (730, 495, 30);
+  //group radio button
+  rbg2= new RadioButtonGroup(3);
+  rbg2.setRadioButtons(rb1, rb2, rb3); 
 }
