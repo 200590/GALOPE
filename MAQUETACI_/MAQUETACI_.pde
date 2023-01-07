@@ -5,10 +5,10 @@ Select s1;
 String[] selectedValue={"JINETE/AMAZONA", "ENTRENADOR/A", "AMBOS", "OTROS"};
 
 //Enumerat pantalles
-enum PANTALLA {ENTRADA, IS, EMP, ELECCION,FAQs,  ESENCIALES, PRACTICA, PRACTICATEST1, PRACTICATEST2};
+enum PANTALLA {ENTRADA, IS, EMP, ELECCION,FAQs,  ESENCIALES, PRACTICA, PRACTICATEST1, PRACTICATEST2, EVALUACION, CORRECCION};
 
 //PANTALLA ACTUAL
-PANTALLA pantalla=PANTALLA.PRACTICA;
+PANTALLA pantalla=PANTALLA.CORRECCION;
 
 
 
@@ -50,6 +50,10 @@ void draw () {
     dibujaPantallaPracTEST1(); break;
   case PRACTICATEST2: 
     dibujaPantallaPracTEST2(); break;
+   case EVALUACION: 
+     dibujaPantallaEvaluacion(); break;
+   case CORRECCION:
+     dibujaPantallaCorreccion (); break;
   }
 
 

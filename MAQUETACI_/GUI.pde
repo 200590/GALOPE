@@ -11,8 +11,7 @@ TextField Textousuario, Textocontraseña;
 TextField Textocorreo, TextocontraseñaE, TextOcupacion;
 //Pantalla elección
 Button b3, b4, b5, b6;
-CheckBoxList cb1;
-CheckBoxList cb2;
+CheckBoxList cb1, cb2, cb3;
 //pantalla practica
 Button b7, b8, b9, b10;
 //Pantalla esenciales
@@ -29,8 +28,8 @@ RadioButtonGroup rbg2;
 
 //textos opciones checkboxlist
 String[] info1={"EXEMPLE 1", "EXEMPLE 2", "EXEMPLE 3", "EXEMPLE 4", "EXEMPLE 5", "EXEMPLE 6"};
-String[] info2={"EXEMPLE A", "EXEMPLE B", "EXEMPLE C", "EXEMPLE D", "EMEPLE E"};
-
+String [] evaluacion={"RESPUESTA 1", "RESPUESTA2","RESPUESTA 3", "RESPUESTA 4", "RESPUESTA 5"};
+String []evaluacion2={"RESPUESTA 6", "RESPUESTA 7", "RESPUESTA 8", "RESPUESTA 9", "RESPUESTA 10"};
 void setFAQs() {
  /* faqs = new FAQ[8];
 
@@ -102,4 +101,8 @@ void setGUI() {
   //group radio button
   rbg2= new RadioButtonGroup(3);
   rbg2.setRadioButtons(rb1, rb2, rb3); 
+  
+  //checkbox list evaluación
+  cb2= new CheckBoxList (evaluacion, 238, 334, 80, 80);
+  cb3= new CheckBoxList (evaluacion2,  838, 334, 80, 80);
 }

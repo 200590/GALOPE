@@ -14,7 +14,7 @@ void mousePressed() {
   }
 
     if (back.mouseOverRoundButton()){
-      if (pantalla==PANTALLA.FAQs||pantalla==PANTALLA.ESENCIALES||pantalla==PANTALLA.PRACTICA||pantalla==PANTALLA.PRACTICATEST1){
+      if (pantalla==PANTALLA.FAQs||pantalla==PANTALLA.ESENCIALES||pantalla==PANTALLA.PRACTICA||pantalla==PANTALLA.PRACTICATEST1||pantalla==PANTALLA.PRACTICATEST2||pantalla==PANTALLA.EVALUACION||pantalla==PANTALLA.CORRECCION){
         pantalla=PANTALLA.ELECCION;
     }
     }
@@ -61,7 +61,6 @@ void mousePressed() {
 
   if (pantalla==PANTALLA.ESENCIALES) {
     cb1.checkMouse();
-    //cb2.display();
   }
   
   if (pantalla==PANTALLA.FAQs){
@@ -87,8 +86,8 @@ void mousePressed() {
   if (pantalla==PANTALLA.PRACTICATEST2){
     rbg2.updateOnClick();
   }
-    /*else if (b8.mouseOverButton()){
-    }else if (b9.mouseOverButton()){
-   }else if (b10.mouseOverButton()){
-  }*/
+  if (pantalla==PANTALLA.EVALUACION){
+    cb2.checkMouse();
+    cb3.checkMouse();
+  }
 }

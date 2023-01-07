@@ -92,7 +92,6 @@ void dibujaZonaEleccion(){
   fill (227, 188, 208);
  rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
   b0.displayRoundButton();
-  next.displayRoundButton();
   popStyle();
 }
 
@@ -181,7 +180,6 @@ void dibujaZonaPracticaTEST2(){
   rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20);
   textAlign(LEFT);fill(0);
   text("TEST GALOPE 1", 242, 210);
-  popStyle();
   
   //esferas indicadoras de preguntas
   //fill (255); stroke (2);
@@ -201,4 +199,57 @@ text("PREGUNTA:", 100, 395);
  text ("RESPOSTA 3", 750, 495);
  
  rbg2.display();
+popStyle();
+}
+
+void dibujaZonaEvaluacion(){
+   //menu y logo
+  pushStyle();
+  fill (164, 107, 136);
+  strokeWeight(2);
+  rect (margeX,margeY, width-margeX*2, ampmenu);
+  fill (0); textAlign (CENTER); textSize(40);
+  text ("EVALUACION TEST", 960, 77);
+  back.displayRoundButton();
+
+  
+  //recuadro informativo
+  fill(255);
+  rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20);
+  textAlign(LEFT);fill(0);
+  text("EVALUACION TEST GALOPE 1", 242, 210);
+  cb2.display();
+  cb3.display();
+  
+  //rombo marcador
+  fill(255); 
+  //rotate(PI/4);
+  rect(1456, 332, 250,  250);
+   fill(0);
+  text ("X/10", 1556, 465);
+  popStyle();
+}
+
+void dibujaZonaCorreccion(){
+   //menu y logo
+  pushStyle();
+  fill (164, 107, 136);
+  strokeWeight(2);
+  rect (margeX,margeY, width-margeX*2, ampmenu);
+  fill (0); textAlign (CENTER); textSize(40);
+  text ("CORRECCION", 960, 77);
+  back.displayRoundButton();
+
+  
+  //recuadro informativo
+  fill(255);
+  rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20);
+  textAlign(LEFT);fill(0);
+  text("PREGUNTA", 242, 210);
+  
+  //cuadro correccion
+  fill(255);
+  rect (margeX, margeY+270, width-margeX*2, 200);
+  fill (0);
+  text ("CORRECCIÓN: ", 31, 395);
 }

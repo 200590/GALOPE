@@ -93,3 +93,11 @@ void dibujaPantallaPracTEST1(){
 void dibujaPantallaPracTEST2(){
   dibujaZonaPracticaTEST2();
 }
+
+void dibujaPantallaEvaluacion(){
+  dibujaZonaEvaluacion();
+}
+
+void dibujaPantallaCorreccion(){
+  dibujaZonaCorreccion();
+}
