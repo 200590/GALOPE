@@ -156,10 +156,11 @@ text("PREGUNTA:", 100, 395);
  //ellipse (llarglogo/2+180, amplogo/2+ampmenu-22+Rroundbutton+50, 35,35);
  
  //textos radio button
- text ("RESPOSTA 1", 684, 495); 
- text ("RESPOSTA 2", 684, 550); 
- text ("RESPOSTA 3", 750, 495);
- text ("RESPOSTA 4", 750, 550);
+ textAlign (CENTER);
+ text ("RESPOSTA 1", 789, 530); 
+ text ("RESPOSTA 2", 789, 725); 
+ text ("RESPOSTA 3", 1310, 530);
+ text ("RESPOSTA 4", 1310, 725);
  
  rbg.display();
 }
@@ -194,9 +195,10 @@ text("PREGUNTA:", 100, 395);
  //ellipse (llarglogo/2+180, amplogo/2+ampmenu-22+Rroundbutton+50, 35,35);
  
   //textos radio button
- text ("RESPOSTA 1", 684, 495); 
+ textAlign (CENTER);
+ text ("RESPOSTA 1", 810, 535); 
  text ("RESPOSTA 2", 684, 550); 
- text ("RESPOSTA 3", 750, 495);
+ text ("RESPOSTA 3", 876, 535);
  
  rbg2.display();
 popStyle();

@@ -86,16 +86,16 @@ void setGUI() {
   PT= new PagedTable (5, 1);
   
   //radio buttons practica test 1
-  rb1= new RadioButton (664, 495, 30);
-  rb2= new RadioButton (664, 550, 30); 
-  rb3= new RadioButton (730, 495, 30);
-  rb4= new RadioButton (730, 550, 30);
+  rb1= new RadioButton (664, 520, 30);
+  rb2= new RadioButton (664, 715, 30); 
+  rb3= new RadioButton (1185, 520, 30);
+  rb4= new RadioButton (1185, 715, 30);
   //group radio button
   rbg= new RadioButtonGroup(4);
   rbg.setRadioButtons(rb1, rb2, rb3, rb4); 
   
   //radio button practica test 2
-   rb5= new RadioButton (664, 495, 30);
+  rb5= new RadioButton (664, 495, 30);
   rb6= new RadioButton (664, 550, 30); 
   rb7= new RadioButton (730, 495, 30);
   //group radio button
