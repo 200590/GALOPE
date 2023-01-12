@@ -21,6 +21,7 @@ class RadioButton{
   
   //dibuja Checkcercle
   void display(){
+    pushStyle();
     stroke(borderColor);
     strokeWeight(3);
     fill(backgroundColor);
@@ -30,6 +31,7 @@ class RadioButton{
       fill(checkedColor); noStroke();
       ellipse (x, y, 1.5*r, 1.5*r);
     }
+    popStyle();
   }
   
   void setChecked (boolean b){

@@ -22,6 +22,7 @@ PagedTable PT;
 //pantalla practica test 1
 RadioButton rb1, rb2, rb3, rb4;
 RadioButtonGroup rbg;
+ArrayButtons AB1;
 //pantalla practica test 2
 RadioButton rb5, rb6, rb7;
 RadioButtonGroup rbg2;
@@ -84,12 +85,18 @@ void setGUI() {
   b11= new Button ("NEXT", buttonPTX, buttonPTY, buttonPTW, buttonPTH);
   b12=new Button ("PREV", buttonPTX-30, buttonPTY-30, buttonPTW, buttonPTH);
   PT= new PagedTable (5, 1);
+  float[] colsWidth ={100};
+  PT.setColumWidths(colsWidth);
+  String[] header = {"FAQ"};
+  PT.setHeaders(header);
+  String[][] faqs ={ {"pregunta1","resposta1"},{"pregunta2","resposta2"}};
+  PT.setData(faqs);
   
   //radio buttons practica test 1
-  rb1= new RadioButton (664, 520, 30);
-  rb2= new RadioButton (664, 715, 30); 
-  rb3= new RadioButton (1185, 520, 30);
-  rb4= new RadioButton (1185, 715, 30);
+  rb1= new RadioButton (600, 600, 30);
+  rb2= new RadioButton (600, 800, 30); 
+  rb3= new RadioButton (1185, 600, 30);
+  rb4= new RadioButton (1185, 800, 30);
   //group radio button
   rbg= new RadioButtonGroup(4);
   rbg.setRadioButtons(rb1, rb2, rb3, rb4); 

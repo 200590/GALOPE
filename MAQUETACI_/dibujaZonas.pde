@@ -150,6 +150,7 @@ void dibujaZonaPracticaTEST(){
     ellipse (i, amplogo/2+ampmenu-22+Rroundbutton+50, 35, 35);
   }
   //recuadro pregunta
+  strokeWeight(3);
 rect (margeX, margeY+321, width-margeX*2, ampmenu);
 textAlign (CENTER); fill (0);
 text("PREGUNTA:", 100, 395);
@@ -157,10 +158,10 @@ text("PREGUNTA:", 100, 395);
  
  //textos radio button
  textAlign (CENTER);
- text ("RESPOSTA 1", 789, 530); 
- text ("RESPOSTA 2", 789, 725); 
- text ("RESPOSTA 3", 1310, 530);
- text ("RESPOSTA 4", 1310, 725);
+ text ("RESPOSTA 1", 720, 610); 
+ text ("RESPOSTA 2", 720, 810); 
+ text ("RESPOSTA 3", 1300, 610);
+ text ("RESPOSTA 4", 1300, 810);
  
  rbg.display();
 }
