@@ -122,6 +122,7 @@ void dibujaZonaPractica (){
 
 void dibujaZonaEsenciales(){
   pushStyle();
+   fill (255, 252, 252);
   fill (219, 130, 193);
   strokeWeight(2);
   rect (margeX,margeY, width-margeX*2, ampmenu, 10);
@@ -138,9 +139,10 @@ void dibujaZonaEsenciales(){
 void dibujaZonaPracticaTEST(){
   //menu y logo
   pushStyle();
+   fill (255, 252, 252);
  fill (219, 130, 193);
   strokeWeight(2);
-  rect (margeX,margeY, width-margeX*2, ampmenu);
+  rect (margeX,margeY, width-margeX*2, ampmenu, 10);
   fill (0); textAlign (CENTER); textSize(40);
   text ("TEST", 960, 77);
   back.displayRoundButton();
@@ -148,7 +150,7 @@ void dibujaZonaPracticaTEST(){
   
   //recuadro informativo
   fill(255);
-  rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20);
+  rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20, 10);
   textAlign(LEFT);fill(0);
   text("TEST GALOPE 1", 242, 210);
   popStyle();
@@ -163,7 +165,7 @@ void dibujaZonaPracticaTEST(){
   //recuadro pregunta
   strokeWeight(2);
   fill(255);
-rect (margeX, margeY+321, width-margeX*2, ampmenu);
+rect (margeX, margeY+321, width-margeX*2, ampmenu, 10);
 textAlign (CENTER); fill (0);
 text("PREGUNTA:", 100, 395);
  //ellipse (llarglogo/2+180, amplogo/2+ampmenu-22+Rroundbutton+50, 35,35);
@@ -176,14 +178,16 @@ text("PREGUNTA:", 100, 395);
  text ("RESPOSTA 4", 1300, 810);
  
  rbg.display();
+ b14.displayButton();
 }
 
 void dibujaZonaPracticaTEST2(){
   //menu y logo
   pushStyle();
+   fill (255, 252, 252);
  fill (219, 130, 193);
   strokeWeight(2);
-  rect (margeX,margeY, width-margeX*2, ampmenu);
+  rect (margeX,margeY, width-margeX*2, ampmenu, 10);
   fill (0); textAlign (CENTER); textSize(40);
   text ("TEST", 960, 77);
   back.displayRoundButton();
@@ -191,7 +195,7 @@ void dibujaZonaPracticaTEST2(){
   
   //recuadro informativo
   fill(255);
-  rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20);
+  rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20, 10);
   textAlign(LEFT); fill(0);
   text("TEST GALOPE 1", 242, 210);
   
@@ -204,7 +208,7 @@ void dibujaZonaPracticaTEST2(){
   
   //recuadro pregunta
   fill(255);
-rect (margeX, margeY+321, width-margeX*2, ampmenu);
+rect (margeX, margeY+321, width-margeX*2, ampmenu, 10);
 textAlign (CENTER); fill (0);
 text("PREGUNTA:", 115, 400);
  //ellipse (llarglogo/2+180, amplogo/2+ampmenu-22+Rroundbutton+50, 35,35);
@@ -216,15 +220,17 @@ text("PREGUNTA:", 115, 400);
  text ("RESPOSTA 3", 1340, 612);
  
  rbg2.display();
+ b14.displayButton();
 popStyle();
 }
 
 void dibujaZonaEvaluacion(){
    //menu y logo
   pushStyle();
+   fill (255, 252, 252);
   fill (219, 130, 193);
   strokeWeight(2);
-  rect (margeX,margeY, width-margeX*2, ampmenu);
+  rect (margeX,margeY, width-margeX*2, ampmenu, 10);
   fill (0); textAlign (CENTER); textSize(40);
   text ("EVALUACION TEST", 960, 77);
   back.displayRoundButton();
@@ -232,7 +238,7 @@ void dibujaZonaEvaluacion(){
   
   //recuadro informativo
   fill(255);
-  rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20);
+  rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20, 10);
   textAlign(LEFT);fill(0);
   text("EVALUACION TEST GALOPE 1", 242, 210);
   cb2.display();
@@ -250,6 +256,7 @@ void dibujaZonaEvaluacion(){
 void dibujaZonaCorreccion(){
    //menu y logo
   pushStyle();
+   fill (255, 252, 252);
  fill (219, 130, 193);
   strokeWeight(2);
   rect (margeX,margeY, width-margeX*2, ampmenu);
@@ -278,13 +285,24 @@ void dibujaZonaCorreccion(){
 void dibujaZonaCalendario(){
    //menu y logo
   pushStyle();
+   fill (255, 252, 252);
   fill (219, 130, 193);
   strokeWeight(2);
-  rect (margeX,margeY, width-margeX*2, ampmenu);
+  rect (margeX,margeY, width-margeX*2, ampmenu, 10);
   fill (0); textAlign (CENTER); textSize(40);
   text ("CALENDARIO", 960, 77);
   back.displayRoundButton();
   
+  //recuadro fecha
+  fill (255, 252, 252);
+  
+  rect (460, 195, 570, 100, 10);
+ 
+  
   c.display();
+  ImportantEvents.display();
+  fill (0);
+  textAlign (LEFT);
+  text ("EVENTOS IMPORTANTES", 623, 355);
   popStyle();
 }

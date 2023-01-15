@@ -1,7 +1,7 @@
 class Button {
 
   //características boton rect. 
-  float x, y, w, h;
+  float x, y, w, h, g;
   
   //características boton circulo
   float a, b, r; //a-->equivalente a x   b-->equivalente a y    r-->equivalente a radio
@@ -15,13 +15,14 @@ class Button {
   
 
   //constructor
-  Button (String texto, float x, float y, float w, float h) {
+  Button (String texto, float x, float y, float w, float h, float g) {
     this.textButton=texto;
     this.x=x;
     this.y=y;
     this.w=w;
     this.h=h;
-    ColorFill=color(227, 188, 208);
+    this.g=g;
+    ColorFill=color(255, 211, 234);
     fillColorOver=color(235, 188, 220);
     StrokeColor=color(0);
   }
@@ -37,7 +38,7 @@ class Button {
     }
     stroke(StrokeColor);
     strokeWeight(2);
-    rect (this.x, this.y, this.w, this.h);
+    rect (this.x, this.y, this.w, this.h, this.g);
 
     //propiedades texto
     fill(0);

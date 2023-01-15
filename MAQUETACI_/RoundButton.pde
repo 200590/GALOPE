@@ -10,7 +10,7 @@
     this.a=a; 
     this.b=b; 
     this.r=r;
-    FillColor=color(227, 188, 208);
+    FillColor=color(255, 211, 234);
     ColorFillOver=color(235, 188, 220);
   }
   

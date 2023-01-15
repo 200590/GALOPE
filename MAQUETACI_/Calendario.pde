@@ -22,12 +22,15 @@ class Calendario {
   
   // Dimensions del calendari
   int x, y, w, h;
+  float DTX, DTY;
   
   
   // Constructor
-  Calendario (int x, int y, int w, int h){
+  Calendario (int x, int y, int w, int h, float DTX, float DTY){
     
     this.buttons = new DayButton[37];
+    this.DTX=DTX; 
+    this.DTY=DTY;
     
     this.cal = Calendar.getInstance();
     cal.set(Calendar.DAY_OF_MONTH, 1);
@@ -176,8 +179,8 @@ class Calendario {
     
     if(dateSelected){
       String dateText = this.selectedDay+"/"+this.selectedMonth+"/"+this.selectedYear;
-      fill(0); textSize(24); textAlign(RIGHT);
-      text(dateText, x+w, y - 30);
+      fill(0); textSize(30); textAlign(RIGHT);
+      text(dateText, DTX, DTY);
     }
   }
   

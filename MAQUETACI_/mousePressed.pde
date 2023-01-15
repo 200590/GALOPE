@@ -89,10 +89,16 @@ void mousePressed() {
 
   else if (pantalla==PANTALLA.PRACTICATEST1) {
     rbg.updateOnClick();
+    if (b14.mouseOverButton()){
+    pantalla=PANTALLA.EVALUACION;
+    }
   }
 
   else if (pantalla==PANTALLA.PRACTICATEST2) {
     rbg2.updateOnClick();
+    if (b14.mouseOverButton()){
+      b14.mouseOverButton();
+    }
   }
   
   else if (pantalla==PANTALLA.EVALUACION) {

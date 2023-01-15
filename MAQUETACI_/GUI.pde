@@ -22,15 +22,17 @@ PagedTable PT;
 //pantalla practica test 1
 RadioButton rb1, rb2, rb3, rb4;
 RadioButtonGroup rbg;
-ArrayButtons AB1;
+//ArrayButtons AB1;
 Button buttons;
 //pantalla practica test 2
 RadioButton rb5, rb6, rb7;
 RadioButtonGroup rbg2;
+Button b14;
 //pantalla correccion
 Button b13;
 //pantalla calendario
 Calendario c;
+TextField ImportantEvents;
 
 //textos opciones checkboxlist
 String[] info1={"EXEMPLE 1", "EXEMPLE 2", "EXEMPLE 3", "EXEMPLE 4", "EXEMPLE 5", "EXEMPLE 6"};
@@ -50,29 +52,29 @@ void setGUI() {
   setFAQs();
 
   //creación botones
-  b1= new Button("INICIAR SESIÓN", Xbutton, Ybutton, Wbutton, Hbutton);
-  b2= new Button ("EMPEZAR", Xbutton, Ybutton+200, Wbutton, Hbutton);
+  b1= new Button("INICIAR SESIÓN", Xbutton, Ybutton, Wbutton, Hbutton, Gbutton);
+  b2= new Button ("EMPEZAR", Xbutton, Ybutton+200, Wbutton, Hbutton, Gbutton);
   b0= new RoundButton ("GALOPE", llarglogo/2+16, amplogo/2+ampmenu+30, Rroundbutton+20);
   next= new RoundButton("NEXT", Xroundbutton, Yroundbutton, Rroundbutton);
   back= new RoundButton ("BACK", 75, Yroundbutton, Rroundbutton);
 
 
 
-  b3= new Button ("INFORMACIÓN GALOPES (FAQs)", Xrecuadros, Yrecuadros, Wrecuadros, Hrecuadros);
-  b4= new Button ("PRÁCTICA", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros);
-  b5= new Button ("ESENCIALES", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros);
-  b6= new Button ("CALENDARIO", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros);
+  b3= new Button ("INFORMACIÓN GALOPES (FAQs)", Xrecuadros, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
+  b4= new Button ("PRÁCTICA", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
+  b5= new Button ("ESENCIALES", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
+  b6= new Button ("CALENDARIO", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
   
-  b7=new Button ("GALOPE 1", Xrecuadros, Yrecuadros, Wrecuadros, Hrecuadros);
-  b8= new Button ("GALOPE 2", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros);
-  b9= new Button ("GALOPE 3", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros);
-  b10= new Button ("GALOPE 4", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros);
+  b7=new Button ("GALOPE 1", Xrecuadros, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
+  b8= new Button ("GALOPE 2", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
+  b9= new Button ("GALOPE 3", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
+  b10= new Button ("GALOPE 4", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
 
   //creacion campo texto
-  Textousuario= new TextField((int)Xbutton, (int)Ybutton, (int)Wbutton, (int)Hbutton);
-  Textocontraseña= new TextField ((int)Xbutton, (int)Ybutton+150, (int) Wbutton, (int)Hbutton);
-  Textocorreo=new TextField ((int)Xcorreo, (int) Ycorreo, (int)Wbutton, (int) Hbutton);
-  TextocontraseñaE= new TextField ((int)Xcorreo, (int)Ycorreo+(int)Hbutton+25, (int)Wbutton, (int)Hbutton);
+  Textousuario= new TextField((int)Xbutton, (int)Ybutton, (int)Wbutton, (int)Hbutton, Gbutton);
+  Textocontraseña= new TextField ((int)Xbutton, (int)Ybutton+150, (int) Wbutton, (int)Hbutton, Gbutton);
+  Textocorreo=new TextField ((int)Xcorreo, (int) Ycorreo, (int)Wbutton, (int) Hbutton, Gbutton);
+  TextocontraseñaE= new TextField ((int)Xcorreo, (int)Ycorreo+(int)Hbutton+25, (int)Wbutton, (int)Hbutton, Gbutton);
   // TextOcupacion=new TextField (Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton);
 
   //consturcción checkbox List
@@ -87,8 +89,8 @@ void setGUI() {
   P2= new PopUp (1431, Ycheckbox+270, 300, 200, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
   P3= new PopUp (1431, Ycheckbox+270*2, 300, 200, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
   //PagedTable
-  b11= new Button ("NEXT", buttonPTX, buttonPTY, buttonPTW, buttonPTH);
-  b12=new Button ("PREV", buttonPTX-30, buttonPTY-30, buttonPTW, buttonPTH);
+  b11= new Button ("NEXT", buttonPTX, buttonPTY, buttonPTW, buttonPTH, Gbutton);
+  b12=new Button ("PREV", buttonPTX-30, buttonPTY-30, buttonPTW, buttonPTH, Gbutton);
   PT= new PagedTable (5, 1);
   float[] colsWidth ={100};
   PT.setColumWidths(colsWidth);
@@ -117,13 +119,15 @@ void setGUI() {
   //checkbox list evaluación
   cb2= new CheckBoxList (evaluacion, 238, 334, 80, 80);
   cb3= new CheckBoxList (evaluacion2,  838, 334, 80, 80);
+  b14= new Button ("FINALIZAR", 1500, 890, Wbutton, Hbutton, Gbutton);
   
   //pantalla correccion
-  b13= new Button ("EVALUACIÓN", 242, 890, Wbutton, Hbutton);
+  b13= new Button ("EVALUACIÓN", 242, 890, Wbutton, Hbutton, Gbutton);
   
   //array buttons pràcitca test 1
 //buttons=new ArrayButtons[10];
 
   //pantalla calendario
-  c= new Calendario (200, 100, 500, 550);
+  c= new Calendario (1075, 195, 839, 720, 610, 255);
+  ImportantEvents= new TextField (610, 310, 1025-610, 350, Gbutton);
 }

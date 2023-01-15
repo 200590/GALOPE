@@ -2,7 +2,7 @@
 
 class TextField{
 //caracteristicas campo texto
-float x, y, h, w;
+float x, y, h, w, g;
 
 //colores
 color FieldNoSelectedColor=color(227, 188, 208);
@@ -18,11 +18,12 @@ int textSize=30;
 boolean selected=false;
 
 // constructor campo de texto
-TextField(float x, float y, float w, float h){
+TextField(float x, float y, float w, float h, float g){
   this.x=x; 
   this.y=y;
   this.w=w; 
   this.h=h;
+  this.g=g;
 }
 
 //dibuija campo de texto
@@ -34,7 +35,7 @@ void display(){
   }
   strokeWeight(borderWeight);
   stroke(bordercolor);
-  rect (x, y, w, h);
+  rect (x, y, w, h, g);
 }
 
 void keyPressed(char key, int keyCode) {

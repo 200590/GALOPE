@@ -43,6 +43,8 @@ float Xbutton=815;
 float Ybutton=396;
 float Wbutton=300;
 float Hbutton=90;
+float Gbutton=15;
+
 //posicions text b1, b2
 float textX=965; 
 float textY=453;

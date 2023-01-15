@@ -1,4 +1,4 @@
-int n;
+/*int n;
 class ArrayButtons {
   
   Button[] buttons;
@@ -17,4 +17,4 @@ class ArrayButtons {
     }
     popStyle();
   }
-}
+}*/
