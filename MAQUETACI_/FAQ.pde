@@ -13,7 +13,7 @@ class FAQ {
     this.h1 = h1;
     this.h2=h2;
     this.c1=c1;
-    this.c2 = c2;
+    this.c2 =c2;
   }
   
   void display(){

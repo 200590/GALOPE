@@ -89,8 +89,8 @@ void setGUI() {
   P2= new PopUp (1431, Ycheckbox+270, 300, 200, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
   P3= new PopUp (1431, Ycheckbox+270*2, 300, 200, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
   //PagedTable
-  b11= new Button ("NEXT", buttonPTX, buttonPTY, buttonPTW, buttonPTH, Gbutton);
-  b12=new Button ("PREV", buttonPTX-30, buttonPTY-30, buttonPTW, buttonPTH, Gbutton);
+  b11= new Button ("NEXT", buttonPTX+130, buttonPTY, buttonPTW, buttonPTH, Gbutton);
+  b12=new Button ("PREV", buttonPTX, buttonPTY, buttonPTW, buttonPTH, Gbutton);
   PT= new PagedTable (5, 1);
   float[] colsWidth ={100};
   PT.setColumWidths(colsWidth);

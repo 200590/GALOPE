@@ -3,12 +3,14 @@ boolean logged=false;
 Select s1;
 //opcions select
 String[] selectedValue={"JINETE/AMAZONA", "ENTRENADOR/A", "AMBOS", "OTROS"};
+PFont font;
+
 
 //Enumerat pantalles
-enum PANTALLA {ENTRADA, IS, EMP, ELECCION,FAQs,  ESENCIALES, PRACTICA, PRACTICATEST1, PRACTICATEST2, EVALUACION, CORRECCION, CALENDARIO};
+enum PANTALLA {ENTRADA, IS, EMP, ELECCION, FAQs,  ESENCIALES, PRACTICA, PRACTICATEST1, PRACTICATEST2, EVALUACION, CORRECCION, CALENDARIO};
 
 //PANTALLA ACTUAL
-PANTALLA pantalla=PANTALLA.PRACTICATEST1;
+PANTALLA pantalla=PANTALLA.FAQs;
 
 
 
@@ -16,12 +18,14 @@ void setup() {
   fullScreen(P2D);
   textAlign (CENTER);
   setGUI();
-  loadMedia();
+ // setMedias();
+  //loadMedia();
 }
 
 void draw () {
   background(255);
   //image(Logo, margeX, margeX+107, llarglogo, amplogo);
+  //displayLogo(40, 50, 70, 70);
 
  
   //menu

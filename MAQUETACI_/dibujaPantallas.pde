@@ -53,9 +53,9 @@ void dibujaPantallaEleccion() {
 
 void dibujaPantallaFAQs() {
   back.displayRoundButton();
-  fill (164, 107, 136);
+  fill (219, 130, 193);
   strokeWeight(2);
-  rect (margeX,margeY, width-margeX*2, ampmenu);
+  rect (margeX,margeY, width-margeX*2, ampmenu, 10);
   fill (0); textAlign (CENTER); textSize(40);
   text ("INFORMACIÓN GALOPES (FAQs)", 960, 77);
  
@@ -65,7 +65,7 @@ void dibujaPantallaFAQs() {
     }
   }*/
   
-  PT.display (50, 50, tableW,tableH);
+  PT.display (margeX, 270, width-margeX*2, tableH);
   b11.displayButton();
   b12.displayButton();
 }

@@ -37,7 +37,8 @@ pushStyle();
   fill (219, 130, 193);
   strokeWeight(2);
   rect (margeX,margeY, width-margeX*2, ampmenu, 10);
-  fill (0); textAlign (CENTER); textSize(40);
+  fill (0); textAlign (CENTER); textSize(40); 
+  //textFont(font);
   text ("ENTRADA", 960, 77);
   //sección rosa 
   stroke(0);

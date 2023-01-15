@@ -67,8 +67,8 @@ float selectedH=50;
 float tableW=800; 
 float tableH=500;
 //dimensions botons i posició
-float buttonPTX=400;
-float buttonPTY=400;
+float buttonPTX=1150;
+float buttonPTY=820;
 float buttonPTW=90; 
 float buttonPTH=90;
   //num rows+capçalera
