@@ -23,9 +23,14 @@ PagedTable PT;
 RadioButton rb1, rb2, rb3, rb4;
 RadioButtonGroup rbg;
 ArrayButtons AB1;
+Button buttons;
 //pantalla practica test 2
 RadioButton rb5, rb6, rb7;
 RadioButtonGroup rbg2;
+//pantalla correccion
+Button b13;
+//pantalla calendario
+Calendario c;
 
 //textos opciones checkboxlist
 String[] info1={"EXEMPLE 1", "EXEMPLE 2", "EXEMPLE 3", "EXEMPLE 4", "EXEMPLE 5", "EXEMPLE 6"};
@@ -112,4 +117,13 @@ void setGUI() {
   //checkbox list evaluación
   cb2= new CheckBoxList (evaluacion, 238, 334, 80, 80);
   cb3= new CheckBoxList (evaluacion2,  838, 334, 80, 80);
+  
+  //pantalla correccion
+  b13= new Button ("EVALUACIÓN", 242, 890, Wbutton, Hbutton);
+  
+  //array buttons pràcitca test 1
+//buttons=new ArrayButtons[10];
+
+  //pantalla calendario
+  c= new Calendario (200, 100, 500, 550);
 }

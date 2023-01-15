@@ -1,3 +1,4 @@
+int n;
 class ArrayButtons {
   
   Button[] buttons;

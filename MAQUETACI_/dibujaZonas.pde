@@ -32,17 +32,19 @@ popStyle();
 void dibujaZonaEntr(){
 pushStyle();
   //fons general
-  fill(244, 255, 253);
+  //fill(244, 255, 253);
   //zona menu
-  fill (164, 107, 136);
+  fill (219, 130, 193);
   strokeWeight(2);
-  rect (margeX,margeY, width-margeX*2, ampmenu);
+  rect (margeX,margeY, width-margeX*2, ampmenu, 10);
   fill (0); textAlign (CENTER); textSize(40);
   text ("ENTRADA", 960, 77);
   //sección rosa 
   stroke(0);
-  fill (227, 188, 208);
+  fill (255, 252, 252);
+  stroke(255);
   rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
+  stroke(0);
   b0.displayRoundButton();
   popStyle();
 }
@@ -51,14 +53,16 @@ pushStyle();
 void dibujaZonaIS(){
 pushStyle();
   //zona menu
-  fill (164, 107, 136);
+  fill (219, 130, 193);
   strokeWeight(2);
-  rect (margeX,margeY, width-margeX*2, ampmenu);
+  rect (margeX,margeY, width-margeX*2, ampmenu, 10);
   fill (0); textAlign (CENTER); textSize(40);
   text ("INICIAR SESIÓN", 960, 77);
   //sección rosa 
-  fill (227, 188, 208);
+  fill (255, 252, 252);
+  noStroke();
   rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
+  stroke(0);
   b0.displayRoundButton();
   popStyle();
 }
@@ -67,14 +71,16 @@ pushStyle();
 void dibujaZonaEMP(){
   pushStyle();
   //zona menu
-  fill (164, 107, 136);
+  fill (219, 130, 193);
   strokeWeight(2);
-  rect (margeX,margeY, width-margeX*2, ampmenu);
+  rect (margeX,margeY, width-margeX*2, ampmenu, 10);
   fill (0); textAlign (CENTER); textSize(40);
   text ("EMPEZAR", 960, 77);
   //sección rosa 
-  fill (227, 188, 208);
+  fill (255, 252, 252);
+  noStroke();
   rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
+  stroke(0);
   b0.displayRoundButton();
   popStyle();
 }
@@ -83,28 +89,32 @@ void dibujaZonaEMP(){
 void dibujaZonaEleccion(){
    pushStyle();
    //sección menu
-  fill (164, 107, 136);
+ fill (219, 130, 193);
   strokeWeight(2);
-  rect (margeX,margeY, width-margeX*2, ampmenu);
+  rect (margeX,margeY, width-margeX*2, ampmenu, 10);
   fill (0); textAlign (CENTER); textSize(40);
   text ("ELECCIÓN", 960, 77);
-  //sección rosa 
-  fill (227, 188, 208);
+  //sección rosa
+  fill (255, 252, 252);
+  noStroke();
  rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
+ stroke(0);
   b0.displayRoundButton();
   popStyle();
 }
 
 void dibujaZonaPractica (){
   pushStyle();
-   fill (164, 107, 136);
+ fill (219, 130, 193);
   strokeWeight(2);
-  rect (margeX,margeY, width-margeX*2, ampmenu);
+  rect (margeX,margeY, width-margeX*2, ampmenu, 10);
   fill (0); textAlign (CENTER); textSize(40);
   text ("PRÁCTICA", 960, 77);
   //sección rosa 
-  fill (227, 188, 208);
+  fill (255, 252, 252);
+  noStroke();
   rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
+  stroke(0);
   b0.displayRoundButton();
   back.displayRoundButton();
   popStyle();
@@ -112,9 +122,9 @@ void dibujaZonaPractica (){
 
 void dibujaZonaEsenciales(){
   pushStyle();
-  fill (164, 107, 136);
+  fill (219, 130, 193);
   strokeWeight(2);
-  rect (margeX,margeY, width-margeX*2, ampmenu);
+  rect (margeX,margeY, width-margeX*2, ampmenu, 10);
   fill (0); textAlign (CENTER); textSize(40);
   text ("ESENCIALES", 960, 77);
   back.displayRoundButton();
@@ -128,7 +138,7 @@ void dibujaZonaEsenciales(){
 void dibujaZonaPracticaTEST(){
   //menu y logo
   pushStyle();
-  fill (164, 107, 136);
+ fill (219, 130, 193);
   strokeWeight(2);
   rect (margeX,margeY, width-margeX*2, ampmenu);
   fill (0); textAlign (CENTER); textSize(40);
@@ -145,12 +155,14 @@ void dibujaZonaPracticaTEST(){
   
   //esferas indicadoras de preguntas
   //fill (255); stroke (2);
-  for (float i=llarglogo/2+180; i<llargeneral-amplogo; i+=70){
+ /* for (float i=llarglogo/2+180; i<llargeneral-amplogo; i+=70){
     fill(255); stroke (5);
     ellipse (i, amplogo/2+ampmenu-22+Rroundbutton+50, 35, 35);
-  }
+  }*/
+  
   //recuadro pregunta
-  strokeWeight(3);
+  strokeWeight(2);
+  fill(255);
 rect (margeX, margeY+321, width-margeX*2, ampmenu);
 textAlign (CENTER); fill (0);
 text("PREGUNTA:", 100, 395);
@@ -169,7 +181,7 @@ text("PREGUNTA:", 100, 395);
 void dibujaZonaPracticaTEST2(){
   //menu y logo
   pushStyle();
-  fill (164, 107, 136);
+ fill (219, 130, 193);
   strokeWeight(2);
   rect (margeX,margeY, width-margeX*2, ampmenu);
   fill (0); textAlign (CENTER); textSize(40);
@@ -180,26 +192,28 @@ void dibujaZonaPracticaTEST2(){
   //recuadro informativo
   fill(255);
   rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20);
-  textAlign(LEFT);fill(0);
+  textAlign(LEFT); fill(0);
   text("TEST GALOPE 1", 242, 210);
   
   //esferas indicadoras de preguntas
   //fill (255); stroke (2);
-  for (float i=llarglogo/2+180; i<llargeneral-amplogo; i+=70){
+ /* for (float i=llarglogo/2+180; i<llargeneral-amplogo; i+=70){
     fill(255); stroke (5);
     ellipse (i, amplogo/2+ampmenu-22+Rroundbutton+50, 35, 35);
-  }
+  }*/
+  
   //recuadro pregunta
+  fill(255);
 rect (margeX, margeY+321, width-margeX*2, ampmenu);
 textAlign (CENTER); fill (0);
-text("PREGUNTA:", 100, 395);
+text("PREGUNTA:", 115, 400);
  //ellipse (llarglogo/2+180, amplogo/2+ampmenu-22+Rroundbutton+50, 35,35);
  
   //textos radio button
  textAlign (CENTER);
- text ("RESPOSTA 1", 810, 535); 
- text ("RESPOSTA 2", 684, 550); 
- text ("RESPOSTA 3", 876, 535);
+ text ("RESPOSTA 1", 754, 612); 
+ text ("RESPOSTA 2", 754, 812); 
+ text ("RESPOSTA 3", 1340, 612);
  
  rbg2.display();
 popStyle();
@@ -208,7 +222,7 @@ popStyle();
 void dibujaZonaEvaluacion(){
    //menu y logo
   pushStyle();
-  fill (164, 107, 136);
+  fill (219, 130, 193);
   strokeWeight(2);
   rect (margeX,margeY, width-margeX*2, ampmenu);
   fill (0); textAlign (CENTER); textSize(40);
@@ -236,7 +250,7 @@ void dibujaZonaEvaluacion(){
 void dibujaZonaCorreccion(){
    //menu y logo
   pushStyle();
-  fill (164, 107, 136);
+ fill (219, 130, 193);
   strokeWeight(2);
   rect (margeX,margeY, width-margeX*2, ampmenu);
   fill (0); textAlign (CENTER); textSize(40);
@@ -255,4 +269,22 @@ void dibujaZonaCorreccion(){
   rect (margeX, margeY+270, width-margeX*2, 200);
   fill (0);
   text ("CORRECCIÓN: ", 31, 395);
+  
+  b13.displayButton();
+  popStyle();
+}
+
+//Calendario
+void dibujaZonaCalendario(){
+   //menu y logo
+  pushStyle();
+  fill (219, 130, 193);
+  strokeWeight(2);
+  rect (margeX,margeY, width-margeX*2, ampmenu);
+  fill (0); textAlign (CENTER); textSize(40);
+  text ("CALENDARIO", 960, 77);
+  back.displayRoundButton();
+  
+  c.display();
+  popStyle();
 }
