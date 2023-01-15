@@ -82,7 +82,7 @@ void setGUI() {
 
 
   //selected
-  s1=new Select (selectedValue, Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton);
+  s1=new Select (selectedValue, Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton, 10);
   
   //PopUps
   P1= new PopUp (1431, Ycheckbox, 300, 200, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));

@@ -1,30 +1,31 @@
 class Select{
   //dimensiones y posición
-  float x, y, w, h;
+  float x, y, w, h, g;
   String[] opciones; //diferentes opciones del desplegable
   String selectedValue; //valor seleccionado
   
   boolean wraped=false;   //plegat/desplegat
   float lineSpace=10;    //espacio entre lineas
   
-  Select (String[] opciones, float x, float y, float w, float h){
+  Select (String[] opciones, float x, float y, float w, float h, float g){
     this.opciones=opciones; 
     this.selectedValue="";
     this.x=x;
     this.y=y;
     this.w=w; 
     this.h=h;
+    this.g=g;
     this.wraped=true;
   }
   
   void display(){
     pushStyle();
-    stroke (0); strokeWeight(2); fill (227, 188, 208);
-    rect (x, y, w, h);
+    stroke (0); strokeWeight(2); fill(255, 211, 234);
+    rect (x, y, w, h, g);
     
     //sección triangulo
     fill (100);
-    rect(x + w - 30, y, 30, h);
+    rect(x + w - 30, y, 30, h, g);
     
     //triangulo
     fill (0); stroke (0);
@@ -44,7 +45,8 @@ class Select{
         }
         
         fill(0);
-        text(opciones[i], x + 10, y + h + 25 + (h + lineSpace)*i);
+        textSize(24); textAlign(LEFT);
+        text(opciones[i], x + 20, y + h + 53 + (h + lineSpace)*i);
       }
      }
     popStyle();

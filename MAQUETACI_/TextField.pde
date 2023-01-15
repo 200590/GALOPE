@@ -5,7 +5,7 @@ class TextField{
 float x, y, h, w, g;
 
 //colores
-color FieldNoSelectedColor=color(227, 188, 208);
+color FieldNoSelectedColor=color(255, 211, 234);
 color FieldSelectedColor=color(235, 188, 220);
 color bordercolor=color(0);
 int borderWeight=2;

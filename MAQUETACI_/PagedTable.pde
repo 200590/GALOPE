@@ -51,12 +51,13 @@ class PagedTable{
   //Dibuixa taula
   void display (float x, float y, float w, float h){
     pushStyle();
-    fill (200, 50); stroke (0); strokeWeight(3);
+      fill (255, 252, 252);
+    stroke (0); strokeWeight(3);
     rect (x, y, w, h);
     rect(x, y, w, h);
     
     float rowHeight = h / numRows;
-    fill(200, 100, 100); stroke(0);strokeWeight(3);
+    fill(232, 138, 205);  stroke(0); strokeWeight(3);
     rect(x, y, w, rowHeight);
     
     // Dibuixa files
@@ -80,12 +81,15 @@ class PagedTable{
       xCol = x;
       for(int c = 0; c< numCols; c++){
         if(r==0){
-          text(tableHeaders[c], xCol + 10, y + (r+1)*rowHeight - 10);
+          textSize(35);
+          text(tableHeaders[c], xCol + 50, y + (r+1)*rowHeight-35);
         }
         else{
           int k = (numRows-1)*numPage + (r-1);
           if(k<tableData.length){
-            text(tableData[k][c], xCol + 10, y + (r+1)*rowHeight - 10);
+            textAlign (LEFT);
+            textSize(24);
+            text(tableData[k][c], xCol + 30, y + (r+1)*rowHeight - 35);
           }
         }
         xCol += w*columnWidths[c]/100.0;

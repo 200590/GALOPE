@@ -1,10 +1,10 @@
 //TIPOGRAFIES
-/*PFont [] fonts; 
+PFont [] fonts; 
 
-void setFonts(){
+/*void setFonts(){
   this.fonts= new PFont[2];
-  this.fonts[0]= createFont ("FUTRFW.TTF", 24);
-  this.fonts[1]= createFont ("Zector.otf", 30);
+  this.fonts[0]= createFont ("Zector.ttf", 24);
+ // this.fonts[1]= createFont ("Zector.otf", 30);
 }
 
 //getter number fonts 
@@ -22,7 +22,7 @@ PFont getSecondFont(){
   return this.fonts[1];
 }
 
-/*PFont getThirdFont(){
+PFont getThirdFont(){
   return this.fonts[2];
 }
 
