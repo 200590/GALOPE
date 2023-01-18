@@ -1,4 +1,13 @@
 void keyPressed(){
+  if (pantalla==PANTALLA.IS){
+    Textousuario.keyPressed(key, (int)keyCode);
+    Textocontraseña.keyPressed(key, (int)keyCode);
+  }
+  if (pantalla==PANTALLA.EMP){
+    Textousuario.keyPressed(key, (int)keyCode);
+    Textocorreo.keyPressed(key, (int)keyCode);
+    TextocontraseñaE.keyPressed(key,(int)keyCode);
+  }
    if (pantalla==PANTALLA.FAQs){
      if (keyCode==LEFT){
        PT.prevPage();

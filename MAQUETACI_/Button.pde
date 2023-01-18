@@ -27,11 +27,11 @@ class Button {
     StrokeColor=color(0);
   }
   
-  
+ 
 
  void displayButton() {
     pushStyle();
-    if (mouseOverButton()) {
+     if (mouseOverButton()) {
       fill(fillColorOver);
     }else {
       fill (ColorFill);

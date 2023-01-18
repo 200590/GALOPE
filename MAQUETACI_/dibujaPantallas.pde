@@ -11,6 +11,9 @@ void dibujaPantallaIS() {
   Textocontraseña.display();
   next.displayRoundButton();
   back.displayRoundButton();
+  back.setEnabled(false);
+  Textousuario.keyPressed(key, (int)keyCode);
+  Textocontraseña.keyPressed(key, (int)keyCode);
 
   //etiquetas texto
   fill(0);
@@ -33,6 +36,7 @@ void dibujaPantallaEMP() {
   s1.display();
   next.displayRoundButton();
   back.displayRoundButton();
+  
 
   //etiquetas texto
   fill(0);
