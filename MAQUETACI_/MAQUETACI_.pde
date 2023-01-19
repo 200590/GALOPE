@@ -17,9 +17,9 @@ PANTALLA pantalla=PANTALLA.CORRECCION;
 void setup() {
   fullScreen(P2D);
   textAlign (CENTER);
+  setFonts();
+  setMedias();
   setGUI();
- // setMedias();
-  //loadMedia();
 }
 
 void draw () {

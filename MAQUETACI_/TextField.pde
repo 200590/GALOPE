@@ -36,6 +36,8 @@ void display(){
   strokeWeight(borderWeight);
   stroke(bordercolor);
   rect (x, y, w, h, g);
+  fill(0);
+  text(text, x, y);
 }
 
 void keyPressed(char key, int keyCode) {

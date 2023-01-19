@@ -3,6 +3,7 @@ void dibujaPantallaENTRADA() {
   dibujaZonaEntr();
   b1.displayButton();
   b2.displayButton();
+  displayLogo(100,100,300,400);
 }
 
 void dibujaPantallaIS() {

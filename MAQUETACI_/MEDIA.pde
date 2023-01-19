@@ -1,9 +1,10 @@
 //TIPOGRAFIES
+String URL_FONTS="fonts/";
 PFont [] fonts; 
 
-/*void setFonts(){
+void setFonts(){
   this.fonts= new PFont[2];
-  this.fonts[0]= createFont ("Zector.ttf", 24);
+  this.fonts[0]= createFont (URL_FONTS+"Zector.ttf", 24);
  // this.fonts[1]= createFont ("Zector.otf", 30);
 }
 
@@ -32,12 +33,6 @@ PFont getIFont(int i){
 }
 
 
-
-void font(){
-  PFont font;
-  font= createFont ("Zector.otf", 30);
-}
-
 String URL_IMGS="imgs/";
 
 //Array imagenes
@@ -45,18 +40,27 @@ PImage[] imgs;
 
 void setMedias(){
   this.imgs=new PImage[3];
-  this.imgs[0]= loadImage(URL_IMGS+"/LOGO");
+  this.imgs[0]= loadImage(URL_IMGS+"logo01.png");
+  this.imgs[1]= loadImage(URL_IMGS+"logo02.png");
 }
 
 int getNumImatges(){
   return this.imgs.length;
 }
 
-PImage getLogo(){
+PImage getLogo01(){
   return this.imgs[0];
+}
+
+PImage getLogo02(){
+  return this.imgs[1];
 }
 
 //display logo 
 void displayLogo (float x, float y, float w, float h){
-  image (getLogo(), x, y, w, h);
-}*/
+  image (getLogo01(), x, y, w, h);
+}
+
+void displayLogo2 (float x, float y, float w, float h){
+  image (getLogo02(), x, y, w, h);
+}
