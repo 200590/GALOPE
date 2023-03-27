@@ -17,7 +17,7 @@ class Calendario {
   // Calendari actual, i del mes anterior
   Calendar cal, cPrev;
   
-  // Botons del calendari
+  // Botons del calendari (Composición)
   DayButton[] buttons;
   
   // Dimensions del calendari

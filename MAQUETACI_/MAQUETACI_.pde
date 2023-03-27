@@ -1,9 +1,12 @@
+
+
 boolean logged=false;
 //selects
 Select s1;
 //opcions select
 String[] selectedValue={"JINETE/AMAZONA", "ENTRENADOR/A", "AMBOS", "OTROS"};
 PFont font;
+
 
 
 //Enumerat pantalles
@@ -20,6 +23,10 @@ void setup() {
   setFonts();
   setMedias();
   setGUI();
+
+  setConnexionBBDD();
+  
+
 }
 
 void draw () {
@@ -65,5 +72,5 @@ void draw () {
 
 
 
-  println("X: "+mouseX+", Y:"+mouseY);
+ // println("X: "+mouseX+", Y:"+mouseY);
 }

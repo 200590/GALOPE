@@ -1,6 +1,6 @@
 class RadioButtonGroup{
   //caracteristicas
-  RadioButton[] rbuttons;
+  RadioButton[] rbuttons; // Composició
   int selectedOption;
   
   RadioButtonGroup (int n){
