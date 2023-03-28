@@ -13,7 +13,7 @@ PFont font;
 enum PANTALLA {ENTRADA, IS, EMP, ELECCION, FAQs,  ESENCIALES, PRACTICA, PRACTICATEST1, PRACTICATEST2, EVALUACION, CORRECCION, CALENDARIO};
 
 //PANTALLA ACTUAL
-PANTALLA pantalla=PANTALLA.CORRECCION;
+PANTALLA pantalla=PANTALLA.ENTRADA;
 
 
 
@@ -72,5 +72,5 @@ void draw () {
 
 
 
- // println("X: "+mouseX+", Y:"+mouseY);
+ println("X: "+mouseX+", Y:"+mouseY);
 }

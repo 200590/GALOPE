@@ -43,7 +43,8 @@ class Button {
     //propiedades texto
     fill(0);
     textAlign (CENTER);
-    textSize(30);
+    textFont (getFirstFont());
+    textSize(25);
     text (textButton, this.x+this.w/2, this.y+this.h/2+10);
     popStyle();
   }

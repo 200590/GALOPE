@@ -40,7 +40,8 @@
     //propiedades texto
     fill(0);
     textAlign (CENTER);
-    textSize(30);
+    textFont (getFirstFont());
+    textSize(25);
     text (text, this.a, this.b+10);
     popStyle();
  }

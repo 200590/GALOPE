@@ -3,8 +3,12 @@ String URL_FONTS="fonts/";
 PFont [] fonts; 
 
 void setFonts(){
-  this.fonts= new PFont[2];
-  this.fonts[0]= createFont (URL_FONTS+"Zector.ttf", 24);
+  this.fonts= new PFont[4];
+  this.fonts[0]= createFont (URL_FONTS+"Type Machine.ttf", 24);
+  this.fonts[1]= createFont (URL_FONTS+"NixieOne.ttf", 24); 
+  this.fonts[2]= createFont (URL_FONTS+"LiberationMono-Regular.ttf", 24);
+  this.fonts[3]= createFont(URL_FONTS+"Cherry Monospace-Light.ttf", 24);
+  
  // this.fonts[1]= createFont ("Zector.otf", 30);
 }
 
@@ -25,6 +29,10 @@ PFont getSecondFont(){
 
 PFont getThirdFont(){
   return this.fonts[2];
+}
+
+PFont getFourthFont(){
+  return this.fonts[3];
 }
 
 //getter i font

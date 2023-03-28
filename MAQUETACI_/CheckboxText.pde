@@ -49,6 +49,7 @@ class CheckboxText{
     }
     rect (x, y, w, h);
     fill (0); textAlign(LEFT); textSize(30);
+    textFont (getThirdFont());
     text (this.text,x+w+15, y+h/2+5);
     
     /* if(img!=null){

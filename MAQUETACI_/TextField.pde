@@ -37,7 +37,8 @@ void display(){
   stroke(bordercolor);
   rect (x, y, w, h, g);
   fill(0);
-  text(text, x, y);
+  textFont (getThirdFont());
+  text(text, x+152, y+52);
 }
 
 void keyPressed(char key, int keyCode) {
@@ -64,6 +65,7 @@ void keyPressed(char key, int keyCode) {
          this.text += c;
          textLength++;
       }
+      delay (100);
    }
    
    // Elimina ultima letra texto

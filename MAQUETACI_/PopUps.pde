@@ -36,9 +36,11 @@ class PopUp {
       rect(this.x, this.y, this.w, this.h, this.s);
       fill (0);
       textAlign(CENTER);
+      textFont(getThirdFont());
       text (this.asunto, this.x+80, this.y+50);
       fill(0);
       textAlign (CENTER);
+      textFont (getThirdFont());
       text (this.mensaje, this.x+80, y+130);
       this.tempsVisible--;
       if (this.tempsVisible==0) {
