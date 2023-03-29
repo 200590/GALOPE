@@ -142,9 +142,9 @@ void dibujaZonaEsenciales(){
   text ("ESENCIALES", 960, 85);
   back.displayRoundButton();
   cb1.display();
+  cb4.display();
   P1.display();
-  P2.display();
-  P3.display();
+  cl.display();
   popStyle();
 }
 
@@ -166,6 +166,8 @@ void dibujaZonaPracticaTEST(){
   fill(255);
   rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20, 10);
   textAlign(LEFT); fill(0);
+  textFont(getThirdFont());
+  textSize(30);
   text("TEST GALOPE 1", 242, 210);
   popStyle();
   
@@ -181,15 +183,19 @@ void dibujaZonaPracticaTEST(){
   fill(255);
 rect (margeX, margeY+321, width-margeX*2, ampmenu, 10);
 textAlign (CENTER); fill (0);
+textFont(getThirdFont());
+textSize(30);
 text("PREGUNTA:", 100, 395);
  //ellipse (llarglogo/2+180, amplogo/2+ampmenu-22+Rroundbutton+50, 35,35);
  
  //textos radio button
  textAlign (CENTER);
- text ("RESPOSTA 1", 720, 610); 
- text ("RESPOSTA 2", 720, 810); 
- text ("RESPOSTA 3", 1300, 610);
- text ("RESPOSTA 4", 1300, 810);
+ textFont (getThirdFont());
+ textSize(30);
+ text ("RESPOSTA 1", 725, 610); 
+ text ("RESPOSTA 2", 725, 810); 
+ text ("RESPOSTA 3", 1310, 610);
+ text ("RESPOSTA 4", 1310, 810);
  
  rbg.display();
  b14.displayButton();
@@ -213,6 +219,8 @@ void dibujaZonaPracticaTEST2(){
   fill(255);
   rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20, 10);
   textAlign(LEFT); fill(0);
+  textFont(getThirdFont());
+  textSize(30);
   text("TEST GALOPE 2", 242, 210);
   
   //esferas indicadoras de preguntas
@@ -226,15 +234,18 @@ void dibujaZonaPracticaTEST2(){
   fill(255);
 rect (margeX, margeY+321, width-margeX*2, ampmenu, 10);
 textAlign (CENTER); fill (0);
+ textFont(getThirdFont());
+  textSize(30);
 text("PREGUNTA:", 115, 400);
  //ellipse (llarglogo/2+180, amplogo/2+ampmenu-22+Rroundbutton+50, 35,35);
  
   //textos radio button
  textAlign (CENTER);
  textFont (getThirdFont());
- text ("RESPOSTA 1", 754, 612); 
- text ("RESPOSTA 2", 754, 812); 
- text ("RESPOSTA 3", 1340, 612);
+ textSize(30);
+ text ("RESPOSTA 1", 725, 612); 
+ text ("RESPOSTA 2", 725, 812); 
+ text ("RESPOSTA 3", 1310, 612);
  
  rbg2.display();
  b14.displayButton();
@@ -253,6 +264,7 @@ void dibujaZonaEvaluacion(){
   textSize(50);
   text ("EVALUACION TEST", 960, 85);
   back.displayRoundButton();
+  b15.displayButton();
 
   
   //recuadro informativo
@@ -271,6 +283,7 @@ void dibujaZonaEvaluacion(){
    fill(0);
     textFont(getSecondFont());
   text ("X/10", 1556, 465);
+ 
   popStyle();
 }
 
@@ -301,6 +314,7 @@ void dibujaZonaCorreccion(){
   text ("CORRECCIÓN: ", 31, 395);
   
   b13.displayButton();
+  P3.display();
   popStyle();
 }
 
@@ -329,5 +343,7 @@ void dibujaZonaCalendario(){
   fill (0);
   textAlign (LEFT);
   text ("EVENTOS IMPORTANTES", 623, 355);
+   P2.display();
   popStyle();
+ 
 }

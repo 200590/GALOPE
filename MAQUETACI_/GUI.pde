@@ -11,7 +11,7 @@ TextField Textousuario, Textocontraseña;
 TextField Textocorreo, TextocontraseñaE, TextOcupacion;
 //Pantalla elección
 Button b3, b4, b5, b6;
-CheckBoxList cb1, cb2, cb3;
+CheckBoxList cb1, cb2, cb3, cb4;
 //pantalla practica
 Button b7, b8, b9, b10;
 //Pantalla esenciales
@@ -28,16 +28,23 @@ Button buttons;
 RadioButton rb5, rb6, rb7;
 RadioButtonGroup rbg2;
 Button b14;
+//pantalla evaluacion 
+Button b15;
 //pantalla correccion
 Button b13;
 //pantalla calendario
 Calendario c;
 TextField ImportantEvents;
+//carrousel
+Carrousel cl;
 
 //textos opciones checkboxlist
-String[] info1={"EXEMPLE 1", "EXEMPLE 2", "EXEMPLE 3", "EXEMPLE 4", "EXEMPLE 5", "EXEMPLE 6"};
+String[] info1={"Caballo", "Casco homologado y/o chaleco protector", "Botas/Botines con polainas"};
+String[] info2={"Fusta/espuelas", "Material para el caballo", "Pantalones de equitación"};
 String [] evaluacion={"RESPUESTA 1", "RESPUESTA2","RESPUESTA 3", "RESPUESTA 4", "RESPUESTA 5"};
 String []evaluacion2={"RESPUESTA 6", "RESPUESTA 7", "RESPUESTA 8", "RESPUESTA 9", "RESPUESTA 10"};
+String [] nameCarrousel={"caballo.jpg", "casco.jpg", "chaleco.jpg", "botes.jpg", "fusta.jpg", "espuelas.jpg", "montura.avif", "protector.jpg", "sudadero.jpg", "pantalones.jpg"};
+
 void setFAQs() {
  /* faqs = new FAQ[8];
 
@@ -79,15 +86,17 @@ void setGUI() {
 
   //consturcción checkbox List
   cb1=new CheckBoxList (info1, Xcheckbox,  Ycheckbox, 100, 100);
+  cb4=new CheckBoxList (info2,Xcheckbox+720, Ycheckbox, 100, 100);
 
 
   //selected
   s1=new Select (selectedValue, Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton, 10);
   
   //PopUps
-  P1= new PopUp (1431, Ycheckbox, 300, 200, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
-  P2= new PopUp (1431, Ycheckbox+270, 300, 200, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
-  P3= new PopUp (1431, Ycheckbox+270*2, 300, 200, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
+  P1= new PopUp (375, 815, 350, 225, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
+  P2= new PopUp (145, 315, 350, 225, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
+  P3= new PopUp (1162, 760, 350, 220, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
+  
   //PagedTable
   b11= new Button ("NEXT", buttonPTX+130, buttonPTY, buttonPTW, buttonPTH, Gbutton);
   b12=new Button ("PREV", buttonPTX, buttonPTY, buttonPTW, buttonPTH, Gbutton);
@@ -120,6 +129,7 @@ void setGUI() {
   cb2= new CheckBoxList (evaluacion, 238, 334, 80, 80);
   cb3= new CheckBoxList (evaluacion2,  838, 334, 80, 80);
   b14= new Button ("FINALIZAR", 1500, 890, Wbutton, Hbutton, Gbutton);
+  b15=new Button ("CORRECCIÓN", 1455, 766, Wbutton, Hbutton, Gbutton);
   
   //pantalla correccion
   b13= new Button ("EVALUACIÓN", 242, 890, Wbutton, Hbutton, Gbutton);
@@ -130,4 +140,8 @@ void setGUI() {
   //pantalla calendario
   c= new Calendario (1075, 195, 839, 720, 610, 255);
   ImportantEvents= new TextField (610, 310, 1025-610, 350, Gbutton);
+  
+  //pantalla esenciales 
+  cl=new Carrousel (1400, 225, 500, 700, 1);
+  cl.setImages(nameCarrousel);
 }

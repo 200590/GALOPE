@@ -3,7 +3,7 @@ void dibujaPantallaENTRADA() {
   dibujaZonaEntr();
   b1.displayButton();
   b2.displayButton();
-  displayLogo(100,100,300,400);
+  //displayLogo(100,100,300,400);
 }
 
 void dibujaPantallaIS() {
@@ -61,7 +61,9 @@ void dibujaPantallaFAQs() {
   fill (219, 130, 193);
   strokeWeight(2);
   rect (margeX,margeY, width-margeX*2, ampmenu, 10);
-  fill (0); textAlign (CENTER); textSize(40);
+  fill (0); textAlign (CENTER);
+  textFont(getSecondFont());
+  textSize(50); 
   text ("INFORMACIÓN GALOPES (FAQs)", 960, 77);
  
   /*for (int i=0; i<faqs.length; i++) {

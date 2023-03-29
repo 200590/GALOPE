@@ -6,7 +6,7 @@ class PopUp {
   String mensaje;
   color c;
 
-  int tempsVisible = 30*4;
+  int tempsVisible = 30*5;
   int tempsInvisible = 30*2;
   boolean visible = false;
 
@@ -33,6 +33,7 @@ class PopUp {
       }
     } else {
       fill (this.c);
+      //contorno bold afegir
       rect(this.x, this.y, this.w, this.h, this.s);
       fill (0);
       textAlign(CENTER);
@@ -50,7 +51,7 @@ class PopUp {
   }
 
   void reset() {
-    tempsVisible = 30*4;
+    tempsVisible = 30*5;
     tempsInvisible = 30*2;
     visible = false;
   }

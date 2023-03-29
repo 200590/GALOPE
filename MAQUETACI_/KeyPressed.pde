@@ -27,4 +27,14 @@ void keyPressed(){
     println("PREV MONTH");
   }
    }
-    }
+   
+   if (pantalla==PANTALLA.EVALUACION){
+      if (keyCode==LEFT){
+    cl.prev();
+  }
+  else if(keyCode==RIGHT){
+    cl.next();
+  }
+}
+   }
+    

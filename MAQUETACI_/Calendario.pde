@@ -180,7 +180,7 @@ class Calendario {
     if(dateSelected){
       String dateText = this.selectedDay+"/"+this.selectedMonth+"/"+this.selectedYear;
       fill(0); textSize(30); textAlign(RIGHT);
-      text(dateText, DTX, DTY);
+      text(dateText, DTX+20, DTY);
     }
   }
   

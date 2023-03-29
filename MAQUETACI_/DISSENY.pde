@@ -56,8 +56,8 @@ float Rroundbutton=100;
 //checkbox list
 //distanca entre logo y checkboxlist
 float entreLogoyCheckbox=10;
-float Xcheckbox=246;
-float Ycheckbox=145;
+float Xcheckbox=150;
+float Ycheckbox=360;
 
 //SELECTEDS
 float selectedW=Wbutton;
