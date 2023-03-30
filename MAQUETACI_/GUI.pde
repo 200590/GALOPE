@@ -1,10 +1,10 @@
 FAQ[] faqs;
 
 //general
-//Button b0;
+
 RoundButton next, b0, back;
 //Pantalla entrada
-Button b1, b2;
+Button b1, b2, wb;
 //Pantalla Iniciar sesion
 TextField Textousuario, Textocontraseña;
 //Pantalla entrada
@@ -43,7 +43,7 @@ String[] info1={"Caballo", "Casco homologado y/o chaleco protector", "Botas/Boti
 String[] info2={"Fusta/espuelas", "Material para el caballo", "Pantalones de equitación"};
 String [] evaluacion={"RESPUESTA 1", "RESPUESTA2","RESPUESTA 3", "RESPUESTA 4", "RESPUESTA 5"};
 String []evaluacion2={"RESPUESTA 6", "RESPUESTA 7", "RESPUESTA 8", "RESPUESTA 9", "RESPUESTA 10"};
-String [] nameCarrousel={"caballo.jpg", "casco.jpg", "chaleco.jpg", "botes.jpg", "fusta.jpg", "espuelas.jpg", "montura.avif", "protector.jpg", "sudadero.jpg", "pantalones.jpg"};
+String [] nameCarrousel={"caballo.jpg", "casco.jpg", "chaleco.jpg", "botes.jpg", "fusta.jpg", "espuelas.jpg", "montura.jpg", "protector.jpg", "sudadero.jpg", "pantalones.jpg"};
 
 void setFAQs() {
  /* faqs = new FAQ[8];
@@ -76,7 +76,9 @@ void setGUI() {
   b8= new Button ("GALOPE 2", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
   b9= new Button ("GALOPE 3", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
   b10= new Button ("GALOPE 4", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
-
+  wb= new Button("RFHE", Xbutton+600, Ybutton+450, Wbutton, Hbutton, Gbutton);
+    desktop=Desktop.getDesktop();
+  
   //creacion campo texto
   Textousuario= new TextField((int)Xbutton, (int)Ybutton, (int)Wbutton, (int)Hbutton, Gbutton);
   Textocontraseña= new TextField ((int)Xbutton, (int)Ybutton+150, (int) Wbutton, (int)Hbutton, Gbutton);

@@ -48,6 +48,7 @@ pushStyle();
   rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
   stroke(0);
   b0.displayRoundButton();
+  wb.displayButton();
   popStyle();
 }
 
@@ -144,7 +145,7 @@ void dibujaZonaEsenciales(){
   cb1.display();
   cb4.display();
   P1.display();
-  cl.display();
+  //cl.display();
   popStyle();
 }
 

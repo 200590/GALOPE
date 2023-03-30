@@ -74,14 +74,7 @@ void setImages(String []nameCarrousel){
     }
  }
     
-  /*void keyPressed(){
-  if (keyCode==LEFT){
-    cl.prev();
-  }
-  else if(keyCode==RIGHT){
-    cl.next();
-  }
-}*/
+ 
 }
 
   

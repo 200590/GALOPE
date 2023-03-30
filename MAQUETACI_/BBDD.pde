@@ -20,7 +20,7 @@ void setConnexionBBDD() {
   }
 }
 
-void insertInfoTaulaUsuario(String idUsuario, String correo, String password, String ocupacion){
+void insertInfoTaulaUsuario(String idUsuario, String correo, String password, String ocupacion) {
   String q= "INSERT INTO usuario (idUsuario, correo, password, ocupacion) VALUES ('"+idUsuario+"', '"+correo+"','"+password+"', '"+ocupacion+" )";
   println (q);
   msql.query(q);

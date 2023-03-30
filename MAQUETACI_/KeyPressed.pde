@@ -28,7 +28,7 @@ void keyPressed(){
   }
    }
    
-   if (pantalla==PANTALLA.EVALUACION){
+   if (pantalla==PANTALLA.ESENCIALES){
       if (keyCode==LEFT){
     cl.prev();
   }

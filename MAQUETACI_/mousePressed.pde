@@ -28,6 +28,8 @@ void mousePressed() {
       pantalla=PANTALLA.IS;
     } else if (b2.mouseOverButton()) {
       pantalla=PANTALLA.EMP;
+    }else if(wb.mouseOverButton()){
+      openWebPage("https://rfhe.com/");
     }
   }
 
@@ -71,6 +73,7 @@ void mousePressed() {
 
   else if (pantalla==PANTALLA.ESENCIALES) {
     cb1.checkMouse();
+    cb4.checkMouse();
   }
 
   else if (pantalla==PANTALLA.FAQs) {
