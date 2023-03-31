@@ -2,6 +2,28 @@
 //enum PANTALLA {ENTRADA, IS, EMP, FAQs, ELECCION, ESENCIALES};
 void mousePressed() {
 
+  
+  if (pantalla==PANTALLA.EMP) {
+    Textousuario.isPressed();
+    Textocorreo.isPressed();
+    TextocontraseñaE.isPressed();
+    if (next.mouseOverRoundButton()){
+      println("NEXT PITJAT");
+      String correo=Textocorreo.text;
+      String userName = Textousuario.text;
+      String contra=TextocontraseñaE.text;
+      String ocupacion=s1.selectedValue;
+      println(correo, userName, contra, ocupacion);
+      insertInfoTaulaUsuario(correo, userName, contra, ocupacion);
+    }
+    if (s1.mouseOverSelect()) {
+      if (!s1.wraped) {
+        s1.update();
+      }
+      s1.toggle();
+    }
+  }
+  
   // Escoltar tots els elements comunS A TOTES LES PANTALLES
   if (b0.mouseOverRoundButton()) {
     pantalla=PANTALLA.ENTRADA;
@@ -38,18 +60,9 @@ void mousePressed() {
     Textocontraseña.isPressed();
   }
 
-  else if (pantalla==PANTALLA.EMP) {
-    Textocorreo.isPressed();
-    TextocontraseñaE.isPressed();
-    if (s1.mouseOverSelect()) {
-      if (!s1.wraped) {
-        s1.update();
-      }
-      s1.toggle();
-    }
-  }
+   
 
-  else if (pantalla==PANTALLA.ELECCION) {
+   if (pantalla==PANTALLA.ELECCION) {
     if (b3.mouseOverButton()) {
       pantalla=PANTALLA.FAQs;
     } else if (b4.mouseOverButton()) {
@@ -64,11 +77,11 @@ void mousePressed() {
     }
   }
   else if (pantalla==PANTALLA.PRACTICA) {
-    if (b7.mouseOverButton()) {
+    if (b7.mouseOverButton()||b8.mouseOverButton()||b9.mouseOverButton()||b10.mouseOverButton()) {
       pantalla=PANTALLA.PRACTICATEST1;
-    } else if (b8.mouseOverButton()) {
+    }/* else if (b8.mouseOverButton()) {
       pantalla=PANTALLA.PRACTICATEST2;
-    }
+    }*/
   }
 
   else if (pantalla==PANTALLA.ESENCIALES) {

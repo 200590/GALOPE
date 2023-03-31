@@ -20,11 +20,12 @@ PANTALLA pantalla=PANTALLA.ENTRADA;
 void setup() {
   fullScreen(P2D);
   textAlign (CENTER);
+  setConnexionBBDD();
   setFonts();
   setMedias();
   setGUI();
 
-  setConnexionBBDD();
+  
   
 
 }
@@ -72,5 +73,5 @@ void draw () {
 
 
 
- println("X: "+mouseX+", Y:"+mouseY);
+ //println("X: "+mouseX+", Y:"+mouseY);
 }

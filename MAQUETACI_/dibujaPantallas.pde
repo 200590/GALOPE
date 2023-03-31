@@ -19,18 +19,19 @@ void dibujaPantallaIS() {
   //etiquetas texto
   fill(0);
   textSize(30);
-  textAlign (CENTER);
-  text ("USUARIO", 968, 452);
+  textAlign (LEFT);
+  text ("USUARIO", Xbutton, 390);
   noFill();
   ellipse (1150, 445, 50, 50);
   fill(0);
-  text ("CONTRASEÑA", 968, 600);
+  text ("CONTRASEÑA", Xbutton, 535);
   noFill();
   ellipse (1153, 590, 50, 50);
 }
 
 void dibujaPantallaEMP() {
   dibujaZonaEMP();
+  Textousuario.display();
   Textocorreo.display();
   TextocontraseñaE.display();
   // TextOcupacion.display();
@@ -42,10 +43,11 @@ void dibujaPantallaEMP() {
   //etiquetas texto
   fill(0);
   textSize(30);
-  textAlign (CENTER);
-  text ("CORREO ELECTRONICO", 1033, 405);
-  text ("CONTRASEÑA", 975, 520);
-  text ("OCUPACIÓN", 960, 635);
+  textAlign (LEFT);
+  text ("CORREO ELECTRONICO", Xbutton, Wbutton-50);
+  text("USUARIO", Xbutton, Wbutton+90);
+  text ("CONTRASEÑA", Xbutton, Wbutton+230);
+  text ("OCUPACIÓN", Xbutton, Ycorreo+Hbutton*2+140);
 }
 
 void dibujaPantallaEleccion() {

@@ -170,14 +170,7 @@ void dibujaZonaPracticaTEST(){
   textFont(getThirdFont());
   textSize(30);
   text("TEST GALOPE 1", 242, 210);
-  popStyle();
-  
-  //esferas indicadoras de preguntas
-  //fill (255); stroke (2);
- /* for (float i=llarglogo/2+180; i<llargeneral-amplogo; i+=70){
-    fill(255); stroke (5);
-    ellipse (i, amplogo/2+ampmenu-22+Rroundbutton+50, 35, 35);
-  }*/
+
   
   //recuadro pregunta
   strokeWeight(2);
@@ -200,6 +193,7 @@ text("PREGUNTA:", 100, 395);
  
  rbg.display();
  b14.displayButton();
+ popStyle();
 }
 
 void dibujaZonaPracticaTEST2(){

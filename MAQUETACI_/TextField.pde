@@ -28,6 +28,7 @@ TextField(float x, float y, float w, float h, float g){
 
 //dibuija campo de texto
 void display(){
+  pushStyle();
   if (selected){
     fill(FieldSelectedColor);
   }else{
@@ -36,9 +37,10 @@ void display(){
   strokeWeight(borderWeight);
   stroke(bordercolor);
   rect (x, y, w, h, g);
-  fill(0);
+  fill(0); textAlign(LEFT);
   textFont (getThirdFont());
-  text(text, x+152, y+52);
+  text(text, x, y+52);
+  popStyle();
 }
 
 void keyPressed(char key, int keyCode) {

@@ -43,7 +43,7 @@ String[] info1={"Caballo", "Casco homologado y/o chaleco protector", "Botas/Boti
 String[] info2={"Fusta/espuelas", "Material para el caballo", "Pantalones de equitación"};
 String [] evaluacion={"RESPUESTA 1", "RESPUESTA2","RESPUESTA 3", "RESPUESTA 4", "RESPUESTA 5"};
 String []evaluacion2={"RESPUESTA 6", "RESPUESTA 7", "RESPUESTA 8", "RESPUESTA 9", "RESPUESTA 10"};
-String [] nameCarrousel={"caballo.jpg", "casco.jpg", "chaleco.jpg", "botes.jpg", "fusta.jpg", "espuelas.jpg", "montura.jpg", "protector.jpg", "sudadero.jpg", "pantalones.jpg"};
+String [] nameCarrousel={"caballo.jpg", "casco.jpg", "chaleco.jpg", "botes.jpg", "fusta.jpg", "espuelas.jpg", "montura.jpg", "protector.jpg", "sudadero.jpg", "pantalones.png"};
 
 void setFAQs() {
  /* faqs = new FAQ[8];
@@ -82,9 +82,10 @@ void setGUI() {
   //creacion campo texto
   Textousuario= new TextField((int)Xbutton, (int)Ybutton, (int)Wbutton, (int)Hbutton, Gbutton);
   Textocontraseña= new TextField ((int)Xbutton, (int)Ybutton+150, (int) Wbutton, (int)Hbutton, Gbutton);
-  Textocorreo=new TextField ((int)Xcorreo, (int) Ycorreo, (int)Wbutton, (int) Hbutton, Gbutton);
-  TextocontraseñaE= new TextField ((int)Xcorreo, (int)Ycorreo+(int)Hbutton+25, (int)Wbutton, (int)Hbutton, Gbutton);
-  // TextOcupacion=new TextField (Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton);
+  
+  Textocorreo=new TextField ((int)Xbutton, (int) Ycorreo-90, (int)Wbutton, (int) Hbutton, Gbutton);
+  TextocontraseñaE= new TextField ((int)Xbutton, (int)Ycorreo+(int)Hbutton+100, (int)Wbutton, (int)Hbutton, Gbutton);
+
 
   //consturcción checkbox List
   cb1=new CheckBoxList (info1, Xcheckbox,  Ycheckbox, 100, 100);
@@ -92,7 +93,7 @@ void setGUI() {
 
 
   //selected
-  s1=new Select (selectedValue, Xcorreo, Ycorreo+Hbutton*2+50, Wbutton, Hbutton, 10);
+  s1=new Select (selectedValue, Xbutton, Ycorreo+Hbutton*2+150, Wbutton, Hbutton, 10);
   
   //PopUps
   P1= new PopUp (375, 815, 350, 225, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
@@ -102,6 +103,7 @@ void setGUI() {
   //PagedTable
   b11= new Button ("NEXT", buttonPTX+130, buttonPTY, buttonPTW, buttonPTH, Gbutton);
   b12=new Button ("PREV", buttonPTX, buttonPTY, buttonPTW, buttonPTH, Gbutton);
+  
   PT= new PagedTable (5, 1);
   float[] colsWidth ={100};
   PT.setColumWidths(colsWidth);

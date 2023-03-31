@@ -4,7 +4,7 @@ MySQL msql;
 
 String user="admin";
 String pass="12345";
-String database="galope";
+String database="mydb";
 
 void setConnexionBBDD() {
   //se establece la conexión
@@ -21,7 +21,12 @@ void setConnexionBBDD() {
 }
 
 void insertInfoTaulaUsuario(String idUsuario, String correo, String password, String ocupacion) {
-  String q= "INSERT INTO usuario (idUsuario, correo, password, ocupacion) VALUES ('"+idUsuario+"', '"+correo+"','"+password+"', '"+ocupacion+" )";
+  String q= "INSERT INTO usuario (idusuario, correoelectronico, contraseña, ocupacion) VALUES ('"+idUsuario+"', '"+correo+"','"+password+"', '"+ocupacion+" ')";
   println (q);
   msql.query(q);
 }
+
+// Lleva tot el text
+  /* void removeAllText(){
+     this.text = "";
+   }*/
