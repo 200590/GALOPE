@@ -1,10 +1,9 @@
 //pressed on campo texto
 //enum PANTALLA {ENTRADA, IS, EMP, FAQs, ELECCION, ESENCIALES};
 void mousePressed() {
-
   
   if (pantalla==PANTALLA.EMP) {
-    Textousuario.isPressed();
+    newUsuario.isPressed();
     Textocorreo.isPressed();
     TextocontraseñaE.isPressed();
     if (next.mouseOverRoundButton()){
@@ -15,6 +14,9 @@ void mousePressed() {
       String ocupacion=s1.selectedValue;
       println(correo, userName, contra, ocupacion);
       insertInfoTaulaUsuario(correo, userName, contra, ocupacion);
+      Textousuario.removeAllText();
+      Textocorreo.removeAllText();
+      TextocontraseñaE.removeAllText();
     }
     if (s1.mouseOverSelect()) {
       if (!s1.wraped) {
@@ -79,7 +81,8 @@ void mousePressed() {
   else if (pantalla==PANTALLA.PRACTICA) {
     if (b7.mouseOverButton()||b8.mouseOverButton()||b9.mouseOverButton()||b10.mouseOverButton()) {
       pantalla=PANTALLA.PRACTICATEST1;
-    }/* else if (b8.mouseOverButton()) {
+    } 
+    /* else if (b8.mouseOverButton()) {
       pantalla=PANTALLA.PRACTICATEST2;
     }*/
   }
@@ -87,6 +90,7 @@ void mousePressed() {
   else if (pantalla==PANTALLA.ESENCIALES) {
     cb1.checkMouse();
     cb4.checkMouse();
+    done2.mouseOverButton();
   }
 
   else if (pantalla==PANTALLA.FAQs) {
@@ -97,13 +101,6 @@ void mousePressed() {
     }
   }
 
-  else if (pantalla==PANTALLA.PRACTICA) {
-    if (b7.mouseOverButton()) {
-      pantalla=PANTALLA.PRACTICATEST1;
-    } else if (b8.mouseOverButton()) {
-      pantalla=PANTALLA.PRACTICATEST2;
-    }
-  }
 
   else if (pantalla==PANTALLA.PRACTICATEST1||pantalla==PANTALLA.PRACTICATEST2) {
     rbg.updateOnClick();
@@ -126,5 +123,7 @@ void mousePressed() {
   }
   else if (pantalla==PANTALLA.CALENDARIO){
     c.checkButtons();
+    ImportantEvents.isPressed();
+    done.mouseOverButton();
   }
 }

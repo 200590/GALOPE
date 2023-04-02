@@ -4,7 +4,7 @@ void keyPressed(){
     Textocontraseña.keyPressed(key, (int)keyCode);
   }
   if (pantalla==PANTALLA.EMP){
-    Textousuario.keyPressed(key, (int)keyCode);
+    newUsuario.keyPressed(key, (int)keyCode);
     Textocorreo.keyPressed(key, (int)keyCode);
     TextocontraseñaE.keyPressed(key,(int)keyCode);
   }
@@ -25,6 +25,8 @@ void keyPressed(){
   else if(keyCode==RIGHT){
     c.nextMonth();
     println("PREV MONTH");
+  }else{
+    ImportantEvents.keyPressed(key, (int)keyCode);
   }
    }
    

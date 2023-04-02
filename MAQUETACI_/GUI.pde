@@ -1,4 +1,4 @@
-FAQ[] faqs;
+//FAQ[] faqs;
 
 //general
 
@@ -6,7 +6,7 @@ RoundButton next, b0, back;
 //Pantalla entrada
 Button b1, b2, wb;
 //Pantalla Iniciar sesion
-TextField Textousuario, Textocontraseña;
+TextField newUsuario, Textousuario, Textocontraseña;
 //Pantalla entrada
 TextField Textocorreo, TextocontraseñaE, TextOcupacion;
 //Pantalla elección
@@ -16,6 +16,7 @@ CheckBoxList cb1, cb2, cb3, cb4;
 Button b7, b8, b9, b10;
 //Pantalla esenciales
 PopUp P1, P2, P3;
+Button done2;
 //Pantalla FAQs
 Button b11, b12;
 PagedTable PT;
@@ -34,6 +35,7 @@ Button b15;
 Button b13;
 //pantalla calendario
 Calendario c;
+Button done;
 TextField ImportantEvents;
 //carrousel
 Carrousel cl;
@@ -81,6 +83,7 @@ void setGUI() {
   
   //creacion campo texto
   Textousuario= new TextField((int)Xbutton, (int)Ybutton, (int)Wbutton, (int)Hbutton, Gbutton);
+  newUsuario=new TextField ((int)Xbutton, (int)Ybutton, (int)Wbutton, (int)Hbutton, Gbutton);
   Textocontraseña= new TextField ((int)Xbutton, (int)Ybutton+150, (int) Wbutton, (int)Hbutton, Gbutton);
   
   Textocorreo=new TextField ((int)Xbutton, (int) Ycorreo-90, (int)Wbutton, (int) Hbutton, Gbutton);
@@ -137,15 +140,15 @@ void setGUI() {
   
   //pantalla correccion
   b13= new Button ("EVALUACIÓN", 242, 890, Wbutton, Hbutton, Gbutton);
-  
-  //array buttons pràcitca test 1
-//buttons=new ArrayButtons[10];
+ 
 
   //pantalla calendario
   c= new Calendario (1075, 195, 839, 720, 610, 255);
-  ImportantEvents= new TextField (610, 310, 1025-610, 350, Gbutton);
+  ImportantEvents= new TextField (620, 360, 1025-610, 350, Gbutton);
+  done= new Button ("DONE", 935, 750, Wbutton/3, Hbutton/2, Gbutton);
   
   //pantalla esenciales 
   cl=new Carrousel (1400, 225, 500, 700, 1);
   cl.setImages(nameCarrousel);
+  done2= new Button ("DONE", 990, 900, Wbutton/3, Hbutton/2, Gbutton);
 }

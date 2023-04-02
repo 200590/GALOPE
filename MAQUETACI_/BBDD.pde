@@ -25,8 +25,3 @@ void insertInfoTaulaUsuario(String idUsuario, String correo, String password, St
   println (q);
   msql.query(q);
 }
-
-// Lleva tot el text
-  /* void removeAllText(){
-     this.text = "";
-   }*/

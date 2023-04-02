@@ -7,6 +7,7 @@ void dibujaPantallaENTRADA() {
 }
 
 void dibujaPantallaIS() {
+  pushStyle();
   dibujaZonaIS();
   Textousuario.display();
   Textocontraseña.display();
@@ -27,11 +28,13 @@ void dibujaPantallaIS() {
   text ("CONTRASEÑA", Xbutton, 535);
   noFill();
   ellipse (1153, 590, 50, 50);
+  popStyle();
 }
 
 void dibujaPantallaEMP() {
+  pushStyle();
   dibujaZonaEMP();
-  Textousuario.display();
+  newUsuario.display();
   Textocorreo.display();
   TextocontraseñaE.display();
   // TextOcupacion.display();
@@ -48,6 +51,7 @@ void dibujaPantallaEMP() {
   text("USUARIO", Xbutton, Wbutton+90);
   text ("CONTRASEÑA", Xbutton, Wbutton+230);
   text ("OCUPACIÓN", Xbutton, Ycorreo+Hbutton*2+140);
+  popStyle();
 }
 
 void dibujaPantallaEleccion() {

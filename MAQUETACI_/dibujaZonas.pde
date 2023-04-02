@@ -145,6 +145,7 @@ void dibujaZonaEsenciales(){
   cb1.display();
   cb4.display();
   P1.display();
+  done.displayButton();
   //cl.display();
   popStyle();
 }
@@ -337,8 +338,9 @@ void dibujaZonaCalendario(){
   ImportantEvents.display();
   fill (0);
   textAlign (LEFT);
-  text ("EVENTOS IMPORTANTES", 623, 355);
+  text ("EVENTOS IMPORTANTES", 623, 340);
    P2.display();
+   done.displayButton();
   popStyle();
  
 }

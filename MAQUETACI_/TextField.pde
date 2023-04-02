@@ -96,4 +96,8 @@ void keyPressed(char key, int keyCode) {
          selected = false;
       }
    }
+   // Lleva tot el text
+void removeAllText(){
+     this.text = "";
+   }
 }

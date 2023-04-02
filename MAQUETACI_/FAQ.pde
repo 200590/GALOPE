@@ -1,4 +1,4 @@
-class FAQ {
+/*class FAQ {
   
   String pregunta, resposta;
   float x, y, w, h1, h2;
@@ -32,5 +32,5 @@ class FAQ {
     textAlign(LEFT); fill(0); text(this.resposta, this.x+5+h2, this.y+this.h2);
     popStyle();
   }
-}
+}*/
   
