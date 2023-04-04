@@ -98,17 +98,18 @@ void mousePressed() {
       numTest = 1;
       numPregunta=0;
       preguntas = getInfoTablaPregunta(String.valueOf(numTest));
-       printArray(preguntas.length);
+      printArray(preguntas.length);
+      pantalla=PANTALLA.PRACTICATEST1;
     } else if (b9.mouseOverButton()) {
       numTest = 2;
       numPregunta=0;
       preguntas = getInfoTablaPregunta(String.valueOf(numTest));
-       printArray(preguntas.length);
+      printArray(preguntas.length);
     } else if (b10.mouseOverButton()) {
       numTest = 3;
       numPregunta=0;
       preguntas = getInfoTablaPregunta(String.valueOf(numTest));
-       printArray(preguntas.length);
+      printArray(preguntas.length);
     }
   } else if (pantalla==PANTALLA.ESENCIALES) {
     cb1.checkMouse();
@@ -126,11 +127,10 @@ void mousePressed() {
     if (b14.mouseOverButton()) {
       pantalla=PANTALLA.EVALUACION;
     }
-    else if (followQ.mouseOverButton()&&numPregunta<=5) {
+    else if (followQ.mouseOverButton() && numPregunta<preguntas.length-1) {
       println("FOLLOW Q");
       numPregunta++;
-    }else{
-      numPregunta=0;
+      println(numPregunta, preguntas.length);
     }
   } else if (pantalla==PANTALLA.EVALUACION) {
     cb2.checkMouse();

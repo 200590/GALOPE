@@ -189,11 +189,11 @@ void dibujaZonaPracticaTEST() {
   strokeWeight(2);
   fill(255);
   rect (margeX, margeY+321, width-margeX*2, ampmenu, 10);
-  textAlign (CENTER);
+  textAlign (LEFT);
   fill (0);
   textFont(getThirdFont());
   textSize(30);
-  text("PREGUNTA: "+preguntas[numPregunta][1], 100, 395);
+ text("PREGUNTA ("+(numPregunta+1)+"/"+preguntas.length+"): "+preguntas[numPregunta][1], 100, 395); 
   //ellipse (llarglogo/2+180, amplogo/2+ampmenu-22+Rroundbutton+50, 35,35);
 
   //textos radio button
