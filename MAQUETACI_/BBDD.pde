@@ -103,6 +103,7 @@ String [][] getInfoTablaPregunta(String unidad){
     data [nr][6]=msql.getString ("correcta"); 
     data [nr][7]=msql.getString ("area_idarea");
     data [nr][8]=msql.getString ("unidad_idunidad");
+    nr++;
   }
   return data;
 }

@@ -202,14 +202,18 @@ void dibujaZonaPracticaTEST() {
   textSize(30);
 
   //getInfoTablaPregunta("GALOPE 1");
+  println(preguntas[numPregunta][2]);
   text (preguntas[numPregunta][2], 725, 610);
   text (preguntas[numPregunta][3], 725, 810);
   text (preguntas[numPregunta][4], 1310, 610);
+
   if (preguntas[numPregunta][5]!=null) {
     text (preguntas[numPregunta][5], 1310, 810);
   }
+  
 
   rbg.display();
+  followQ.displayButton();
   b14.displayButton();
   popStyle();
 }
@@ -238,12 +242,6 @@ void dibujaZonaPracticaTEST2() {
   textSize(30);
   text("TEST GALOPE 2", 242, 210);
 
-  //esferas indicadoras de preguntas
-  //fill (255); stroke (2);
-  /* for (float i=llarglogo/2+180; i<llargeneral-amplogo; i+=70){
-   fill(255); stroke (5);
-   ellipse (i, amplogo/2+ampmenu-22+Rroundbutton+50, 35, 35);
-   }*/
 
   //recuadro pregunta
   fill(255);

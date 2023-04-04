@@ -23,6 +23,7 @@ PagedTable PT;
 //pantalla practica test 1
 RadioButton rb1, rb2, rb3, rb4;
 RadioButtonGroup rbg;
+Button followQ;
 //ArrayButtons AB1;
 Button buttons;
 //pantalla practica test 2
@@ -72,6 +73,8 @@ void setGUI() {
   b10= new Button ("GALOPE 4", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
   wb= new Button("RFHE", Xbutton+600, Ybutton+450, Wbutton, Hbutton, Gbutton);
     desktop=Desktop.getDesktop();
+    
+  
   
   //creacion campo texto
   Textousuario= new TextField((int)Xbutton, (int)Ybutton, (int)Wbutton, (int)Hbutton, Gbutton);
@@ -115,6 +118,7 @@ void setGUI() {
   rb2= new RadioButton (600, 800, 30); 
   rb3= new RadioButton (1185, 600, 30);
   rb4= new RadioButton (1185, 800, 30);
+  followQ= new Button ("CONTINUE",1640, 650,  Wbutton/2+20, Hbutton, Gbutton);
   //group radio button
   rbg= new RadioButtonGroup(4);
   rbg.setRadioButtons(rb1, rb2, rb3, rb4); 
