@@ -14,8 +14,6 @@ void dibujaPantallaIS() {
   next.displayRoundButton();
   back.displayRoundButton();
   back.setEnabled(false);
-  Textousuario.keyPressed(key, (int)keyCode);
-  Textocontraseña.keyPressed(key, (int)keyCode);
 
   //etiquetas texto
   fill(0);
@@ -71,12 +69,6 @@ void dibujaPantallaFAQs() {
   textFont(getSecondFont());
   textSize(50); 
   text ("INFORMACIÓN GALOPES (FAQs)", 960, 77);
- 
-  /*for (int i=0; i<faqs.length; i++) {
-    if (faqs[i]!=null) {
-      faqs[i].display();
-    }
-  }*/
   
   PT.display (margeX, 270, width-margeX*2, tableH);
   b11.displayButton();

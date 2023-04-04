@@ -4,7 +4,7 @@ boolean logged=false;
 //selects
 Select s1;
 //opcions select
-String[] selectedValue={"JINETE/AMAZONA", "ENTRENADOR/A", "AMBOS", "OTROS"};
+String[] selectedValue={"JINETE/AMAZONA", "ENTRENADOR/A", "AMBOS"};
 PFont font;
 
 
@@ -15,7 +15,9 @@ enum PANTALLA {ENTRADA, IS, EMP, ELECCION, FAQs,  ESENCIALES, PRACTICA, PRACTICA
 //PANTALLA ACTUAL
 PANTALLA pantalla=PANTALLA.ENTRADA;
 
-
+int numTest=0;
+int numPregunta = 1;
+String[][] preguntas;
 
 void setup() {
   fullScreen(P2D);
@@ -26,7 +28,8 @@ void setup() {
   setGUI();
 
   
-  
+  preguntas = getInfoTablaPregunta(String.valueOf(numTest));
+  printArray(preguntas[0]);
 
 }
 

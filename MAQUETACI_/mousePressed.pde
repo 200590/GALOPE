@@ -32,8 +32,19 @@ void mousePressed() {
   }
 
   if (next.mouseOverRoundButton()) {
-    if (pantalla==PANTALLA.IS||pantalla==PANTALLA.EMP) {
+    if (pantalla==PANTALLA.IS){
+      String user = Textousuario.text;
+      String password = Textocontraseña.text;
+      int n = getUserLogin(user, password);
+      if(n==0){
+        println("ERROR USUARIO O CONTRASEÑA");
+        warn.display();
+      } else {
+            pantalla=PANTALLA.ELECCION;
+        }
+    }else if (pantalla==PANTALLA.EMP){
       pantalla=PANTALLA.ELECCION;
+      success.display();
     }
   }
 
@@ -80,6 +91,21 @@ void mousePressed() {
   }
   else if (pantalla==PANTALLA.PRACTICA) {
     if (b7.mouseOverButton()||b8.mouseOverButton()||b9.mouseOverButton()||b10.mouseOverButton()) {
+      if(b7.mouseOverButton()){
+        numTest = 0;
+      }
+      else if(b8.mouseOverButton()){
+        numTest = 1;
+      }
+       else if(b9.mouseOverButton()){
+        numTest = 2;
+      }
+       else if(b10.mouseOverButton()){
+        numTest = 3;
+      }
+       numPregunta=0;
+       preguntas = getInfoTablaPregunta(String.valueOf(numTest));
+      printArray(preguntas[0]);
       pantalla=PANTALLA.PRACTICATEST1;
     } 
     /* else if (b8.mouseOverButton()) {
@@ -94,6 +120,7 @@ void mousePressed() {
   }
 
   else if (pantalla==PANTALLA.FAQs) {
+    
     if (b11.mouseOverButton()) {
       PT.nextPage();
     } else if (b12.mouseOverButton()) {

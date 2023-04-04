@@ -81,7 +81,7 @@ class PagedTable{
       xCol = x;
       for(int c = 0; c< numCols; c++){
         if(r==0){
-          textSize(35);
+          textSize(35);textAlign(LEFT);
           text(tableHeaders[c], xCol + 50, y + (r+1)*rowHeight-35);
         }
         else{
@@ -89,7 +89,11 @@ class PagedTable{
           if(k<tableData.length){
             textAlign (LEFT);
             textSize(24);
-            text(tableData[k][c], xCol + 30, y + (r+1)*rowHeight - 35);
+            String tt = (tableData[k][c]);
+            if(tt.length() > 80){
+              tt = tt.substring(0,80)+" ...";
+            }
+            text(tt, xCol + 30, y + (r+1)*rowHeight - 35);
           }
         }
         xCol += w*columnWidths[c]/100.0;

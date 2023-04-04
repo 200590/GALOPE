@@ -30,8 +30,10 @@ class Select{
     //triangulo
     fill (0); stroke (0);
     triangle (x + w - 25, y+5, x + w - 15, y + 25, x + w - 5 , y+5);
+    
     //caracteristicas opciones
     fill (0); textSize (14);
+     
      text(selectedValue, x , y + 20);
      
      if (!this.wraped){

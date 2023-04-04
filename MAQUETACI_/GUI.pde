@@ -15,7 +15,7 @@ CheckBoxList cb1, cb2, cb3, cb4;
 //pantalla practica
 Button b7, b8, b9, b10;
 //Pantalla esenciales
-PopUp P1, P2, P3;
+PopUp P1, P2, P3, warn, success;
 Button done2;
 //Pantalla FAQs
 Button b11, b12;
@@ -47,18 +47,10 @@ String [] evaluacion={"RESPUESTA 1", "RESPUESTA2","RESPUESTA 3", "RESPUESTA 4", 
 String []evaluacion2={"RESPUESTA 6", "RESPUESTA 7", "RESPUESTA 8", "RESPUESTA 9", "RESPUESTA 10"};
 String [] nameCarrousel={"caballo.jpg", "casco.jpg", "chaleco.jpg", "botes.jpg", "fusta.jpg", "espuelas.jpg", "montura.jpg", "protector.jpg", "sudadero.jpg", "pantalones.png"};
 
-void setFAQs() {
- /* faqs = new FAQ[8];
 
-  faqs[0] = new FAQ ("pregunta1", "resposta1", margeX, Ycapsa, Wcapsa, 100, 170, color(227, 188, 208), color (255, 222, 226));
-  faqs[1]=new FAQ("pregunta 2", "resposta 2", margeX, Ycapsa+100+170, Wcapsa, 100, 170, color (227, 188, 208), color (255, 222, 226));
-  //faqs[2]= new FAQ ("pregunta 3", "resposta 3", margeX, Ycapsa*3, Wcapsa, 120, 250, color (277, 188, 208), color (255, 222, 226));*/
-  
-
-}
 
 void setGUI() {
-  setFAQs();
+  //setFAQs();
 
   //creación botones
   b1= new Button("INICIAR SESIÓN", Xbutton, Ybutton, Wbutton, Hbutton, Gbutton);
@@ -69,7 +61,7 @@ void setGUI() {
 
 
 
-  b3= new Button ("INFORMACIÓN GALOPES (FAQs)", Xrecuadros, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
+  b3= new Button ("FAQs GALOPES", Xrecuadros, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
   b4= new Button ("PRÁCTICA", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
   b5= new Button ("ESENCIALES", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
   b6= new Button ("CALENDARIO", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
@@ -99,20 +91,23 @@ void setGUI() {
   s1=new Select (selectedValue, Xbutton, Ycorreo+Hbutton*2+150, Wbutton, Hbutton, 10);
   
   //PopUps
-  P1= new PopUp (375, 815, 350, 225, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
+  textAlign(LEFT);
+  P1= new PopUp (375, 815, 350, 225, 20, "RECUERDA!", "MENSAJE", color (255, 222, 226));
   P2= new PopUp (145, 315, 350, 225, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
   P3= new PopUp (1162, 760, 350, 220, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
+  warn= new PopUp (563, 879, 500, 200, 20, "WARNING", "ERROR EN USUARIO O CONTRASEÑA", color (255, 222, 226));
+  success=new PopUp (536, 879, 500, 200, 20, "SUCESS", "USUARIO REGISTRADO", color (255, 222, 226));
   
   //PagedTable
   b11= new Button ("NEXT", buttonPTX+130, buttonPTY, buttonPTW, buttonPTH, Gbutton);
   b12=new Button ("PREV", buttonPTX, buttonPTY, buttonPTW, buttonPTH, Gbutton);
   
-  PT= new PagedTable (5, 1);
-  float[] colsWidth ={100};
+  PT= new PagedTable (5, 2);
+  float[] colsWidth ={40,60};
   PT.setColumWidths(colsWidth);
-  String[] header = {"FAQ"};
+  String[] header = {"Pregunta", "Resposta"};
   PT.setHeaders(header);
-  String[][] faqs ={ {"pregunta1","resposta1"},{"pregunta2","resposta2"}};
+  String[][] faqs = getInfoTaulaFAQs();
   PT.setData(faqs);
   
   //radio buttons practica test 1
@@ -150,5 +145,5 @@ void setGUI() {
   //pantalla esenciales 
   cl=new Carrousel (1400, 225, 500, 700, 1);
   cl.setImages(nameCarrousel);
-  done2= new Button ("DONE", 990, 900, Wbutton/3, Hbutton/2, Gbutton);
+  done2= new Button ("DONE", 990, 1000, Wbutton/3, Hbutton/2, Gbutton);
 }
