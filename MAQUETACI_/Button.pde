@@ -37,7 +37,7 @@ class Button {
       fill (ColorFill);
     }
     stroke(StrokeColor);
-    strokeWeight(2);
+    strokeWeight(2);rectMode(CORNER);
     rect (this.x, this.y, this.w, this.h, this.g);
 
     //propiedades texto

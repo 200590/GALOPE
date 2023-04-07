@@ -3,12 +3,12 @@
 boolean logged=false;
 //selects
 Select s1;
-//opcions select
+//opciones select
 String[] selectedValue={"JINETE/AMAZONA", "ENTRENADOR/A", "AMBOS"};
 PFont font;
 
 
-//Enumerat pantalles
+//Enum pantallas
 enum PANTALLA {
   ENTRADA, IS, EMP, ELECCION, FAQs, ESENCIALES, PRACTICA, PRACTICATEST1, PRACTICATEST2, EVALUACION, CORRECCION, CALENDARIO
 };
@@ -16,8 +16,10 @@ enum PANTALLA {
 //PANTALLA ACTUAL
 PANTALLA pantalla=PANTALLA.PRACTICA;
 
+int numRespuesta = 0;
 int numTest=0;
 int numPregunta = 1;
+String idPregunta = "1";
 String[][] preguntas;
 
 void setup() {
@@ -30,23 +32,16 @@ void setup() {
 
 
   preguntas = getInfoTablaPregunta(String.valueOf(numTest));
-  printArray(preguntas[0]);
-  printArray(preguntas[1]);
+
 }
 
 void draw () {
   background(255);
-  //image(Logo, margeX, margeX+107, llarglogo, amplogo);
-  //displayLogo(40, 50, 70, 70);
-
-
-  //menu
-  //dibujaZonaMenu();
 
   //logo
   dibujaZonaLogo();
 
-  //DIBUIXA PANTALLA CORRESPONENT
+  //DIBUJA PANTALLA CORRESPONDIENTE
   switch (pantalla) {
   case ENTRADA:
     dibujaPantallaENTRADA();

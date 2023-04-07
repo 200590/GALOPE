@@ -171,7 +171,7 @@ void dibujaZonaPracticaTEST() {
   textAlign (CENTER);
   textFont(getSecondFont());
   textSize (50);
-  text ("TEST", 960, 85);
+  text ("TEST", 945, 85);
   back.displayRoundButton();
 
 
@@ -193,7 +193,7 @@ void dibujaZonaPracticaTEST() {
   fill (0);
   textFont(getThirdFont());
   textSize(30);
- text("PREGUNTA ("+(numPregunta+1)+"/"+preguntas.length+"): "+preguntas[numPregunta][1], 100, 395); 
+ text("PREGUNTA ("+(numPregunta+1)+"/"+preguntas.length+"): "+preguntas[numPregunta][1], 40, 395); 
   //ellipse (llarglogo/2+180, amplogo/2+ampmenu-22+Rroundbutton+50, 35,35);
 
   //textos radio button
@@ -202,18 +202,19 @@ void dibujaZonaPracticaTEST() {
   textSize(30);
 
   //getInfoTablaPregunta("GALOPE 1");
-  println(preguntas[numPregunta][2]);
-  text (preguntas[numPregunta][2], 725, 610);
-  text (preguntas[numPregunta][3], 725, 810);
-  text (preguntas[numPregunta][4], 1310, 610);
+  textAlign(LEFT);
+  text (preguntas[numPregunta][2], 400, 510);
+  text (preguntas[numPregunta][3], 400, 660);
+  text (preguntas[numPregunta][4], 400, 810);
 
   if (preguntas[numPregunta][5]!=null) {
-    text (preguntas[numPregunta][5], 1310, 810);
+    text (preguntas[numPregunta][5], 400, 960);
   }
   
 
   rbg.display();
   followQ.displayButton();
+  contestar.displayButton();
   b14.displayButton();
   popStyle();
 }
@@ -251,7 +252,6 @@ void dibujaZonaPracticaTEST2() {
   textFont(getThirdFont());
   textSize(30);
   text("PREGUNTA:", 115, 400);
-  //ellipse (llarglogo/2+180, amplogo/2+ampmenu-22+Rroundbutton+50, 35,35);
 
   //textos radio button
   textAlign (CENTER);

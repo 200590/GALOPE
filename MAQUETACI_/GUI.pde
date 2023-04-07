@@ -23,7 +23,7 @@ PagedTable PT;
 //pantalla practica test 1
 RadioButton rb1, rb2, rb3, rb4;
 RadioButtonGroup rbg;
-Button followQ;
+Button followQ, contestar;
 //ArrayButtons AB1;
 Button buttons;
 //pantalla practica test 2
@@ -114,11 +114,14 @@ void setGUI() {
   PT.setData(faqs);
   
   //radio buttons practica test 1
-  rb1= new RadioButton (600, 600, 30);
-  rb2= new RadioButton (600, 800, 30); 
-  rb3= new RadioButton (1185, 600, 30);
-  rb4= new RadioButton (1185, 800, 30);
-  followQ= new Button ("CONTINUE",1640, 650,  Wbutton/2+20, Hbutton, Gbutton);
+  rb1= new RadioButton (350, 500, 30);
+  rb2= new RadioButton (350, 650, 30); 
+  rb3= new RadioButton (350, 800, 30);
+  rb4= new RadioButton (350, 950, 30);
+  followQ= new Button ("CONTINUE",1640, 155,  Wbutton/2+30, Hbutton, Gbutton);
+  
+  contestar= new Button ("CONTESTAR", 1440, 155, Wbutton/2+30, Hbutton, Gbutton);
+  
   //group radio button
   rbg= new RadioButtonGroup(4);
   rbg.setRadioButtons(rb1, rb2, rb3, rb4); 
@@ -134,7 +137,7 @@ void setGUI() {
   //checkbox list evaluación
   cb2= new CheckBoxList (evaluacion, 238, 334, 80, 80);
   cb3= new CheckBoxList (evaluacion2,  838, 334, 80, 80);
-  b14= new Button ("FINALIZAR", 1500, 890, Wbutton, Hbutton, Gbutton);
+  b14= new Button ("FINALIZAR", margeY, 530, Wbutton, Hbutton, Gbutton);
   b15=new Button ("CORRECCIÓN", 1455, 766, Wbutton, Hbutton, Gbutton);
   
   //pantalla correccion

@@ -10,12 +10,12 @@ void setConnexionBBDD() {
   //se establece la conexión
   msql=new MySQL(this, "localhost", database, user, pass);
 
-  // Si la connexió s'ha establert
+  // Si la connexió se ha establecido
   if (msql.connect()) {
-    // La connexió ha funcionat!!!
+     //Connected to database!!
     println("Connected to database!!");
   } else {
-    // La connexió ha fallat!!!
+    // Connection failed!!
     println("Connection failed !");
   }
 }
@@ -24,6 +24,22 @@ void insertInfoTaulaUsuario(String idUsuario, String correo, String password, St
   String q= "INSERT INTO usuario (idusuario, correoelectronico, contraseña, ocupacion) VALUES ('"+idUsuario+"', '"+correo+"','"+password+"', '"+ocupacion+" ')";
   println (q);
   msql.query(q);
+}
+
+void insertRespostaTest (int respuesta, int test_idtest, int pregunta_idpregunta){
+  String r="INSERT INTO respuesta ( respuesta, test_idtest, pregunta_idpregunta) VALUES ('"+respuesta+"', '"+test_idtest+"', '"+pregunta_idpregunta+" ')";
+  println (r);
+  msql.query(r);
+}
+
+String getRespostaRightTest(){
+  String RR= "SELECT `idpregunta`, `correcta` FROM `pregunta`";
+  return RR;
+}
+
+String getRespostaContestada (){
+  String RC= "SELECT `idrespuesta`, `respuesta` FROM `respuesta`";
+  return RC;
 }
 
 int getUserLogin(String user, String password){
@@ -35,10 +51,7 @@ int getUserLogin(String user, String password){
   return n;
 }
 
-
-
-
-// Obté el número de files de la taula
+// Getter de número de fials de la tabla
 int getNumRowsTaula(String nomTaula){
   msql.query( "SELECT COUNT(*) AS n FROM %s", nomTaula );
   msql.next();
@@ -46,7 +59,7 @@ int getNumRowsTaula(String nomTaula){
   return numRows;
 }
 
-// Obté el número de files de la query
+// Getter número de filas de la query
 int getNumRowsQuery(String q){
   msql.query( q);
   msql.next();
@@ -54,7 +67,8 @@ int getNumRowsQuery(String q){
   return numRows;
 }
 
-// Retorna el numero de Unitat de la Unitat amb nom
+// getter de numero de unidad de la unidad con nombre 
+
 int getIdTaulaUnitat(String nom){
   String sNom = nom.replace("\'", "\\'");
   String q = "SELECT numero FROM unitat WHERE nom='"+sNom+"'";
@@ -63,10 +77,7 @@ int getIdTaulaUnitat(String nom){
   return msql.getInt("numero");
 }
 
-
-
-  
-// Obté informació de la taula FAQs
+//Getter información tabla FAQs
 String[][] getInfoTaulaFAQs(){
   
   int numRows = getNumRowsTaula("faqs");
@@ -84,7 +95,7 @@ String[][] getInfoTaulaFAQs(){
   return data;
 }
 
-//obte informació taula Pregunta
+//obten informacion tabla pregunta
 
 String [][] getInfoTablaPregunta(String unidad){
   String q2 ="SELECT COUNT(*) AS n FROM pregunta WHERE unidad_idunidad='"+unidad+"'";
@@ -99,7 +110,7 @@ String [][] getInfoTablaPregunta(String unidad){
     data [nr][2]=msql.getString ("opcio1");
     data [nr][3]=msql.getString ("opcio2");
     data [nr][4]=msql.getString ("opcio3");
-    data[nr][5]=msql.getString ("opcio4");
+    data [nr][5]=msql.getString ("opcio4");
     data [nr][6]=msql.getString ("correcta"); 
     data [nr][7]=msql.getString ("area_idarea");
     data [nr][8]=msql.getString ("unidad_idunidad");

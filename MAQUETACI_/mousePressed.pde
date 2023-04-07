@@ -87,7 +87,7 @@ void mousePressed() {
       pantalla=PANTALLA.CALENDARIO;
     }
   } else if (pantalla==PANTALLA.PRACTICA) {
-    
+
     if (b7.mouseOverButton()) {
       numTest = 0;
       numPregunta=0;
@@ -105,11 +105,13 @@ void mousePressed() {
       numPregunta=0;
       preguntas = getInfoTablaPregunta(String.valueOf(numTest));
       printArray(preguntas.length);
+      pantalla=PANTALLA.PRACTICATEST1;
     } else if (b10.mouseOverButton()) {
       numTest = 3;
       numPregunta=0;
       preguntas = getInfoTablaPregunta(String.valueOf(numTest));
       printArray(preguntas.length);
+      pantalla=PANTALLA.PRACTICATEST1;
     }
   } else if (pantalla==PANTALLA.ESENCIALES) {
     cb1.checkMouse();
@@ -122,15 +124,28 @@ void mousePressed() {
     } else if (b12.mouseOverButton()) {
       PT.prevPage();
     }
-  } else if (pantalla==PANTALLA.PRACTICATEST1||pantalla==PANTALLA.PRACTICATEST2) {
+  } else if (pantalla==PANTALLA.PRACTICATEST1) {
+   
     rbg.updateOnClick();
+
     if (b14.mouseOverButton()) {
       pantalla=PANTALLA.EVALUACION;
     }
     else if (followQ.mouseOverButton() && numPregunta<preguntas.length-1) {
       println("FOLLOW Q");
       numPregunta++;
-      println(numPregunta, preguntas.length);
+    } else if (contestar.mouseOverButton()) {
+      println("CONTESTAR PITJAT");
+     String opcionCorrecta = preguntas[numPregunta][9];
+      numRespuesta = rbg.selectedOption+1;
+      if(opcionCorrecta.equals(String.valueOf(numRespuesta))){
+        println("CORRECTA");
+      }
+      else {
+        println("INCORRECTA");
+      }
+      idPregunta = preguntas[numPregunta][0];
+      insertRespostaTest (numRespuesta, numTest+1, Integer.valueOf(idPregunta));
     }
   } else if (pantalla==PANTALLA.EVALUACION) {
     cb2.checkMouse();
