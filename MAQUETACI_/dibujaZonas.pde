@@ -208,6 +208,7 @@ void dibujaZonaPracticaTEST() {
   text (preguntas[numPregunta][4], 400, 810);
 
   if (preguntas[numPregunta][5]!=null) {
+   // rbg2.display();
     text (preguntas[numPregunta][5], 400, 960);
   }
   

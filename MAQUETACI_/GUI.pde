@@ -1,4 +1,3 @@
-//FAQ[] faqs;
 
 //general
 
@@ -47,7 +46,7 @@ String[] info2={"Fusta/espuelas", "Material para el caballo", "Pantalones de equ
 String [] evaluacion={"RESPUESTA 1", "RESPUESTA2","RESPUESTA 3", "RESPUESTA 4", "RESPUESTA 5"};
 String []evaluacion2={"RESPUESTA 6", "RESPUESTA 7", "RESPUESTA 8", "RESPUESTA 9", "RESPUESTA 10"};
 String [] nameCarrousel={"caballo.jpg", "casco.jpg", "chaleco.jpg", "botes.jpg", "fusta.jpg", "espuelas.jpg", "montura.jpg", "protector.jpg", "sudadero.jpg", "pantalones.png"};
-
+String[] namePhoto= {"CABALLO", "CASCO", "CHALECO", "BOTAS", "FUSTA", "ESPUELAS", "MONTURA", "PROTECTOR DE DORSO", "SUDADERO","PANTALONES"};
 
 
 void setGUI() {
@@ -152,5 +151,5 @@ void setGUI() {
   //pantalla esenciales 
   cl=new Carrousel (1400, 225, 500, 700, 1);
   cl.setImages(nameCarrousel);
-  done2= new Button ("DONE", 990, 1000, Wbutton/3, Hbutton/2, Gbutton);
+  done2= new Button ("DONE", 990, 1500, Wbutton/3, Hbutton/2, Gbutton);
 }
