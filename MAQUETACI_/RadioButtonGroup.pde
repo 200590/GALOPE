@@ -47,6 +47,12 @@ class RadioButtonGroup{
     }
       return false;
     }
-  }
+    
+    
+  //intent d'eliminar resposta seleccionada 
+/* void resetRGB(){
+    selectedOption=0;
+    }*/
+}
   
    

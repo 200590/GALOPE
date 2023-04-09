@@ -92,7 +92,9 @@ void dibujaPantallaPractica(){
 }
 
 void dibujaPantallaPracTEST1(){
+  pushStyle();
   dibujaZonaPracticaTEST();
+  popStyle();
 }
 
 void dibujaPantallaPracTEST2(){

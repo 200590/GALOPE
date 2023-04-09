@@ -299,7 +299,7 @@ void dibujaZonaEvaluacion() {
   rect(1456, 332, 250, 250);
   fill(0);
   textFont(getSecondFont());
-  text ("X/10", 1556, 465);
+  text ("x/10", 1556, 465);
 
   popStyle();
 }

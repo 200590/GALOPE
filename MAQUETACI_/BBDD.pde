@@ -27,7 +27,7 @@ void insertInfoTaulaUsuario(String idUsuario, String correo, String password, St
 }
 
 void insertRespostaTest (int respuesta, int test_idtest, int pregunta_idpregunta){
-  String r="INSERT INTO respuesta ( respuesta, test_idtest, pregunta_idpregunta) VALUES ('"+respuesta+"', '"+test_idtest+"', '"+pregunta_idpregunta+" ')";
+  String r="INSERT INTO respuesta (respuesta, test_idtest, pregunta_idpregunta) VALUES ('"+respuesta+"', '"+test_idtest+"', '"+pregunta_idpregunta+" ')";
   println (r);
   msql.query(r);
 }

@@ -125,21 +125,26 @@ void mousePressed() {
       PT.prevPage();
     }
   } else if (pantalla==PANTALLA.PRACTICATEST1) {
-   
-    rbg.updateOnClick();
 
+     rbg.updateOnClick();
+    
     if (b14.mouseOverButton()) {
-      pantalla=PANTALLA.EVALUACION;
-    }
+          pantalla=PANTALLA.EVALUACION;
+          }
+          
     else if (followQ.mouseOverButton() && numPregunta<preguntas.length-1) {
       println("FOLLOW Q");
       numPregunta++;
+      //rbg.resetRGB();
+      
     } else if (contestar.mouseOverButton()) {
       println("CONTESTAR PITJAT");
-     String opcionCorrecta = preguntas[numPregunta][8];
+    String opcionCorrecta = preguntas[numPregunta][8];
+    // int acumulades=0;
       numRespuesta = rbg.selectedOption+1;
       if(opcionCorrecta.equals(String.valueOf(numRespuesta))){
         println("CORRECTA");
+       // acumulades++;
       }
       else {
         println("INCORRECTA");
