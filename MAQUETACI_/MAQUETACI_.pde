@@ -18,7 +18,7 @@ PANTALLA pantalla=PANTALLA.PRACTICA;
 
 int numRespuesta = 0;
 int numTest=0;
-int numPregunta = 1;
+int numPregunta = 0;
 String idPregunta = "1";
 String[][] preguntas;
 

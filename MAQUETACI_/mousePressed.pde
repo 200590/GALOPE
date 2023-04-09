@@ -136,7 +136,7 @@ void mousePressed() {
       numPregunta++;
     } else if (contestar.mouseOverButton()) {
       println("CONTESTAR PITJAT");
-     String opcionCorrecta = preguntas[numPregunta][10];
+     String opcionCorrecta = preguntas[numPregunta][8];
       numRespuesta = rbg.selectedOption+1;
       if(opcionCorrecta.equals(String.valueOf(numRespuesta))){
         println("CORRECTA");
