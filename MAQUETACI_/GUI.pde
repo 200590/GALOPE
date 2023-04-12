@@ -126,12 +126,12 @@ void setGUI() {
   rbg.setRadioButtons(rb1, rb2, rb3, rb4); 
   
   //radio button practica test 2
-  rb5= new RadioButton (664, 495, 30);
-  rb6= new RadioButton (664, 550, 30); 
-  rb7= new RadioButton (730, 495, 30);
+  rb5= new RadioButton (350, 500, 30);
+  rb6= new RadioButton (350, 700, 30); 
+  rb7= new RadioButton (350, 900, 30);
   //group radio button
   rbg2= new RadioButtonGroup(3);
-  rbg2.setRadioButtons(rb1, rb2, rb3); 
+  rbg2.setRadioButtons(rb5, rb6, rb7); 
   
   //checkbox list evaluación
   cb2= new CheckBoxList (evaluacion, 238, 334, 80, 80);

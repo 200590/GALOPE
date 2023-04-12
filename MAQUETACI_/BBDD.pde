@@ -5,6 +5,8 @@ MySQL msql;
 String user="admin";
 String pass="12345";
 String database="mydb";
+int numCorrectas=0; 
+boolean[] correctas ={false, false, false, false, false, false, false, false, false, false};
 
 void setConnexionBBDD() {
   //se establece la conexión
@@ -117,4 +119,11 @@ String [][] getInfoTablaPregunta(String unidad){
     nr++;
   }
   return data;
+}
+void resetCorrectas(){
+  numCorrectas=0; 
+  for (int i=0; i<correctas.length; i++){
+    correctas[i]=false;
+  }
+
 }

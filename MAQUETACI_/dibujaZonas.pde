@@ -182,7 +182,7 @@ void dibujaZonaPracticaTEST() {
   fill(0);
   textFont(getThirdFont());
   textSize(30);
-  text("TEST GALOPE "+numTest, 242, 210);
+  text("TEST GALOPE "+(numTest+1), 242, 210);
 
 
   //recuadro pregunta
@@ -204,16 +204,20 @@ void dibujaZonaPracticaTEST() {
   //getInfoTablaPregunta("GALOPE 1");
   textAlign(LEFT);
   text (preguntas[numPregunta][2], 400, 510);
-  text (preguntas[numPregunta][3], 400, 660);
-  text (preguntas[numPregunta][4], 400, 810);
+  text (preguntas[numPregunta][3], 400, 710);
+  text (preguntas[numPregunta][4], 400, 910);
+  
 
   if (preguntas[numPregunta][5]!=null) {
-   // rbg2.display();
+    rbg.display();
+  text (preguntas[numPregunta][2], 400, 510);
+  text (preguntas[numPregunta][3], 400, 660);
+  text (preguntas[numPregunta][4], 400, 810);
     text (preguntas[numPregunta][5], 400, 960);
   }
   
 
-  rbg.display();
+  rbg2.display();
   followQ.displayButton();
   contestar.displayButton();
   b14.displayButton();
@@ -299,7 +303,7 @@ void dibujaZonaEvaluacion() {
   rect(1456, 332, 250, 250);
   fill(0);
   textFont(getSecondFont());
-  text ("x/10", 1556, 465);
+  text (numCorrectas+"/10", 1556, 465);
 
   popStyle();
 }

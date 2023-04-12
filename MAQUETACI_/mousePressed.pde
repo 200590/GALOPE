@@ -91,23 +91,27 @@ void mousePressed() {
     if (b7.mouseOverButton()) {
       numTest = 0;
       numPregunta=0;
+      resetCorrectas();
       preguntas = getInfoTablaPregunta(String.valueOf(numTest));
       printArray(preguntas.length);
       pantalla=PANTALLA.PRACTICATEST1;
     } else if (b8.mouseOverButton()) {
       numTest = 1;
       numPregunta=0;
+      resetCorrectas();
       preguntas = getInfoTablaPregunta(String.valueOf(numTest));
       printArray(preguntas.length);
       pantalla=PANTALLA.PRACTICATEST1;
     } else if (b9.mouseOverButton()) {
       numTest = 2;
       numPregunta=0;
+      resetCorrectas();
       preguntas = getInfoTablaPregunta(String.valueOf(numTest));
       printArray(preguntas.length);
       pantalla=PANTALLA.PRACTICATEST1;
     } else if (b10.mouseOverButton()) {
       numTest = 3;
+     resetCorrectas();
       numPregunta=0;
       preguntas = getInfoTablaPregunta(String.valueOf(numTest));
       printArray(preguntas.length);
@@ -129,25 +133,37 @@ void mousePressed() {
      rbg.updateOnClick();
     
     if (b14.mouseOverButton()) {
-          pantalla=PANTALLA.EVALUACION;
+         for (int i=0; i<10; i++){
+           if (i<5){
+             cb2.cbs[i].checked=correctas[i];
+           }else{
+             cb3.cbs[i-5].checked=correctas[i];
+           }
+         }
+      pantalla=PANTALLA.EVALUACION;
           }
           
     else if (followQ.mouseOverButton() && numPregunta<preguntas.length-1) {
       println("FOLLOW Q");
       numPregunta++;
-      //rbg.resetRGB();
+      for (int i=0; i<rbg.rbuttons.length; i++){
+        rbg.rbuttons[i].checked=false;
+      }
       
     } else if (contestar.mouseOverButton()) {
       println("CONTESTAR PITJAT");
-    String opcionCorrecta = preguntas[numPregunta][8];
-    // int acumulades=0;
+    String opcionCorrecta = preguntas[numPregunta][6];
+    printArray (preguntas[numPregunta]);
+    println ("OPCIÓ CORRECTA:"+opcionCorrecta);
       numRespuesta = rbg.selectedOption+1;
       if(opcionCorrecta.equals(String.valueOf(numRespuesta))){
         println("CORRECTA");
-       // acumulades++;
+       correctas[numPregunta]=true;
+       numCorrectas++;
       }
       else {
         println("INCORRECTA");
+       correctas[numPregunta]=false;
       }
       idPregunta = preguntas[numPregunta][0];
       insertRespostaTest (numRespuesta, numTest+1, Integer.valueOf(idPregunta));
