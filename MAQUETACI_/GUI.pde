@@ -54,7 +54,7 @@ void setGUI() {
 
   //creación botones
   b1= new Button("INICIAR SESIÓN", Xbutton, Ybutton, Wbutton, Hbutton, Gbutton);
-  b2= new Button ("EMPEZAR", Xbutton, Ybutton+200, Wbutton, Hbutton, Gbutton);
+  b2= new Button ("EMPEZAR", Xbutton+Wbutton*2, Ybutton, Wbutton, Hbutton, Gbutton);
   b0= new RoundButton ("GALOPE", llarglogo/2+16, amplogo/2+ampmenu+30, Rroundbutton+20);
   next= new RoundButton("NEXT", Xroundbutton, Yroundbutton, Rroundbutton);
   back= new RoundButton ("BACK", 75, Yroundbutton, Rroundbutton);
@@ -70,18 +70,18 @@ void setGUI() {
   b8= new Button ("GALOPE 2", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
   b9= new Button ("GALOPE 3", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
   b10= new Button ("GALOPE 4", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
-  wb= new Button("RFHE", Xbutton+600, Ybutton+450, Wbutton, Hbutton, Gbutton);
+  wb= new Button("RFHE", Xbutton+Wbutton, Ybutton+250,Wbutton, Hbutton, Gbutton);
     desktop=Desktop.getDesktop();
     
   
   
   //creacion campo texto
-  Textousuario= new TextField((int)Xbutton, (int)Ybutton, (int)Wbutton, (int)Hbutton, Gbutton);
-  newUsuario=new TextField ((int)Xbutton, (int)Ybutton, (int)Wbutton, (int)Hbutton, Gbutton);
-  Textocontraseña= new TextField ((int)Xbutton, (int)Ybutton+150, (int) Wbutton, (int)Hbutton, Gbutton);
+  Textousuario= new TextField((int)Xtextfield, (int)Ytextfield, (int)Wbutton, (int)Hbutton, Gbutton);
+  newUsuario=new TextField ((int)Xtextfield, (int)Ytextfield, (int)Wbutton, (int)Hbutton, Gbutton);
+  Textocontraseña= new TextField ((int)Xtextfield, (int)Ytextfield+150, (int) Wbutton, (int)Hbutton, Gbutton);
   
-  Textocorreo=new TextField ((int)Xbutton, (int) Ycorreo-90, (int)Wbutton, (int) Hbutton, Gbutton);
-  TextocontraseñaE= new TextField ((int)Xbutton, (int)Ycorreo+(int)Hbutton+100, (int)Wbutton, (int)Hbutton, Gbutton);
+  Textocorreo=new TextField ((int)Xtextfield, (int) Ytextfield-90, (int)Wbutton, (int) Hbutton, Gbutton);
+  TextocontraseñaE= new TextField ((int)Xtextfield, (int)Ytextfield+(int)Hbutton+100, (int)Wbutton, (int)Hbutton, Gbutton);
 
 
   //consturcción checkbox List

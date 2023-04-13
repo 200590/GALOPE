@@ -36,20 +36,21 @@ void dibujaZonaEntr() {
   //fons general
   //fill(244, 255, 253);
   //zona menu
-  fill (219, 130, 193);
+ /* fill (219, 130, 193);
   strokeWeight(2);
   rect (margeX, margeY, width-margeX*2, ampmenu, 10);
   fill (0);
   textAlign (CENTER);
   textFont(getSecondFont());
   textSize(50);
-  text ("ENTRADA", 960, 85);
-  //sección rosa
-  stroke(0);
+  text ("ENTRADA", 960, 85);*/
+  //sección blanca
+  displayEntrada(0,0, width, height);
+ /* stroke(0);
   fill (255, 252, 252);
   stroke(255);
   rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
-  stroke(0);
+  stroke(0);*/
   b0.displayRoundButton();
   wb.displayButton();
   // success.display();

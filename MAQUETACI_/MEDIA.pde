@@ -47,9 +47,10 @@ String URL_IMGS="imgs/";
 PImage[] imgs;
 
 void setMedias(){
-  this.imgs=new PImage[3];
+  this.imgs=new PImage[4];
   this.imgs[0]= loadImage(URL_IMGS+"logo01.png");
   this.imgs[1]= loadImage(URL_IMGS+"logo02.png");
+  this.imgs[2]=loadImage (URL_IMGS+"entrada.jpg");
 }
 
 int getNumImatges(){
@@ -64,6 +65,10 @@ PImage getLogo02(){
   return this.imgs[1];
 }
 
+PImage getEntrada(){
+  return this.imgs[2];
+}
+
 //display logo 
 void displayLogo (float x, float y, float w, float h){
   image (getLogo01(), x, y, w, h);
@@ -71,4 +76,8 @@ void displayLogo (float x, float y, float w, float h){
 
 void displayLogo2 (float x, float y, float w, float h){
   image (getLogo02(), x, y, w, h);
+}
+
+void displayEntrada (float x, float y, float w, float h){
+  image (getEntrada(), x, y, w, h);
 }
