@@ -20,7 +20,7 @@ class Select{
   
   void display(){
     pushStyle();
-    stroke (0); strokeWeight(2); fill(255, 211, 234);
+    stroke (0); strokeWeight(2); fill(222, 65, 65);
     rect (x, y, w, h, g);
     
     //sección triangulo
@@ -32,9 +32,9 @@ class Select{
     triangle (x + w - 25, y+5, x + w - 15, y + 25, x + w - 5 , y+5);
     
     //caracteristicas opciones
-    fill (0); textSize (14);
+    fill (0); textSize (30);textFont (getThirdFont());
      
-     text(selectedValue, x , y + 20);
+     text(selectedValue, x , y + 52);
      
      if (!this.wraped){
        fill(255); stroke(0);

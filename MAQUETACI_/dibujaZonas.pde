@@ -61,7 +61,7 @@ void dibujaZonaEntr() {
 void dibujaZonaIS() {
   pushStyle();
   //zona menu
-  fill (219, 130, 193);
+ /* fill (219, 130, 193);
   strokeWeight(2);
   rect (margeX, margeY, width-margeX*2, ampmenu, 10);
   fill (0);
@@ -73,7 +73,8 @@ void dibujaZonaIS() {
   fill (255, 252, 252);
   noStroke();
   rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
-  stroke(0);
+  stroke(0);*/
+  displayEmpezar(0, 0, width, height);
   b0.displayRoundButton();
   //warn.display();
   popStyle();
@@ -83,7 +84,7 @@ void dibujaZonaIS() {
 void dibujaZonaEMP() {
   pushStyle();
   //zona menu
-  fill (219, 130, 193);
+ /* fill (219, 130, 193);
   strokeWeight(2);
   rect (margeX, margeY, width-margeX*2, ampmenu, 10);
   fill (0);
@@ -95,7 +96,8 @@ void dibujaZonaEMP() {
   fill (255, 252, 252);
   noStroke();
   rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
-  stroke(0);
+  stroke(0);*/
+  displayEmpezar (0, 0, width, height);
   b0.displayRoundButton();
   popStyle();
 }
@@ -117,6 +119,9 @@ void dibujaZonaEleccion() {
   noStroke();
   rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
   stroke(0);
+  rectMode(LEFT);
+  tint (255, 115);
+  displayLogo2(735, 330, 500, 500);
   b0.displayRoundButton();
   popStyle();
 }
@@ -136,6 +141,9 @@ void dibujaZonaPractica () {
   noStroke();
   rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
   stroke(0);
+  rectMode(LEFT);
+  tint (255, 115);
+  displayLogo2(735, 330, 500, 500);
   b0.displayRoundButton();
   back.displayRoundButton();
   popStyle();
@@ -143,6 +151,8 @@ void dibujaZonaPractica () {
 
 void dibujaZonaEsenciales() {
   pushStyle();
+    tint (255, 115);
+  displayLogo2(735, 330, 500, 500);
   fill (255, 252, 252);
   fill (219, 130, 193);
   strokeWeight(2);
@@ -156,14 +166,16 @@ void dibujaZonaEsenciales() {
   cb1.display();
   cb4.display();
   P1.display();
-  done.displayButton();
   cl.display();
+ 
   popStyle();
 }
 
 void dibujaZonaPracticaTEST() {
   //menu y logo
   pushStyle();
+  tint (255, 115);
+  displayLogo2(735, 330, 500, 500);
   fill (255, 252, 252);
   fill (219, 130, 193);
   strokeWeight(2);
@@ -275,6 +287,8 @@ void dibujaZonaPracticaTEST2() {
 void dibujaZonaEvaluacion() {
   //menu y logo
   pushStyle();
+  tint (255, 115);
+  displayLogo2(735, 330, 500, 500);
   fill (255, 252, 252);
   fill (219, 130, 193);
   strokeWeight(2);
@@ -306,12 +320,15 @@ void dibujaZonaEvaluacion() {
   textFont(getSecondFont());
   text (numCorrectas+"/10", 1556, 465);
 
+
   popStyle();
 }
 
 void dibujaZonaCorreccion() {
   //menu y logo
   pushStyle();
+  tint (255, 115);
+  displayLogo2(735, 330, 500, 500);
   fill (255, 252, 252);
   fill (219, 130, 193);
   strokeWeight(2);
@@ -346,6 +363,8 @@ void dibujaZonaCorreccion() {
 void dibujaZonaCalendario() {
   //menu y logo
   pushStyle();
+  tint (255, 115);
+  displayLogo2(735, 330, 500, 500);
   fill (255, 252, 252);
   fill (219, 130, 193);
   strokeWeight(2);
@@ -362,12 +381,14 @@ void dibujaZonaCalendario() {
 
   rect (460, 195, 570, 100, 10);
 
+  
+
 
   c.display();
   ImportantEvents.display();
   fill (0);
   textAlign (LEFT);
-  text ("EVENTOS IMPORTANTES", 623, 340);
+  text ("EVENTOS IMPORTANTES", 460, 340);
   P2.display();
   done.displayButton();
   popStyle();

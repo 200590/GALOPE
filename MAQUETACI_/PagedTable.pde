@@ -51,13 +51,13 @@ class PagedTable{
   //Dibuixa taula
   void display (float x, float y, float w, float h){
     pushStyle();
-      fill (255, 252, 252);
+    fill (255, 252, 252, 115);
     stroke (0); strokeWeight(3);
     rect (x, y, w, h);
     rect(x, y, w, h);
     
     float rowHeight = h / numRows;
-    fill(232, 138, 205);  stroke(0); strokeWeight(3);
+    fill(222, 65, 65);  stroke(0); strokeWeight(3);
     rect(x, y, w, rowHeight);
     
     // Dibuixa files

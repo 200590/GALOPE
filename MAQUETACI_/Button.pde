@@ -22,8 +22,8 @@ class Button {
     this.w=w;
     this.h=h;
     this.g=g;
-    ColorFill=color(255, 211, 234);
-    fillColorOver=color(235, 188, 220);
+    ColorFill=color(222, 65, 65);
+    fillColorOver=color(214, 63, 63);
     StrokeColor=color(0);
   }
   

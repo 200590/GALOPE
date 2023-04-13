@@ -28,7 +28,7 @@ class CheckboxText{
     this.x=x;  this.y=y; this.w=w; this.h=h; 
     this.checked=false; 
     this.bgNoChecked= color (255);
-    this.bgChecked= color(235, 188, 220);
+    this.bgChecked= color(222, 65, 65);
   }
   
   /*void setImage (String imgName){

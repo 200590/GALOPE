@@ -131,6 +131,7 @@ void mousePressed() {
   } else if (pantalla==PANTALLA.PRACTICATEST1) {
 
      rbg.updateOnClick();
+     rbg2.updateOnClick();
     
     if (b14.mouseOverButton()) {
          for (int i=0; i<10; i++){

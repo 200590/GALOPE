@@ -53,24 +53,25 @@ void setGUI() {
   //setFAQs();
 
   //creación botones
-  b1= new Button("INICIAR SESIÓN", Xbutton, Ybutton, Wbutton, Hbutton, Gbutton);
-  b2= new Button ("EMPEZAR", Xbutton+Wbutton*2, Ybutton, Wbutton, Hbutton, Gbutton);
+
+  b1= new Button("INICIAR SESIÓN", Xbutton-120, Ybutton-70, Wbutton, Hbutton, Gbutton);
+  b2= new Button ("EMPEZAR", Xbutton+Wbutton*2+150, Ybutton-70, Wbutton, Hbutton, Gbutton);
   b0= new RoundButton ("GALOPE", llarglogo/2+16, amplogo/2+ampmenu+30, Rroundbutton+20);
   next= new RoundButton("NEXT", Xroundbutton, Yroundbutton, Rroundbutton);
   back= new RoundButton ("BACK", 75, Yroundbutton, Rroundbutton);
 
 
-
-  b3= new Button ("FAQs GALOPES", Xrecuadros, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
-  b4= new Button ("PRÁCTICA", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
+//222, 65, 65
+  b3= new Button ("FAQs GALOPES", Xrecuadros-50, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
+  b4= new Button ("PRÁCTICA", Xrecuadros-50, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
   b5= new Button ("ESENCIALES", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
   b6= new Button ("CALENDARIO", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
   
-  b7=new Button ("GALOPE 1", Xrecuadros, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
-  b8= new Button ("GALOPE 2", Xrecuadros, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
+  b7=new Button ("GALOPE 1", Xrecuadros-50, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
+  b8= new Button ("GALOPE 2", Xrecuadros-50, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
   b9= new Button ("GALOPE 3", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
   b10= new Button ("GALOPE 4", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
-  wb= new Button("RFHE", Xbutton+Wbutton, Ybutton+250,Wbutton, Hbutton, Gbutton);
+  wb= new Button("RFHE", Xbutton+Wbutton, Ybutton+150,Wbutton, Hbutton, Gbutton);
     desktop=Desktop.getDesktop();
     
   
@@ -80,8 +81,8 @@ void setGUI() {
   newUsuario=new TextField ((int)Xtextfield, (int)Ytextfield, (int)Wbutton, (int)Hbutton, Gbutton);
   Textocontraseña= new TextField ((int)Xtextfield, (int)Ytextfield+150, (int) Wbutton, (int)Hbutton, Gbutton);
   
-  Textocorreo=new TextField ((int)Xtextfield, (int) Ytextfield-90, (int)Wbutton, (int) Hbutton, Gbutton);
-  TextocontraseñaE= new TextField ((int)Xtextfield, (int)Ytextfield+(int)Hbutton+100, (int)Wbutton, (int)Hbutton, Gbutton);
+  Textocorreo=new TextField ((int)Xtextfield, (int) Ytextfield-135, (int)Wbutton, (int) Hbutton, Gbutton);
+  TextocontraseñaE= new TextField ((int)Xtextfield, (int)Ytextfield+(int)Hbutton+50, (int)Wbutton, (int)Hbutton, Gbutton);
 
 
   //consturcción checkbox List
@@ -90,7 +91,7 @@ void setGUI() {
 
 
   //selected
-  s1=new Select (selectedValue, Xbutton, Ycorreo+Hbutton*2+150, Wbutton, Hbutton, 10);
+  s1=new Select (selectedValue, Xtextfield, Ytextfield+Hbutton*2+97, Wbutton, Hbutton, 10);
   
   //PopUps
   textAlign(LEFT);
@@ -145,7 +146,7 @@ void setGUI() {
 
   //pantalla calendario
   c= new Calendario (1075, 195, 839, 720, 610, 255);
-  ImportantEvents= new TextField (620, 360, 1025-610, 350, Gbutton);
+  ImportantEvents= new TextField (460, 360, 1025-610, 350, Gbutton);
   done= new Button ("DONE", 935, 750, Wbutton/3, Hbutton/2, Gbutton);
   
   //pantalla esenciales 

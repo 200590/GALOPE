@@ -14,9 +14,9 @@
     this.b=b; 
     this.r=r;
     this.enabled=true;
-    FillColor=color(255, 211, 234);
-    ColorFillOver=color(235, 188, 220);
-    NoEnabledColor=color(235, 188, 220);
+    FillColor=color(222, 65, 65);
+    ColorFillOver=color(214, 63, 63);
+    NoEnabledColor=color(214, 63, 63);
   }
   
  void setEnabled(boolean b){

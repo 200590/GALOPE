@@ -14,7 +14,7 @@ enum PANTALLA {
 };
 
 //PANTALLA ACTUAL
-PANTALLA pantalla=PANTALLA.PRACTICA;
+PANTALLA pantalla=PANTALLA.ELECCION;
 
 int numRespuesta = 0;
 int numTest=0;

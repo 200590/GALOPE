@@ -8,6 +8,7 @@ void setFonts(){
   this.fonts[1]= createFont (URL_FONTS+"NixieOne.ttf", 24); 
   this.fonts[2]= createFont (URL_FONTS+"LiberationMono-Regular.ttf", 24);
   this.fonts[3]= createFont(URL_FONTS+"Cherry Monospace-Light.ttf", 24);
+ 
   
  // this.fonts[1]= createFont ("Zector.otf", 30);
 }
@@ -51,6 +52,7 @@ void setMedias(){
   this.imgs[0]= loadImage(URL_IMGS+"logo01.png");
   this.imgs[1]= loadImage(URL_IMGS+"logo02.png");
   this.imgs[2]=loadImage (URL_IMGS+"entrada.jpg");
+  this.imgs[3]=loadImage (URL_IMGS+"empezar.jpg");
 }
 
 int getNumImatges(){
@@ -69,6 +71,9 @@ PImage getEntrada(){
   return this.imgs[2];
 }
 
+PImage getEmpezar(){
+  return this.imgs[3];
+}
 //display logo 
 void displayLogo (float x, float y, float w, float h){
   image (getLogo01(), x, y, w, h);
@@ -80,4 +85,8 @@ void displayLogo2 (float x, float y, float w, float h){
 
 void displayEntrada (float x, float y, float w, float h){
   image (getEntrada(), x, y, w, h);
+}
+
+void displayEmpezar(float x, float y, float w, float h){
+  image (getEmpezar(), x, y, w, h);
 }
