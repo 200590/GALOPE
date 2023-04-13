@@ -95,9 +95,9 @@ void setGUI() {
   
   //PopUps
   textAlign(LEFT);
-  P1= new PopUp (375, 815, 350, 225, 20, "RECUERDA!", "MENSAJE", color (255, 222, 226));
-  P2= new PopUp (145, 315, 350, 225, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
-  P3= new PopUp (1162, 760, 350, 220, 20, "ASUNTO", "MENSAJE", color (255, 222, 226));
+  P1= new PopUp (375, 815, 350, 225, 20, "RECUERDA!", "MENSAJE", color (222, 65, 65));
+  P2= new PopUp (145, 315, 350, 225, 20, "ASUNTO", "MENSAJE", color (222, 65, 65));
+  P3= new PopUp (1162, 760, 350, 220, 20, "ASUNTO", "MENSAJE", color (222, 65, 65));
   warn= new PopUp (563, 879, 500, 200, 20, "WARNING", "ERROR EN USUARIO O CONTRASEÑA", color (255, 222, 226));
   success=new PopUp (536, 879, 500, 200, 20, "SUCESS", "USUARIO REGISTRADO", color (255, 222, 226));
   

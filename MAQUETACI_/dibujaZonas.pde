@@ -216,21 +216,21 @@ void dibujaZonaPracticaTEST() {
 
   //getInfoTablaPregunta("GALOPE 1");
   textAlign(LEFT);
+  
+  if (preguntas[numPregunta][5]==null){
+  rbg2.display();
   text (preguntas[numPregunta][2], 400, 510);
   text (preguntas[numPregunta][3], 400, 710);
   text (preguntas[numPregunta][4], 400, 910);
-  
-
-  if (preguntas[numPregunta][5]!=null) {
-    rbg.display();
+  } else if (preguntas[numPregunta][5]!=null) {
+  rbg.display();
   text (preguntas[numPregunta][2], 400, 510);
   text (preguntas[numPregunta][3], 400, 660);
   text (preguntas[numPregunta][4], 400, 810);
-    text (preguntas[numPregunta][5], 400, 960);
+  text (preguntas[numPregunta][5], 400, 960);
   }
-  
 
-  rbg2.display();
+  
   followQ.displayButton();
   contestar.displayButton();
   b14.displayButton();

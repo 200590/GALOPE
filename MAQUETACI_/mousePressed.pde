@@ -149,6 +149,7 @@ void mousePressed() {
       numPregunta++;
       for (int i=0; i<rbg.rbuttons.length; i++){
         rbg.rbuttons[i].checked=false;
+        //rbg2.rbuttons[i].checked=false;
       }
       
     } else if (contestar.mouseOverButton()) {
