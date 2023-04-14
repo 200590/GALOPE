@@ -151,7 +151,7 @@ void dibujaZonaPractica () {
 
 void dibujaZonaEsenciales() {
   pushStyle();
-    tint (255, 115);
+  tint (255, 115);
   displayLogo2(735, 330, 500, 500);
   fill (255, 252, 252);
   fill (222, 65, 65);
@@ -166,6 +166,7 @@ void dibujaZonaEsenciales() {
   cb1.display();
   cb4.display();
   P1.display();
+  tint (255, 255);
   cl.display();
  
   popStyle();
@@ -308,7 +309,7 @@ void dibujaZonaEvaluacion() {
   textAlign(LEFT);
   fill(0);
   textFont(getSecondFont());
-  text("EVALUACION TEST GALOPE 1", 242, 210);
+  text("EVALUACION TEST GALOPE "+(numTest+1), 242, 210);
   cb2.display();
   cb3.display();
 
@@ -319,6 +320,7 @@ void dibujaZonaEvaluacion() {
   fill(0);
   textFont(getSecondFont());
   text (numCorrectas+"/10", 1556, 465);
+  text (numCorrectas*100/10+"%",1556, 500);
 
 
   popStyle();
@@ -346,12 +348,16 @@ void dibujaZonaCorreccion() {
   rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20, 10);
   textAlign(LEFT);
   fill(0);
+  textFont(getSecondFont());
+  textSize(30);
   text("PREGUNTA", 242, 210);
 
   //cuadro correccion
   fill(255);
   rect (margeX, margeY+270, width-margeX*2, 200, 10);
   fill (0);
+  textFont (getThirdFont());
+  textSize(30);
   text ("CORRECCIÓN: ", 31, 395);
 
   b13.displayButton();

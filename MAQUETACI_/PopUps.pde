@@ -36,13 +36,13 @@ class PopUp {
       //contorno bold afegir
       rect(this.x, this.y, this.w, this.h, this.s);
       fill (0);
-      textAlign(CENTER);
+      textAlign(LEFT);
       textFont(getThirdFont());
-      text (this.asunto, this.x+80, this.y+50);
+      text (this.asunto, this.x+10, this.y+40);
       fill(0);
-      textAlign (CENTER);
+      textAlign (LEFT);
       textFont (getThirdFont());
-      text (this.mensaje, this.x+80, y+130);
+      text (this.mensaje, this.x+10, y+70);
       this.tempsVisible--;
       if (this.tempsVisible==0) {
         this.visible = false;

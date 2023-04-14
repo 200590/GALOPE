@@ -13,7 +13,7 @@ class Carrousel {
   
   // titulos imagenes
   String[] nameCarrousel;
- // String [] namePhoto;
+ String [] namePhoto;
   
   // Imagenes carrousel
   PImage[] imgs;

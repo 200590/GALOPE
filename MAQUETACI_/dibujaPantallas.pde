@@ -71,7 +71,7 @@ void dibujaPantallaFAQs() {
   strokeWeight(2);
   rect (margeX,margeY, width-margeX*2, ampmenu, 10);
   fill (0); textAlign (CENTER);
-  textFont(getFirstFont());
+  textFont(getSecondFont());
   textSize(50); 
   text ("INFORMACIÓN GALOPES (FAQs)", 960, 77);
   

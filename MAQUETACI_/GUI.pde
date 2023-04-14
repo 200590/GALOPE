@@ -45,8 +45,8 @@ String[] info1={"Caballo", "Casco homologado y/o chaleco protector", "Botas/Boti
 String[] info2={"Fusta/espuelas", "Material para el caballo", "Pantalones de equitación"};
 String [] evaluacion={"RESPUESTA 1", "RESPUESTA2","RESPUESTA 3", "RESPUESTA 4", "RESPUESTA 5"};
 String []evaluacion2={"RESPUESTA 6", "RESPUESTA 7", "RESPUESTA 8", "RESPUESTA 9", "RESPUESTA 10"};
-String [] nameCarrousel={"caballo.jpg", "casco.jpg", "chaleco.jpg", "botes.jpg", "fusta.jpg", "espuelas.jpg", "montura.jpg", "protector.jpg", "sudadero.jpg", "pantalones.png"};
-String[] namePhoto= {"CABALLO", "CASCO", "CHALECO", "BOTAS", "FUSTA", "ESPUELAS", "MONTURA", "PROTECTOR DE DORSO", "SUDADERO","PANTALONES"};
+String [] nameCarrousel={"casco.jpg", "chaleco.jpg", "botas.jpg", "polainas.jpg", "fusta.jpg", "espuelas.jpg", "montura.jpg", "protector.jpg", "sudadero.jpg", "calçons.jpg"};
+String[] namePhoto= {"CASCO", "CHALECO", "BOTAS","POLAINAS", "FUSTA", "ESPUELAS", "MONTURA", "PROTECTOR DE DORSO", "SUDADERO","PANTALONES"};
 
 
 void setGUI() {
@@ -95,9 +95,9 @@ void setGUI() {
   
   //PopUps
   textAlign(LEFT);
-  P1= new PopUp (375, 815, 350, 225, 20, "RECUERDA!", "MENSAJE", color (222, 65, 65));
-  P2= new PopUp (145, 315, 350, 225, 20, "ASUNTO", "MENSAJE", color (222, 65, 65));
-  P3= new PopUp (1162, 760, 350, 220, 20, "ASUNTO", "MENSAJE", color (222, 65, 65));
+  P1= new PopUp (375, 915, 620, 100, 20, "RECUERDA!", "Cuida el material! Mantenlo limpio siempre!", color (222, 65, 65));
+  P2= new PopUp (145, 760, 620, 100, 20, "RECUERDA!", "Controla los nervios durante el examen!", color (222, 65, 65));
+  P3= new PopUp (1162, 530, 400, 100, 20, "ANIMO!", "Ya casi lo tienes!", color (222, 65, 65));
   warn= new PopUp (563, 879, 500, 200, 20, "WARNING", "ERROR EN USUARIO O CONTRASEÑA", color (255, 222, 226));
   success=new PopUp (536, 879, 500, 200, 20, "SUCESS", "USUARIO REGISTRADO", color (255, 222, 226));
   
