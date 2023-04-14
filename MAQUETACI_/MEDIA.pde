@@ -52,7 +52,7 @@ void setMedias(){
   this.imgs[0]= loadImage(URL_IMGS+"logo01.png");
   this.imgs[1]= loadImage(URL_IMGS+"logo02.png");
   this.imgs[2]=loadImage (URL_IMGS+"entrada.jpg");
-  this.imgs[3]=loadImage (URL_IMGS+"empezar.jpg");
+  this.imgs[3]=loadImage (URL_IMGS+"empezar2.jpg");
 }
 
 int getNumImatges(){

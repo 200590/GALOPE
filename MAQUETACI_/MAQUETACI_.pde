@@ -14,7 +14,7 @@ enum PANTALLA {
 };
 
 //PANTALLA ACTUAL
-PANTALLA pantalla=PANTALLA.ELECCION;
+PANTALLA pantalla=PANTALLA.CALENDARIO;
 
 int numRespuesta = 0;
 int numTest=0;
@@ -67,9 +67,9 @@ void draw () {
   case PRACTICATEST1:
     dibujaPantallaPracTEST1();
     break;
-  case PRACTICATEST2:
+ /* case PRACTICATEST2:
     dibujaPantallaPracTEST2();
-    break;
+    break;*/
   case EVALUACION:
     dibujaPantallaEvaluacion();
     break;

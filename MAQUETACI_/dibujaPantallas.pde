@@ -16,14 +16,15 @@ void dibujaPantallaIS() {
   back.setEnabled(false);
 
   //etiquetas texto
-   fill(222, 65, 65);
-  textSize(30);
+   fill(0);
+  textSize(40);
   textAlign (LEFT);
-  text ("USUARIO", Xtextfield, 390);
+  textFont (getFirstFont());
+  text ("USUARIO", Xtextfield+420, 390);
 
   //ellipse (1150, 445, 50, 50);
 
-  text ("CONTRASEÑA", Xtextfield, 535);
+  text ("CONTRASEÑA", Xtextfield+420, 535);
 
   //ellipse (1153, 590, 50, 50);
   popStyle();
@@ -42,13 +43,15 @@ void dibujaPantallaEMP() {
   
 
   //etiquetas texto
-  fill(222, 65, 65);
-  textSize(30);
+ // fill(203, 88, 198);
+  fill (0);
+  textSize(40);
   textAlign (LEFT);
-  text ("CORREO ELECTRONICO", Xtextfield, Wbutton-50);
-  text("USUARIO", Xtextfield, Wbutton+90);
-  text ("CONTRASEÑA", Xtextfield, Wbutton+230);
-  text ("OCUPACIÓN", Xtextfield, Ycorreo+Hbutton*2+140);
+ textFont(getFirstFont());
+  text ("CORREO ELECTRONICO", Xtextfield+420, Wbutton-50);
+  text("USUARIO", Xtextfield+420, Wbutton+90);
+  text ("CONTRASEÑA", Xtextfield+420, Wbutton+230);
+  text ("OCUPACIÓN", Xtextfield+420, Ycorreo+Hbutton*2+140);
   popStyle();
 }
 
@@ -64,11 +67,11 @@ void dibujaPantallaFAQs() {
   tint (255, 115);
   displayLogo2(735, 330, 500, 500);
   back.displayRoundButton();
-  fill (219, 130, 193);
+  fill (222, 65, 65);
   strokeWeight(2);
   rect (margeX,margeY, width-margeX*2, ampmenu, 10);
   fill (0); textAlign (CENTER);
-  textFont(getSecondFont());
+  textFont(getFirstFont());
   textSize(50); 
   text ("INFORMACIÓN GALOPES (FAQs)", 960, 77);
   
@@ -99,9 +102,9 @@ void dibujaPantallaPracTEST1(){
   popStyle();
 }
 
-void dibujaPantallaPracTEST2(){
+/*void dibujaPantallaPracTEST2(){
   dibujaZonaPracticaTEST2();
-}
+}*/
 
 void dibujaPantallaEvaluacion(){
   dibujaZonaEvaluacion();

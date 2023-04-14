@@ -77,12 +77,12 @@ void setGUI() {
   
   
   //creacion campo texto
-  Textousuario= new TextField((int)Xtextfield, (int)Ytextfield, (int)Wbutton, (int)Hbutton, Gbutton);
-  newUsuario=new TextField ((int)Xtextfield, (int)Ytextfield, (int)Wbutton, (int)Hbutton, Gbutton);
-  Textocontraseña= new TextField ((int)Xtextfield, (int)Ytextfield+150, (int) Wbutton, (int)Hbutton, Gbutton);
+  Textousuario= new TextField((int)Xtextfield+420, (int)Ytextfield, (int)Wbutton, (int)Hbutton, Gbutton);
+  newUsuario=new TextField ((int)Xtextfield+420, (int)Ytextfield, (int)Wbutton, (int)Hbutton, Gbutton);
+  Textocontraseña= new TextField ((int)Xtextfield+420, (int)Ytextfield+150, (int) Wbutton, (int)Hbutton, Gbutton);
   
-  Textocorreo=new TextField ((int)Xtextfield, (int) Ytextfield-135, (int)Wbutton, (int) Hbutton, Gbutton);
-  TextocontraseñaE= new TextField ((int)Xtextfield, (int)Ytextfield+(int)Hbutton+50, (int)Wbutton, (int)Hbutton, Gbutton);
+  Textocorreo=new TextField ((int)Xtextfield+420, (int) Ytextfield-135, (int)Wbutton, (int) Hbutton, Gbutton);
+  TextocontraseñaE= new TextField ((int)Xtextfield+420, (int)Ytextfield+(int)Hbutton+50, (int)Wbutton, (int)Hbutton, Gbutton);
 
 
   //consturcción checkbox List
@@ -91,7 +91,7 @@ void setGUI() {
 
 
   //selected
-  s1=new Select (selectedValue, Xtextfield, Ytextfield+Hbutton*2+97, Wbutton, Hbutton, 10);
+  s1=new Select (selectedValue, Xtextfield+420, Ytextfield+Hbutton*2+97, Wbutton, Hbutton, 10);
   
   //PopUps
   textAlign(LEFT);

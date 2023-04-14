@@ -106,7 +106,7 @@ void dibujaZonaEMP() {
 void dibujaZonaEleccion() {
   pushStyle();
   //sección menu
-  fill (219, 130, 193);
+  fill (222, 65, 65);
   strokeWeight(2);
   rect (margeX, margeY, width-margeX*2, ampmenu, 10);
   fill (0);
@@ -128,7 +128,7 @@ void dibujaZonaEleccion() {
 
 void dibujaZonaPractica () {
   pushStyle();
-  fill (219, 130, 193);
+  fill (222, 65, 65);
   strokeWeight(2);
   rect (margeX, margeY, width-margeX*2, ampmenu, 10);
   fill (0);
@@ -154,7 +154,7 @@ void dibujaZonaEsenciales() {
     tint (255, 115);
   displayLogo2(735, 330, 500, 500);
   fill (255, 252, 252);
-  fill (219, 130, 193);
+  fill (222, 65, 65);
   strokeWeight(2);
   rect (margeX, margeY, width-margeX*2, ampmenu, 10);
   fill (0);
@@ -177,7 +177,7 @@ void dibujaZonaPracticaTEST() {
   tint (255, 115);
   displayLogo2(735, 330, 500, 500);
   fill (255, 252, 252);
-  fill (219, 130, 193);
+  fill (222, 65, 65);
   strokeWeight(2);
   rect (margeX, margeY, width-margeX*2, ampmenu, 10);
   fill (0);
@@ -237,7 +237,7 @@ void dibujaZonaPracticaTEST() {
   popStyle();
 }
 
-void dibujaZonaPracticaTEST2() {
+/*void dibujaZonaPracticaTEST2() {
   //menu y logo
   pushStyle();
   fill (255, 252, 252);
@@ -282,7 +282,7 @@ void dibujaZonaPracticaTEST2() {
   rbg2.display();
   b14.displayButton();
   popStyle();
-}
+}*/
 
 void dibujaZonaEvaluacion() {
   //menu y logo
@@ -290,7 +290,7 @@ void dibujaZonaEvaluacion() {
   tint (255, 115);
   displayLogo2(735, 330, 500, 500);
   fill (255, 252, 252);
-  fill (219, 130, 193);
+  fill (222, 65, 65);
   strokeWeight(2);
   rect (margeX, margeY, width-margeX*2, ampmenu, 10);
   fill (0);
@@ -330,7 +330,7 @@ void dibujaZonaCorreccion() {
   tint (255, 115);
   displayLogo2(735, 330, 500, 500);
   fill (255, 252, 252);
-  fill (219, 130, 193);
+  fill (222, 65, 65);
   strokeWeight(2);
   rect (margeX, margeY, width-margeX*2, ampmenu, 10);
   fill (0);
@@ -366,7 +366,7 @@ void dibujaZonaCalendario() {
   tint (255, 115);
   displayLogo2(735, 330, 500, 500);
   fill (255, 252, 252);
-  fill (219, 130, 193);
+  fill (222, 65, 65);
   strokeWeight(2);
   rect (margeX, margeY, width-margeX*2, ampmenu, 10);
   fill (0);
