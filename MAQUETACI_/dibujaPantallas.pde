@@ -1,9 +1,9 @@
+//funciones que dibujan las pantallas de la aplicación
 
 void dibujaPantallaENTRADA() {
   dibujaZonaEntr();
   b1.displayButton();
   b2.displayButton();
-  //displayLogo(100,100,300,400);
 }
 
 void dibujaPantallaIS() {
@@ -21,13 +21,8 @@ void dibujaPantallaIS() {
   textAlign (LEFT);
   textFont (getFirstFont());
   text ("USUARIO", Xtextfield+420, 390);
-
-  //ellipse (1150, 445, 50, 50);
-
   text ("CONTRASEÑA", Xtextfield+420, 535);
-
-  //ellipse (1153, 590, 50, 50);
-  popStyle();
+ popStyle();
 }
 
 void dibujaPantallaEMP() {
@@ -36,14 +31,12 @@ void dibujaPantallaEMP() {
   newUsuario.display();
   Textocorreo.display();
   TextocontraseñaE.display();
-  // TextOcupacion.display();
   s1.display();
   next.displayRoundButton();
   back.displayRoundButton();
-  
-
+ 
   //etiquetas texto
- // fill(203, 88, 198);
+
   fill (0);
   textSize(40);
   textAlign (LEFT);
@@ -102,9 +95,6 @@ void dibujaPantallaPracTEST1(){
   popStyle();
 }
 
-/*void dibujaPantallaPracTEST2(){
-  dibujaZonaPracticaTEST2();
-}*/
 
 void dibujaPantallaEvaluacion(){
   dibujaZonaEvaluacion();

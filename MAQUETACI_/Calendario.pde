@@ -58,7 +58,6 @@ class Calendario {
   }
   
   // Setters
-  
   void setCalendar(int d, int m, int y){
     cal.set(Calendar.YEAR, y);
     cal.set(Calendar.MONTH, m);
@@ -77,7 +76,7 @@ class Calendario {
     this.selectedYear = y;
   }
   
-  // Va un mes enrera en el Calendari
+  // función para visitar un mes anterior
   void prevMonth(){
     
     this.buttons = new DayButton[37];
@@ -137,7 +136,7 @@ class Calendario {
     }
   }
   
-  // Va un mes endavant en el calendari
+  // función para visitar un mes posterior
   void nextMonth(){
     
     this.buttons = new DayButton[37];
@@ -167,7 +166,7 @@ class Calendario {
   
 
   
-  // Dibuixa el Calendari
+  //método para dibujar el calendario
   void display(){
     fill(0); textSize(36); textAlign(LEFT);
     text(months[mes-1]+"/"+any, x, y - 30);
@@ -185,7 +184,7 @@ class Calendario {
   }
   
   
-  // Comprova si pitjam sobre els botons del Calendari
+  //método para comprobar si los botones son apretados
   void checkButtons(){
     for(DayButton b : buttons){
       if((b!=null)&&(b.enabled)&&(b.mouseOverDayButton())){
@@ -203,7 +202,7 @@ class Calendario {
     }
   }
   
-  // Deselecciona tots els botons del Calendari
+  //función para deseleccionar todos los botones del calendario
   void deselectAll(){
     for(DayButton b : buttons){
       if(b!=null){

@@ -1,13 +1,13 @@
-//lloc on es situen els diferents espais de l'aplicació
+//variables relacionadas con la posición y dimensiones de los objetos de la aplicación
 
-//llarg-->fa referència a l'altura (height)
-//amp-->fa referència a l'amplada (width)
+//llarg-->height
+//amp-->width
 
-//marges 
+//margenes
 float margeX=10;
 float margeY=15;
 
-//menu
+//menú
 float ampmenu=100;
 
 //LOGO
@@ -22,7 +22,7 @@ float ampgeneral=130;
 int Xcorreo=880; 
 int Ycorreo=350;
 
-//elecció
+//elección
 float Xrecuadros=420;
 float Yrecuadros=320;
 float Wrecuadros=400;
@@ -48,10 +48,11 @@ float Gbutton=15;
 float Xtextfield=815;
 float Ytextfield=396;
 
-//posicions text b1, b2
+//posiciones texto b1, b2
 float textX=965; 
 float textY=453;
-//dimensions boton round
+
+//dimensiones round button
 float Xroundbutton=1820; 
 float Yroundbutton=935; 
 float Rroundbutton=100;
@@ -62,26 +63,30 @@ float entreLogoyCheckbox=10;
 float Xcheckbox=150;
 float Ycheckbox=360;
 
-//SELECTEDS
+//SELECTS
 float selectedW=Wbutton;
 float selectedH=50;
 
 //PAGED TABLE
 float tableW=800; 
 float tableH=500;
-//dimensions botons i posició
+
+//dimensiones botones y posición
 float buttonPTX=1150;
 float buttonPTY=820;
 float buttonPTW=90; 
 float buttonPTH=90;
-  //num rows+capçalera
+
+  //num rows+encabezado
 int files=5; 
+
   //num col
 int columnes=1;
-  //titol columnes
+  //título columnas
 String [] titols={"FAQs"};
 float [] colWidth={1920-margeX*2};
-  //dades de la taula
+
+  //información tabla
 String[][]info={
                 {"PREGUNTA 1"},
                 {"RESPOSTA 1"},

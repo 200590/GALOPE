@@ -43,6 +43,7 @@ void display(){
   popStyle();
 }
 
+//ky pressed del campo de texto
 void keyPressed(char key, int keyCode) {
       if (selected) {
          if (keyCode == (int)BACKSPACE) {
@@ -62,7 +63,7 @@ void keyPressed(char key, int keyCode) {
          }
       }
    }
-   //letra c al final del text
+   //letra c al final del texto
    void addText(char c) {
       if (textWidth(this.text + c) < w) {
          this.text += c;
@@ -79,7 +80,7 @@ void keyPressed(char key, int keyCode) {
       }
    }
 
-   // mouse encima capo texto
+   // mouse encima campo texto
    boolean mouseOverTextField() {
       if (mouseX >= this.x && mouseX <= this.x + this.w) {
          if (mouseY >= this.y && mouseY <= this.y + this.h) {
@@ -97,7 +98,8 @@ void keyPressed(char key, int keyCode) {
          selected = false;
       }
    }
-   // Lleva tot el text
+   
+   // elimina todo el texto
 void removeAllText(){
      this.text = "";
    }

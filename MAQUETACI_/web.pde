@@ -5,6 +5,7 @@ import java.net.URISyntaxException;
 
 Desktop desktop;
 
+//fucnión para open web button
 void openWebPage(String siteUrl) {
   try {
     URI site = new URI(siteUrl);

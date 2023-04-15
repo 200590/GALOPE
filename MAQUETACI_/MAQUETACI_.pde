@@ -67,9 +67,6 @@ void draw () {
   case PRACTICATEST1:
     dibujaPantallaPracTEST1();
     break;
- /* case PRACTICATEST2:
-    dibujaPantallaPracTEST2();
-    break;*/
   case EVALUACION:
     dibujaPantallaEvaluacion();
     break;
@@ -80,9 +77,4 @@ void draw () {
     dibujaZonaCalendario();
     break;
   }
-
-
-
-
-  //println("X: "+mouseX+", Y:"+mouseY);
 }

@@ -1,7 +1,9 @@
 class PopUp {
+  
   //dimensiones PopUp
   float x, y, w, h, s;
-  //Propietats
+  
+  //Propiedades
   String asunto;
   String mensaje;
   color c;
@@ -10,6 +12,7 @@ class PopUp {
   int tempsInvisible = 30*2;
   boolean visible = false;
 
+//constructor
   PopUp(float x, float y, float w, float h, float s, String A, String M, color c) {
     this.x = x;
     this.y = y;
@@ -25,6 +28,7 @@ class PopUp {
     this.visible = b;
   }
 
+//dibuja POPUP
   void display() {
     if (!visible) {
       this.tempsInvisible--;
@@ -33,7 +37,6 @@ class PopUp {
       }
     } else {
       fill (this.c);
-      //contorno bold afegir
       rect(this.x, this.y, this.w, this.h, this.s);
       fill (0);
       textAlign(LEFT);
@@ -50,6 +53,7 @@ class PopUp {
     }
   }
 
+//resetea la configuración del popup
   void reset() {
     tempsVisible = 30*5;
     tempsInvisible = 30*2;

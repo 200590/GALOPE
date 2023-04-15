@@ -48,7 +48,7 @@ class PagedTable{
     }
   }
   
-  //Dibuixa taula
+  //dibuja tabla 
   void display (float x, float y, float w, float h){
     pushStyle();
     fill (255, 252, 252, 115);
@@ -60,7 +60,7 @@ class PagedTable{
     fill(222, 65, 65);  stroke(0); strokeWeight(3);
     rect(x, y, w, rowHeight);
     
-    // Dibuixa files
+    // dibuja filas 
     stroke(0);
     for(int r = 1; r <numRows; r++){
       if(r==1){ strokeWeight(3); }
@@ -68,14 +68,14 @@ class PagedTable{
       line(x, y + r*rowHeight, x + w, y + r*rowHeight);
     }
     
-    // Dibuixa Columnes
+    // dibuja columnas 
     float xCol = x;
     for(int c = 0; c<numCols; c++){
       xCol += w*columnWidths[c]/100.0;
       line(xCol, y, xCol, y + h);
     }
     
-    // Dibuixa textos
+    // dibuja textos
     fill(0); textSize(24);
     for(int r = 0; r < numRows; r++){
       xCol = x;
@@ -100,7 +100,7 @@ class PagedTable{
       }
     }
     
-    // Informació de la Pàgina
+    // Información de la Página
     fill(0);
     text("Pag: "+(this.numPage+1)+" / "+(this.numTotalPages+1), x, y + h + 50);
     popStyle();

@@ -1,4 +1,4 @@
-//TIPOGRAFIES
+//TIPOGRAFÍAS
 String URL_FONTS="fonts/";
 PFont [] fonts; 
 
@@ -7,13 +7,9 @@ void setFonts(){
   this.fonts[0]= createFont (URL_FONTS+"Type Machine.ttf", 24);
   this.fonts[1]= createFont (URL_FONTS+"NixieOne.ttf", 24); 
   this.fonts[2]= createFont (URL_FONTS+"LiberationMono-Regular.ttf", 24);
-  this.fonts[3]= createFont(URL_FONTS+"Cherry Monospace-Light.ttf", 24);
- 
-  
- // this.fonts[1]= createFont ("Zector.otf", 30);
 }
 
-//getter number fonts 
+//getter number fuentes 
 int getNumFonts(){
   return this.fonts.length;
 }
@@ -32,16 +28,13 @@ PFont getThirdFont(){
   return this.fonts[2];
 }
 
-PFont getFourthFont(){
-  return this.fonts[3];
-}
 
 //getter i font
 PFont getIFont(int i){
   return this.fonts[i];
 }
 
-
+//IMAGENES
 String URL_IMGS="imgs/";
 
 //Array imagenes
@@ -74,19 +67,23 @@ PImage getEntrada(){
 PImage getEmpezar(){
   return this.imgs[3];
 }
+
 //display logo 
 void displayLogo (float x, float y, float w, float h){
   image (getLogo01(), x, y, w, h);
 }
 
+//display logo2
 void displayLogo2 (float x, float y, float w, float h){
   image (getLogo02(), x, y, w, h);
 }
 
+//display imagen entrada
 void displayEntrada (float x, float y, float w, float h){
   image (getEntrada(), x, y, w, h);
 }
 
+//display imagen empezar
 void displayEmpezar(float x, float y, float w, float h){
   image (getEmpezar(), x, y, w, h);
 }

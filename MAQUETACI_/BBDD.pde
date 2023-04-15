@@ -8,6 +8,7 @@ String database="mydb";
 int numCorrectas=0; 
 boolean[] correctas ={false, false, false, false, false, false, false, false, false, false};
 
+//función para establecer la conexión con BBDD
 void setConnexionBBDD() {
   //se establece la conexión
   msql=new MySQL(this, "localhost", database, user, pass);
@@ -22,28 +23,22 @@ void setConnexionBBDD() {
   }
 }
 
+
+//función para inserir en la tabla usuario
 void insertInfoTaulaUsuario(String idUsuario, String correo, String password, String ocupacion) {
   String q= "INSERT INTO usuario (idusuario, correoelectronico, contraseña, ocupacion) VALUES ('"+idUsuario+"', '"+correo+"','"+password+"', '"+ocupacion+" ')";
   println (q);
   msql.query(q);
 }
 
+//funcion para inserir en la table respuesta
 void insertRespostaTest (int respuesta, int test_idtest, int pregunta_idpregunta){
   String r="INSERT INTO respuesta (respuesta, test_idtest, pregunta_idpregunta) VALUES ('"+respuesta+"', '"+test_idtest+"', '"+pregunta_idpregunta+" ')";
   println (r);
   msql.query(r);
 }
 
-String getRespostaRightTest(){
-  String RR= "SELECT `idpregunta`, `correcta` FROM `pregunta`";
-  return RR;
-}
-
-String getRespostaContestada (){
-  String RC= "SELECT `idrespuesta`, `respuesta` FROM `respuesta`";
-  return RC;
-}
-
+//función para seleccionar un usuario
 int getUserLogin(String user, String password){
   String q =" SELECT COUNT(*) AS n FROM usuario WHERE idusuario='"+user+"' AND contraseña='"+password+"'";
   println(q);
@@ -69,7 +64,7 @@ int getNumRowsQuery(String q){
   return numRows;
 }
 
-// getter de numero de unidad de la unidad con nombre 
+// getter de número de unidad de la unidad con nombre 
 
 int getIdTaulaUnitat(String nom){
   String sNom = nom.replace("\'", "\\'");
@@ -98,7 +93,6 @@ String[][] getInfoTaulaFAQs(){
 }
 
 //obten informacion tabla pregunta
-
 String [][] getInfoTablaPregunta(String unidad){
   String q2 ="SELECT COUNT(*) AS n FROM pregunta WHERE unidad_idunidad='"+unidad+"'";
   int numRows= getNumRowsQuery (q2);

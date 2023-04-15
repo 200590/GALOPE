@@ -4,9 +4,10 @@ class Select{
   String[] opciones; //diferentes opciones del desplegable
   String selectedValue; //valor seleccionado
   
-  boolean wraped=false;   //plegat/desplegat
+  boolean wraped=false;   //plegado/desplegado
   float lineSpace=10;    //espacio entre lineas
   
+  //constuctor
   Select (String[] opciones, float x, float y, float w, float h, float g){
     this.opciones=opciones; 
     this.selectedValue="";
@@ -18,6 +19,7 @@ class Select{
     this.wraped=true;
   }
   
+  //dibuja Select
   void display(){
     pushStyle();
     stroke (0); strokeWeight(2); fill(222, 65, 65);
@@ -66,7 +68,7 @@ class Select{
     int option=clickedOption();
     selectedValue=opciones[option];
   }
-   // Indica si el cursor està sobre el select
+   // Indica si el cursor está sobre el select
  boolean mouseOverSelect(){
    if(this.wraped){
      return (mouseX >= x) && 
@@ -82,6 +84,7 @@ class Select{
    }
  }
  
+//opcion seleccionada
   int clickedOption(){
    int i = (int)map(mouseY, y + h, y + h + (h + lineSpace)*opciones.length, 
                             0, opciones.length);

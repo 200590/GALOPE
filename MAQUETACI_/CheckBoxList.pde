@@ -8,22 +8,22 @@ class CheckBoxList{
   String []info;
   CheckboxText[] cbs; // Composición
   
+  //constructor
   CheckBoxList(String[] info, float x, float y, float w, float h){
     this.x=x; this.y=y; this.w=w; this.h=h; 
     this.info=info; 
     this.cbs= new CheckboxText[info.length ];
     for (int i=0; i<info.length; i++){
       cbs[i]= new CheckboxText (info[i], x, y+(h+margeV)*i, w, h);
-     //cbs[i].setImage (info[i].toLowerCase()+".png");
     }
   }
   
+//información del checkbox
   void setInfo(String[] info){
     this.info=info; 
     this.cbs= new CheckboxText[info.length ];
     for (int i=0; i<info.length; i++){
       cbs[i]= new CheckboxText (info[i], x, y, w, h);
-     //cbs[i].setImage (info[i].toLowerCase()+".png");
     }
   }
   
@@ -49,7 +49,7 @@ class CheckBoxList{
     return cbs[n].checked;
   }
   
-  //si check box con texto s está seleccionado
+  //si check box con texto está seleccionado
   boolean isChecked (String S){
     for(CheckboxText cb : cbs){
       if(cb.text.equals(S)){
@@ -59,7 +59,7 @@ class CheckBoxList{
     return false;
   }
   
-  //true si mouse sobre algun checkbox
+  //true si mouse está sobre algun checkbox
   boolean checkCursor(){
     for (CheckboxText cb : cbs){
       if(cb.onMouseOver()){

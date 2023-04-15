@@ -1,5 +1,3 @@
-//pressed on campo texto
-//enum PANTALLA {ENTRADA, IS, EMP, FAQs, ELECCION, ESENCIALES};
 void mousePressed() {
 
   if (pantalla==PANTALLA.EMP) {
@@ -26,7 +24,7 @@ void mousePressed() {
     }
   }
 
-  // Escoltar tots els elements comunS A TOTES LES PANTALLES
+  //detecta todos los elementos comunes a todas las pantallas
   if (b0.mouseOverRoundButton()) {
     pantalla=PANTALLA.ENTRADA;
   }
@@ -38,13 +36,13 @@ void mousePressed() {
       int n = getUserLogin(user, password);
       if (n==0) {
         println("ERROR USUARIO O CONTRASEÑA");
-        warn.display();
+
       } else {
         pantalla=PANTALLA.ELECCION;
       }
     } else if (pantalla==PANTALLA.EMP) {
       pantalla=PANTALLA.ELECCION;
-      success.display();
+
     }
   }
 
@@ -56,8 +54,7 @@ void mousePressed() {
     }
   }
 
-  // pantalles
-
+  // pantallas
   if (pantalla==PANTALLA.ENTRADA) {
     if (b1.mouseOverButton()) {
       pantalla=PANTALLA.IS;

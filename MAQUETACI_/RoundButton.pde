@@ -1,6 +1,7 @@
  class RoundButton{
   float a, b, r; //a-->equivalente a x   b-->equivalente a y    r-->equivalente a radio
   String text;
+  
       //propiedades contorno, relleno boton circular
   color FillColor;
   color ColorFillOver;
@@ -33,7 +34,6 @@
     }else {
       fill (FillColor);
     }
-   // stroke(StrokeColor);
     strokeWeight(2);
   ellipse (this.a, this.b, this.r, this.r);
 

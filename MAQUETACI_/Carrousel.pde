@@ -38,19 +38,21 @@ void setImages(String []nameCarrousel){
   }
 }
  
-  
+ //siguiente imagen
   void next(){
     if(this.currentImage<this.numTotalImatges - this.numImatgesVisibles){
       this.currentImage++;
     }
   }
-  
+
+ //imagen anterior
    void prev(){
     if(this.currentImage>0){
       this.currentImage--;
     }
   }
 
+//dibuja el carrusel
  void display(){
    fill (150); stroke (0);
    rect (x-5, y-5, w+10, h+10);

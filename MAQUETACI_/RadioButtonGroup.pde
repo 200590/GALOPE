@@ -1,6 +1,6 @@
 class RadioButtonGroup{
   //caracteristicas
-  RadioButton[] rbuttons; // Composició
+  RadioButton[] rbuttons; // Composición
   int selectedOption;
   
   RadioButtonGroup (int n){
@@ -39,6 +39,7 @@ class RadioButtonGroup{
     }
   }
   
+
   boolean clickOnOneRadioButton(){
     for (int i=0; i<rbuttons.length; i++){
       if (rbuttons[i]!=null&&rbuttons[i].onMouseOver()){
@@ -47,12 +48,6 @@ class RadioButtonGroup{
     }
       return false;
     }
-    
-    
-  //intent d'eliminar resposta seleccionada 
-/* void resetRGB(){
-    selectedOption=0;
-    }*/
 }
   
    

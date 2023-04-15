@@ -21,7 +21,7 @@ void keyPressed(){
     c.prevMonth();
     println("PREV MONTH");
   }
-  // Anar un mes endavant
+  //Visitar el mes posterior
   else if(keyCode==RIGHT){
     c.nextMonth();
     println("PREV MONTH");

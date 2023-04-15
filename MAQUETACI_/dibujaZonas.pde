@@ -1,4 +1,4 @@
-//DIBUJA LA MAQUETACIÓN
+//DIBUJA LAS SECCIONES Y COMPONENTES DE LAS PANTALLAS
 
 //menu
 void dibujaZonaMenu() {
@@ -33,27 +33,10 @@ void dibujaZonaGeneral() {
 //entrada
 void dibujaZonaEntr() {
   pushStyle();
-  //fons general
-  //fill(244, 255, 253);
-  //zona menu
- /* fill (219, 130, 193);
-  strokeWeight(2);
-  rect (margeX, margeY, width-margeX*2, ampmenu, 10);
-  fill (0);
-  textAlign (CENTER);
-  textFont(getSecondFont());
-  textSize(50);
-  text ("ENTRADA", 960, 85);*/
   //sección blanca
   displayEntrada(0,0, width, height);
- /* stroke(0);
-  fill (255, 252, 252);
-  stroke(255);
-  rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
-  stroke(0);*/
   b0.displayRoundButton();
   wb.displayButton();
-  // success.display();
   popStyle();
 }
 
@@ -61,42 +44,14 @@ void dibujaZonaEntr() {
 void dibujaZonaIS() {
   pushStyle();
   //zona menu
- /* fill (219, 130, 193);
-  strokeWeight(2);
-  rect (margeX, margeY, width-margeX*2, ampmenu, 10);
-  fill (0);
-  textAlign (CENTER);
-  textFont(getSecondFont());
-  textSize(50);
-  text ("INICIAR SESIÓN", 960, 85);
-  //sección rosa
-  fill (255, 252, 252);
-  noStroke();
-  rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
-  stroke(0);*/
   displayEmpezar(0, 0, width, height);
   b0.displayRoundButton();
-  //warn.display();
   popStyle();
 }
 
 //empezar
 void dibujaZonaEMP() {
   pushStyle();
-  //zona menu
- /* fill (219, 130, 193);
-  strokeWeight(2);
-  rect (margeX, margeY, width-margeX*2, ampmenu, 10);
-  fill (0);
-  textAlign (CENTER);
-  textFont(getSecondFont());
-  textSize(50);
-  text ("EMPEZAR", 960, 85);
-  //sección rosa
-  fill (255, 252, 252);
-  noStroke();
-  rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
-  stroke(0);*/
   displayEmpezar (0, 0, width, height);
   b0.displayRoundButton();
   popStyle();
@@ -114,7 +69,7 @@ void dibujaZonaEleccion() {
   textFont(getSecondFont());
   textSize(50);
   text ("ELECCIÓN", 960, 85);
-  //sección rosa
+  //sección blanca
   fill (255, 252, 252);
   noStroke();
   rect (margeX, margeX+107, width-margeX*2, height-ampmenu*2+75);
@@ -208,7 +163,6 @@ void dibujaZonaPracticaTEST() {
   textFont(getThirdFont());
   textSize(30);
  text("PREGUNTA ("+(numPregunta+1)+"/"+preguntas.length+"): "+preguntas[numPregunta][1], 40, 395); 
-  //ellipse (llarglogo/2+180, amplogo/2+ampmenu-22+Rroundbutton+50, 35,35);
 
   //textos radio button
   textAlign (CENTER);
@@ -237,53 +191,6 @@ void dibujaZonaPracticaTEST() {
   b14.displayButton();
   popStyle();
 }
-
-/*void dibujaZonaPracticaTEST2() {
-  //menu y logo
-  pushStyle();
-  fill (255, 252, 252);
-  fill (219, 130, 193);
-  strokeWeight(2);
-  rect (margeX, margeY, width-margeX*2, ampmenu, 10);
-  fill (0);
-  textAlign (CENTER);
-  textFont(getSecondFont());
-  textSize(50);
-  text ("TEST", 960, 85);
-  back.displayRoundButton();
-
-
-  //recuadro informativo
-  fill(255);
-  rect (llarglogo/2+170, amplogo/2+ampmenu-22, llargeneral-amplogo, Rroundbutton+20, 10);
-  textAlign(LEFT);
-  fill(0);
-  textFont(getThirdFont());
-  textSize(30);
-  text("TEST GALOPE 2", 242, 210);
-
-
-  //recuadro pregunta
-  fill(255);
-  rect (margeX, margeY+321, width-margeX*2, ampmenu, 10);
-  textAlign (CENTER);
-  fill (0);
-  textFont(getThirdFont());
-  textSize(30);
-  text("PREGUNTA:", 115, 400);
-
-  //textos radio button
-  textAlign (CENTER);
-  textFont (getThirdFont());
-  textSize(30);
-  text ("RESPOSTA 1", 725, 612);
-  text ("RESPOSTA 2", 725, 812);
-  text ("RESPOSTA 3", 1310, 612);
-
-  rbg2.display();
-  b14.displayButton();
-  popStyle();
-}*/
 
 void dibujaZonaEvaluacion() {
   //menu y logo
@@ -321,8 +228,6 @@ void dibujaZonaEvaluacion() {
   textFont(getSecondFont());
   text (numCorrectas+"/10", 1556, 465);
   text (numCorrectas*100/10+"%",1556, 500);
-
-
   popStyle();
 }
 
@@ -386,10 +291,6 @@ void dibujaZonaCalendario() {
   fill (255, 252, 252);
 
   rect (460, 195, 570, 100, 10);
-
-  
-
-
   c.display();
   ImportantEvents.display();
   fill (0);

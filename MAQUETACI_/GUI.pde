@@ -1,6 +1,6 @@
+//creación de todos los objetos de la aplicacion
 
 //general
-
 RoundButton next, b0, back;
 //Pantalla entrada
 Button b1, b2, wb;
@@ -40,7 +40,7 @@ TextField ImportantEvents;
 //carrousel
 Carrousel cl;
 
-//textos opciones checkboxlist
+//strings informaciones checkboxes, carrusel
 String[] info1={"Caballo", "Casco homologado y/o chaleco protector", "Botas/Botines con polainas"};
 String[] info2={"Fusta/espuelas", "Material para el caballo", "Pantalones de equitación"};
 String [] evaluacion={"RESPUESTA 1", "RESPUESTA 2","RESPUESTA 3", "RESPUESTA 4", "RESPUESTA 5"};
@@ -50,18 +50,14 @@ String[] namePhoto= {"CASCO", "CHALECO", "BOTAS","POLAINAS", "FUSTA", "ESPUELAS"
 
 
 void setGUI() {
-  //setFAQs();
-
+  
   //creación botones
-
   b1= new Button("INICIAR SESIÓN", Xbutton-120, Ybutton-70, Wbutton, Hbutton, Gbutton);
   b2= new Button ("EMPEZAR", Xbutton+Wbutton*2+150, Ybutton-70, Wbutton, Hbutton, Gbutton);
   b0= new RoundButton ("GALOPE", llarglogo/2+16, amplogo/2+ampmenu+30, Rroundbutton+20);
   next= new RoundButton("NEXT", Xroundbutton, Yroundbutton, Rroundbutton);
   back= new RoundButton ("BACK", 75, Yroundbutton, Rroundbutton);
 
-
-//222, 65, 65
   b3= new Button ("FAQs GALOPES", Xrecuadros-50, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
   b4= new Button ("PRÁCTICA", Xrecuadros-50, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
   b5= new Button ("ESENCIALES", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
@@ -72,10 +68,8 @@ void setGUI() {
   b9= new Button ("GALOPE 3", Xrecuadros+800, Yrecuadros, Wrecuadros, Hrecuadros, Gbutton);
   b10= new Button ("GALOPE 4", Xrecuadros+800, Yrecuadros+400, Wrecuadros, Hrecuadros, Gbutton);
   wb= new Button("RFHE", Xbutton+Wbutton, Ybutton+150,Wbutton, Hbutton, Gbutton);
-    desktop=Desktop.getDesktop();
-    
-  
-  
+  desktop=Desktop.getDesktop();
+
   //creacion campo texto
   Textousuario= new TextField((int)Xtextfield+420, (int)Ytextfield, (int)Wbutton, (int)Hbutton, Gbutton);
   newUsuario=new TextField ((int)Xtextfield+420, (int)Ytextfield, (int)Wbutton, (int)Hbutton, Gbutton);
@@ -98,8 +92,7 @@ void setGUI() {
   P1= new PopUp (375, 915, 620, 100, 20, "RECUERDA!", "Cuida el material! Mantenlo limpio siempre!", color (222, 65, 65));
   P2= new PopUp (145, 760, 620, 100, 20, "RECUERDA!", "Controla los nervios durante el examen!", color (222, 65, 65));
   P3= new PopUp (1162, 530, 400, 100, 20, "ANIMO!", "Ya casi lo tienes!", color (222, 65, 65));
-  warn= new PopUp (563, 879, 500, 200, 20, "WARNING", "ERROR EN USUARIO O CONTRASEÑA", color (255, 222, 226));
-  success=new PopUp (536, 879, 500, 200, 20, "SUCESS", "USUARIO REGISTRADO", color (255, 222, 226));
+
   
   //PagedTable
   b11= new Button ("NEXT", buttonPTX+130, buttonPTY, buttonPTW, buttonPTH, Gbutton);
@@ -130,6 +123,7 @@ void setGUI() {
   rb5= new RadioButton (350, 500, 30);
   rb6= new RadioButton (350, 700, 30); 
   rb7= new RadioButton (350, 900, 30);
+  
   //group radio button
   rbg2= new RadioButtonGroup(3);
   rbg2.setRadioButtons(rb5, rb6, rb7); 

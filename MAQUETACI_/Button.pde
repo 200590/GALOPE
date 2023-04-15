@@ -2,10 +2,7 @@ class Button {
 
   //características boton rect. 
   float x, y, w, h, g;
-  
-  //características boton circulo
-  float a, b, r; //a-->equivalente a x   b-->equivalente a y    r-->equivalente a radio
-  PImage LOGO;
+ 
 
   //propiedades contorno, relleno boton rect. 
   color ColorFill; 
@@ -28,7 +25,7 @@ class Button {
   }
   
  
-
+//método para dibujar el botón
  void displayButton() {
     pushStyle();
      if (mouseOverButton()) {
@@ -48,7 +45,8 @@ class Button {
     text (textButton, this.x+this.w/2, this.y+this.h/2+10);
     popStyle();
   }
-
+  
+//método para detectar la posición del mouse
   boolean mouseOverButton() {
     return (mouseX >= this.x) &&
       (mouseX<=this.x + this.w) &&

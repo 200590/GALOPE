@@ -5,13 +5,12 @@ class CheckboxText{
   //característiques
   float x, y, w, h;
   String text; 
-  //PImage img;
   
   boolean checked;
   
   //colors
   color bgNoChecked; //no esta seleccionado
-  color bgChecked; //esta seleccionado
+  color bgChecked; //está seleccionado
   
   //constructor
   CheckboxText (int x, int y, int w, int h){
@@ -23,6 +22,7 @@ class CheckboxText{
     this.text="";
   }
   
+  //constructor
   CheckboxText (String t, float x, float y, float w, float h){
     this.text=t; 
     this.x=x;  this.y=y; this.w=w; this.h=h; 
@@ -31,13 +31,8 @@ class CheckboxText{
     this.bgChecked= color(222, 65, 65);
   }
   
-  /*void setImage (String imgName){
-    this.img=loadImage(imgName);
-  }*/
   
-  
-  //dibujar checkbox
-  
+//dibujar checkbox
   void display(){
     stroke (0);
     strokeWeight(3);
@@ -51,17 +46,13 @@ class CheckboxText{
     fill (0); textAlign(LEFT); textSize(30);
     textFont (getThirdFont());
     text (this.text,x+w+15, y+h/2+5);
-    
-    /* if(img!=null){
-      image(img, x - w, y, w, h);
-    }*/
   }
     
     void setChecked (boolean b){
       this.checked=b;
     }
     
-    //canvia estado selección
+    //cambia estado selección
     void toggle(){
       this.checked=! this.checked;
     }
