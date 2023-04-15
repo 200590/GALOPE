@@ -34,7 +34,7 @@ class Select{
     //caracteristicas opciones
     fill (0); textSize (30);textFont (getThirdFont());
      
-     text(selectedValue, x , y + 52);
+     text(selectedValue, x+10 , y + 52);
      
      if (!this.wraped){
        fill(255); stroke(0);

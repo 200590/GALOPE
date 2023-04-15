@@ -39,7 +39,7 @@ void display(){
   rect (x, y, w, h, g);
   fill(0); textAlign(LEFT);
   textFont (getThirdFont());
-  text(text, x, y+52);
+  text(text, x+10, y+52);
   popStyle();
 }
 
@@ -54,8 +54,9 @@ void keyPressed(char key, int keyCode) {
            boolean isKeyCapitalLetter = (key >= 'A' && key <= 'Z');
            boolean isKeySmallLetter = (key >= 'a' && key <= 'z');
            boolean isKeyNumber = (key >= '0' && key <= '9');
+           boolean isKeySimbol= (key=='@' || key=='.');
       
-           if (isKeyCapitalLetter || isKeySmallLetter || isKeyNumber) {
+           if (isKeyCapitalLetter || isKeySmallLetter || isKeyNumber||isKeySimbol) {
                addText(key);
            }
          }

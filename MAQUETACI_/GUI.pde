@@ -43,7 +43,7 @@ Carrousel cl;
 //textos opciones checkboxlist
 String[] info1={"Caballo", "Casco homologado y/o chaleco protector", "Botas/Botines con polainas"};
 String[] info2={"Fusta/espuelas", "Material para el caballo", "Pantalones de equitación"};
-String [] evaluacion={"RESPUESTA 1", "RESPUESTA2","RESPUESTA 3", "RESPUESTA 4", "RESPUESTA 5"};
+String [] evaluacion={"RESPUESTA 1", "RESPUESTA 2","RESPUESTA 3", "RESPUESTA 4", "RESPUESTA 5"};
 String []evaluacion2={"RESPUESTA 6", "RESPUESTA 7", "RESPUESTA 8", "RESPUESTA 9", "RESPUESTA 10"};
 String [] nameCarrousel={"casco.jpg", "chaleco.jpg", "botas.jpg", "polainas.jpg", "fusta.jpg", "espuelas.jpg", "montura.jpg", "protector.jpg", "sudadero.jpg", "calçons.jpg"};
 String[] namePhoto= {"CASCO", "CHALECO", "BOTAS","POLAINAS", "FUSTA", "ESPUELAS", "MONTURA", "PROTECTOR DE DORSO", "SUDADERO","PANTALONES"};
@@ -108,7 +108,7 @@ void setGUI() {
   PT= new PagedTable (5, 2);
   float[] colsWidth ={40,60};
   PT.setColumWidths(colsWidth);
-  String[] header = {"Pregunta", "Resposta"};
+  String[] header = {"Pregunta", "Respuesta"};
   PT.setHeaders(header);
   String[][] faqs = getInfoTaulaFAQs();
   PT.setData(faqs);
